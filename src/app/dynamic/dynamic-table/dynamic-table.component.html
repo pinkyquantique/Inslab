@@ -1,0 +1,23 @@
+<table *ngIf="data && data.length > 0" class="table table-bordered">
+    <thead>
+      <tr>
+        <!-- Guard against empty data -->
+        <th *ngFor="let column of columns">
+          {{ column }}
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of data">
+        <td *ngFor="let column of columns">
+          {{ row[column] }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <!-- Show a message if no data is available -->
+  <div *ngIf="!data || data.length === 0">
+    <p>No data available</p>
+  </div>
+  

@@ -1,0 +1,27 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div *ngFor="let field of fields">
+      <label>{{ field.label }}</label>
+  
+      <div [ngSwitch]="field.type">
+        <input *ngSwitchCase="'text'" [formControlName]="field.name" type="text" class="form-control" />
+        <input *ngSwitchCase="'email'" [formControlName]="field.name" type="email" class="form-control" />
+        <input *ngSwitchCase="'checkbox'" [formControlName]="field.name" type="checkbox" />
+        <div *ngSwitchCase="'radio'">
+          <div *ngFor="let option of field.options">
+            <label>
+              <input [formControlName]="field.name" type="radio" [value]="option" />
+              {{ option }}
+            </label>
+          </div>
+        </div>
+        <div *ngSwitchCase="'select'">
+          <select [formControlName]="field.name" class="form-control">
+            <option *ngFor="let option of field.options" [value]="option">{{ option }}</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  
