@@ -1,1 +1,36 @@
-<p>header works!</p>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- Navbar -->
+<nav class="navbar">
+  <!-- Logo Section -->
+  <div class="logo">
+    <img src="apple-touch-icon.png" alt="logo-name" class="logo-image">
+    <span class="brand-name">INS-LAB</span>
+  </div>
+
+  <!-- Hamburger Menu Button -->
+  <button class="menu-icon" type="button" (click)="toggleMenu()">
+    &#9776; 
+  </button>
+
+  <!-- Navbar Links -->
+  <ul class="nav-links" [ngClass]="{'active': isMenuOpen}">
+    <li><a href="" class="active">Home</a></li>
+    <li><a href="">Dashboard</a></li>
+    <li><a href="">Finance</a></li>
+    <li><a href="">About Us</a></li>
+    <li><a href="">Support</a></li>
+  </ul>
+
+  <!-- Navbar Profile Section -->
+  <div class="profile-section">
+    <div class="language">
+      <span> ENG</span>
+      <span class="glyphicon glyphicon-menu-down"></span>
+    </div>
+    <div class="profile">
+      <span>Neil</span>
+      <span class="glyphicon glyphicon-user"></span>
+    </div>
+  </div>
+</nav>

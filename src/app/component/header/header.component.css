@@ -1,0 +1,174 @@
+.navbar {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem 2rem;
+    height: 60px;
+  }
+  
+  .menu-icon {
+    display: none;
+    background-color: transparent;
+    border: none;
+    font-size: 3.5vh;
+    cursor: pointer;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-right: 10px;
+  }
+  
+  .logo-image {
+    height: 30px;
+    margin-left: -30px;
+  }
+  
+  .brand-name {
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 4rem;
+  }
+  
+  a.active {
+    font-weight: bold;
+    color: black;
+  }
+  
+  a {
+    color: grey;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .profile-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 8rem;
+  }
+  
+  .language {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    margin-left: 10px;
+    margin-right: -60px;
+    width: 80px;
+    height: 40px;
+    box-shadow: 3px 0px 2px #1D1B2033;
+  }
+  
+  .glyphicon-user {
+    color: transparent;
+    -webkit-text-stroke: 1.5px black;
+  }
+  
+  .profile {
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+    margin-right: -60px;
+  }
+  
+  @media (max-width: 768px) {
+    .menu-icon {
+      display: block;
+    }
+  
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1rem;
+      height: auto;
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      gap: 1.5rem;
+      position: absolute;
+      top: 60px; 
+      left: 0;
+      background-color: white;
+      width: 100%;
+      padding: 1rem;
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+      z-index: 10;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .language, .profile {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  
+    .profile-section {
+      gap: 2rem;
+      margin-top: 1rem;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .navbar {
+      padding: 1rem;
+    }
+  
+    .logo {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+  
+    .logo-image {
+      height: 25px;
+      margin-left: -0;
+    }
+  
+    .brand-name {
+      font-size: 1.2rem;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      gap: 1rem;
+      padding: 0;
+    }
+  
+    .profile-section {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+  
+    .language {
+      width: auto;
+      height: auto;
+      box-shadow: none;
+      gap: 0.5rem;
+    }
+  
+    .profile {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+  
