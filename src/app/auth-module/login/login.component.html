@@ -1,1 +1,26 @@
-<p>logincomponent works!</p>
+<h2 class="text-center mt-5">Welcome, Please Login</h2>  
+<form action="#" method="post">
+  <!-- Email ID -->
+  <div class="form-group mt-4 px-5">
+    <label for="email">Email ID</label>
+    <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required>
+  </div>
+  
+  <!-- Password -->
+  <div class="form-group mt-4 px-5">
+    <label for="password">Password</label>
+    <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" required>
+  </div>
+
+  <!-- Forgot Password Text and Link -->
+  <div class="form-group text-center mt-3">
+    <span style="color: black;">Forgot password? </span>
+    <a href="/auth/reset" class="forgot-password-link">Click here</a>
+    
+  </div>
+  
+  <!-- login Button -->
+  <div class="d-flex justify-content-center mt-4 px-5  ">
+    <button type="submit" class="btn btn-dark round-button" style="width: 100%;">Login</button>
+  </div>
+</form>

@@ -1,0 +1,33 @@
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.container-fluid, .row, .col-md-6 {
+    height: 100vh; 
+}
+.carousel, .carousel-inner, .carousel-item, .carousel-item img {
+    height: 100%; 
+}
+
+.rounded-carousel {
+    border-radius: 15px; 
+    overflow: hidden; 
+  }
+
+  .right-side-content {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    padding: 20px;
+    height: 100%; 
+}
+.left-side-content{
+    background-color: #0066b2;
+    border-radius: 20px;
+    
+
+}
+
