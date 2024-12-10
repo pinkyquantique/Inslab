@@ -6,7 +6,7 @@ import { Component, Input, SimpleChanges } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './dynamic-table.component.html',
-  styleUrl: './dynamic-table.component.css'
+  styleUrl: './dynamic-table.component.scss'
 })
 export class DynamicTableComponent {
   @Input() data: any[] = [];

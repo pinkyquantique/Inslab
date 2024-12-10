@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './forget.component.html',
-  styleUrl: './forget.component.css'
+  styleUrl: './forget.component.scss'
 })
 export class ForgetComponent {
 

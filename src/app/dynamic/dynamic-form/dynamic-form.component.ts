@@ -7,7 +7,7 @@ import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
   standalone: true,
   imports: [ReactiveFormsModule,CommonModule  ],
   templateUrl: './dynamic-form.component.html',
-  styleUrl: './dynamic-form.component.css'
+  styleUrl: './dynamic-form.component.scss'
 })
 export class DynamicFormComponent implements OnInit {
   form: FormGroup;

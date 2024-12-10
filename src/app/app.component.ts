@@ -8,9 +8,10 @@ import { DynamicFormComponent } from './dynamic/dynamic-form/dynamic-form.compon
   standalone: true,
   imports: [RouterOutlet,DynamicTableComponent,DynamicFormComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.scss'
 })
 export class AppComponent {
+  title = 'Inslab';
   tableData = [
     { name: 'John', age: 28 },
     { name: 'Jane', age: 25 },

@@ -6,7 +6,7 @@ import { FormControl, FormGroup } from '@angular/forms';
   standalone: true,
   imports: [],
   templateUrl: './dynamic-input.component.html',
-  styleUrl: './dynamic-input.component.css'
+  styleUrl: './dynamic-input.component.scss'
 })
 export class DynamicInputComponent {
   @Input() field: any;
