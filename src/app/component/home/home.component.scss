@@ -66,32 +66,28 @@
     font-size: 16px;
     display: flex;
     gap: 1rem;
-   
+    align-items: center;
     justify-content: center;
  }
  .contact{
     display: flex;
-    gap: 1rem; 
-    color: #4080E0;
-    font-size: 14px;
-    box-shadow: 3px 0px 2px #1D1B2033;
-  
+    align-items: center;
+    gap: 10px;
+    
+
  }
  .message{
     display: flex;
-    gap: 1rem;
+    align-items: center;
+    gap: 8px;
     
    
  }
- .contact p{
-    color: #4080E0;
-    font-size: 14px;
-    margin-right: 10px;
- }
- .message p{
-    color: #4080E0;
-    font-size: 14px;
-    margin-left: 10px;
+ .contact p, .message p {
+    color:#4080E0;
+    margin: 0; /* Remove default margins from <p> */
+    font-size: 14px; /* Adjust font size if needed */
+    line-height: 1.5; /* Optional: control line height */
 }
 .card-banner {
     display: flex;
@@ -128,11 +124,11 @@
     align-items: center;
     font-size: 14px;
     font-weight: bold;
-    width: 24%;
+    width: 128px;
     height: 35px;
     padding: 9px 10px;
     border-radius: 11px;
-    white-space: nowrap; /* Prevents badge text from wrapping */
+    // white-space: nowrap; /* Prevents badge text from wrapping */
 }
 .badge p{
     margin-left: 30px;
@@ -150,7 +146,7 @@
 }
 
 .Highlight {
-    color: #f7f6ed; /* Bright yellow for highlights */
+    color: #f7f6ed; 
     font-weight: bold;
 }
 
@@ -159,7 +155,7 @@
     line-height: 1.9;
     margin: 0;
     font-weight: 100;
-    color: rgba(227, 225, 225, 0.8); /* Text color for paragraph */
+    color: rgba(227, 225, 225, 0.8); 
 }
 h2{
 
@@ -183,12 +179,81 @@ h6{
     gap: 1rem;
    
 }
+.apply-btn img{
+    width: 20px;
+    margin-top: -139px;
+}
+
+.card-forum {
+    width: 80%;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+}
+
+.forum-question {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.forum-question h6 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.forum-question p {
+    font-size: 16px;
+    color: #666666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.forum-answer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card-answer {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: calc(30% - 10px); 
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-answer:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-answer h6 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333333;
+}
+
+.card-answer p {
+    font-size: 14px;
+    color: #555555;
+    line-height: 1.6;
+    margin: 0;
+}
 
 
 
 
-
-@media(max-width: 768px){
+@media(max-width: 1024px){
     .cards{
         display: block;
     }
@@ -197,14 +262,15 @@ h6{
         flex-direction:column;
         flex-wrap: wrap;
         justify-content: center;
-        margin-left: 100px;
+        margin-left: 200px;
     }
     .card-contact{
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        justify-content: center;
-        margin-left: 150px;
+        align-items: center;
+        // justify-content: center;
+        margin-left: 100px;
     }
     .card-banner{
         display: block;
