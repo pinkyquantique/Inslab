@@ -1,20 +1,63 @@
 
-.container-fluid {
-  width: 100%;
-  padding: 0;
-  margin: 0;
+.step {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 
-.card {
-  width: 100%; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 4px solid #C1D5FF;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #6c757d;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
-.card-body {
-  padding: 30px;
+.circle.active {
+  background-color: #007bff;
+  border: 4px solid #C1D5FF;
+  color: white;
 }
 
+.circle.completed {
+  background-color: #404040;
+  border: 4px solid #C1D5FF;
+  color: white;
+}
+
+
+.pipe {
+  width: 140px;
+  height: 4px;
+  background: linear-gradient(to right, #C1D5FF 0%, #C1D5FF 100%);
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  transition: background 0.3s ease;
+  margin-top: 13px; 
+  margin-left: -4px;
+  margin-right: 4px;
+}
+
+.pipe.completed {
+  background: linear-gradient(to right, #404040 0%, #404040 100%);
+}
+
+
+.step-name {
+  font-size: 14px;
+  color: #6c757d; 
+  margin-top: 8px;
+}
 
 .stepper {
   display: flex;
@@ -31,84 +74,37 @@
 .step {
   position: relative;
   display: flex;
-  //flex-direction: column;
-  align-items: center;
+  flex-direction: column; 
+  align-items: baseline;
 }
 
-.circle {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #f0f0f0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 18px;
-  font-weight: bold;
-  color: #6c757d;
-  transition: background-color 0.3s ease, color 0.3s ease;
+
+.container-fluid {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: #f8f9fa;
 }
 
-.circle.active {
-  background-color: #007bff;
-  color: white;
+
+.card {
+  width: 100%;
+  background-color: #f8f9fa;
+  border: none !important;
 }
 
-.circle.completed {
-  background-color: #28a745;
-  color: white;
-}
-
-.pipe {
-  width: 60px; 
-  height: 4px;
-  background-color: #f0f0f0;
-  transition: background-color 0.3s ease;
-  margin-top: -8px; 
-}
-
-.pipe.completed {
-  background-color: #28a745;
-}
-
-.step + .step {
-  margin-left: 30px; 
-}
 
 button:disabled {
   opacity: 0.5;
 }
 
-
 button {
   width: 100%;
-  max-width: 200px; }
+  max-width: 200px;
+}
 
 
-
-  // .stepper-container {
-  //   border-bottom: 2px solid #ccc;
-  //   padding-bottom: 10px;
-  // }
-  
-  // .stepper {
-  //   list-style: none;
-  //   padding: 0;
-  //   margin: 0 0 10px 0;
-  // }
-  
-  // .stepper li {
-  //   width: 40px;
-  //   height: 40px;
-  //   background-color: #ddd;
-  //   color: #fff;
-  //   line-height: 40px;
-  //   text-align: center;
-  //   border-radius: 50%;
-  //   font-weight: bold;
-  // }
-  
-  // .step.active {
-  //   background-color: #007bff;
-  // }
-  
+.stepper-container {
+  border-bottom: 2px solid #C1D5FF;
+  padding-bottom: 10px;
+}

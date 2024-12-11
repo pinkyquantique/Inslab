@@ -11,7 +11,7 @@ import { Router, RouterModule } from '@angular/router';
 })
 
   export class StepperComponent {
-    steps = [1, 2, 3, 4, 5]; // Example steps
+    steps = [{id:1,name:'Motor Details'}, {id:2,name:'Select Plan'},{id:3,name:'Personal Details'}, {id:4,name:'Checkout'},{id:5,name:'Confirmation'}]; // Example steps
     currentStep = 0;
     completedSteps = [false, false, false, false, false]; // Track completed steps
   

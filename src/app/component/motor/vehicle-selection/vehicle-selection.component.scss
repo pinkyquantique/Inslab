@@ -1,15 +1,38 @@
 .card {
-    border: none;
-    border-radius: 10px;
-  }
-  
-  h2 {
-    font-weight: bold;
-  }
-  
-  p {
-    font-size: 14px;
-  }
-  .carimg{
-    background-color: #404040;
-  }
+  border: none;
+  border-radius: 10px;
+}
+
+.select-cont {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+}
+
+.select-cont-div {
+  padding: 40px 80px;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+p {
+
+  color: var(--text-black-60, #1D1B2099);
+}
+
+.carimg-main {
+  border-radius: 12px;
+  background-color: #404040;
+
+}
+
+.carimg {
+  background-color: #404040;
+  width: 375px;
+  max-width: 375px;
+  overflow: hidden;
+  padding: 111px 72px;
+  border-radius: 12px;
+}
