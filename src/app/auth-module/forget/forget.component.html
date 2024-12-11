@@ -1,13 +1,41 @@
-<h2 class="text-center mt-5">Enter your Email ID</h2>  
-<form action="#" method="post">
+<h2 class="text-center mt-5">Enter your Email ID</h2>
+<form (ngSubmit)="onSubmit()">
   <!-- Email ID -->
   <div class="form-group mt-4 px-5">
     <label for="email">Email ID</label>
-    <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required>
+    <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" [(ngModel)]="email" required>
   </div>
-  
-  <!-- login Button -->
-  <div class="d-flex justify-content-center mt-4 px-5  ">
-    <button type="submit" class="btn btn-dark round-button" style="width: 100%;">Login</button>
+
+  <!-- Submit Button -->
+  <div class="d-flex justify-content-center mt-4 px-5">
+    <button type="submit" class="btn btn-dark round-button" style="width: 100%;">Submit</button>
   </div>
 </form>
+
+<!-- Modal for Success (Valid Email) -->
+<div *ngIf="isValidModalVisible" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <h5 class="modal-title text-center">Password Sent!</h5>
+      <div class="modal-body text-center">
+        <img src="image/Password_Sent_Image.png" alt="Success" class="img-fluid mb-3">
+        <p>Your new password has been <b>sent to your email address.</b> Please check your inbox and use the provided password to log in.</p>
+      </div>
+      <button type="button" class="btn" (click)="closeValidModal()">OK</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Invalid Email -->
+<div *ngIf="isInvalidModalVisible" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <h5 class="modal-title text-center">Invalid Email!</h5>
+      <div class="modal-body text-center">
+        <img src="image/Email_not_Found.png" alt="Error" class="img-fluid mb-3">
+        <p>The Email address You entered is <b>not associated with an account </b>. please verify the email and try again ,or contact support for help.</p>
+      </div>
+      <button type="button" class="btn" (click)="closeInvalidModal()">OK</button>
+    </div>
+  </div>
+</div>
