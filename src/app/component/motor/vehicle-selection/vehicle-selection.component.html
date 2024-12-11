@@ -1,65 +1,38 @@
-<div class="row  select-cont">
-    <!-- Left Section: Image -->
-     <div class="select-cont-div">
-    <div class="col-md-4  text-center ">
-      <div class="carimg" >
+<div class="row select-cont">
+  <!-- Left Section: Image -->
+  <div class="col-md-4 text-center select-cont-div">
+    <div class="carimg">
       <img
         src="/image/Car accesories-amico 1.png"
         alt="Car Illustration"
         class="img-fluid"
-        style="width:100%;height:auto; "
+        style="width:100%;height:auto;"
       />
     </div>
+  </div>
+
+  <!-- Right Section: Text and Cards -->
+  <div class="col-md-8" style="padding-left: 30px;">
+    <div class="mb-4 text-left">
+      <h2 class="fs-2">Let’s get started!</h2>
+      <p class="fs-6">Select motor to purchase or renew the insurance policy.</p>
     </div>
-  
-    <!-- Right Section: Text and Cards -->
-    <div  class="col-md-8" style="padding-left: 30px;">
-      <div class="mb-4 text-left">
-        <h2 class="fs-2">Let’s get started!</h2>
-        <p class="fs-6">Select motor to purchase or renew the insurance policy.</p>
-      </div>
-  
-      <!-- Cards -->
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card shadow-sm">
-            <div class="card-body text-left"  (click)="goToNextStep()">
-              <i class="bi bi-bicycle " > <img src="icons/bike.svg" alt="2-wheeler"/></i>
-              <h5>Two Wheeler</h5>
-              <p fs-6>
-                Motorcycles or Scooters; Secure rides with 2-wheeler insurance:
-                peace of mind, financial protection, hassle-free claims.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card shadow-sm ">
-            <div class="card-body text-left"  (click)="goToNextStep()" >
-              <i class="bi bi-car-front fs-1"><img src="icons/car.svg" alt="2-wheeler"/></i>
-              <h5>Four Wheeler</h5>
-              <p>
-                Cars; Four-wheeler insurance ensures protection: financial
-                security, accident coverage, peace of mind on the road.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card shadow-sm">
-            <div class="card-body text-left"  (click)="goToNextStep()">
-              <i class="bi bi-truck fs-1"><img src="icons/truck.svg" alt="com"/></i>
-              <h5>Commercial</h5>
-              <p>
-                Taxi, Truck, Bus, PCCV, Three Wheelers like Van, Tempo, Auto,
-                Miscellaneous; Get business protection, liability coverage,
-                financial security.
-              </p>
-            </div>
+
+    <!-- Cards Section -->
+    <div class="row g-4">
+      <div
+        class="col-md-4 d-flex"
+      
+        *ngFor="let card of cards"
+      >
+        <div class="card shadow-sm " (click)="goToNextStep(card.type)">
+          <div class="card-body text-left">
+            <img [src]="card.icon" [alt]="card.title" />
+            <h5>{{ card.title }}</h5>
+            <p class="fs-6">{{ card.description }}</p>
           </div>
         </div>
       </div>
     </div>
   </div>
-  </div>
-  
+</div>
