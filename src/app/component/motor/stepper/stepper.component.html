@@ -1,0 +1,49 @@
+<div class="container-fluid mt-10">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <div class="card">
+          <div class="card-body">
+            <!-- Stepper with Circular Numbers and Connecting Pipes -->
+            <div class="stepper">
+              <div class="steps">
+                <!-- Step -->
+                <div *ngFor="let step of steps; let i = index" class="step">
+                  <!-- Circle -->
+                  <div class="circle" [class.active]="i <= currentStep" [class.completed]="completedSteps[i]">
+                    <span *ngIf="completedSteps[i]" class="badge badge-success">✔</span>
+                    <span *ngIf="!completedSteps[i]">{{ i + 1 }}</span>
+                  </div>
+                  <div *ngIf="i < steps.length - 1" class="pipe" [class.completed]="completedSteps[i]"></div>
+                  <!-- Pipe only between steps -->
+                </div>
+              </div>
+            </div>
+  
+            <button class="btn btn-primary mt-4" (click)="submitForm()" [disabled]="currentStep === steps.length - 1">
+              Next
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<router-outlet></router-outlet>
+
+
+<!-- <div class="stepper-container my-3">
+    <ul class="stepper d-flex justify-content-between">
+      <li class="step active">1</li>
+      <li class="step">2</li>
+      <li class="step">3</li>
+      <li class="step">4</li>
+    </ul>
+    <div class="d-flex justify-content-between">
+      <span>Motor Details</span>
+      <span>Select Plan</span>
+      <span>Personal Details</span>
+      <span>Checkout</span>
+      <span>Confirmation</span>
+    </div> -->
+  <!-- </div> -->
+  
