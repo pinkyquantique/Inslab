@@ -87,6 +87,7 @@ a:hover{
         text-align:center;
     }
     .footer-links {
+    margin-top: 10px;
     flex-direction: column;
     align-items: center;
   }
@@ -95,6 +96,7 @@ a:hover{
     flex-direction: column;
     text-align: center;
     gap: 0.5rem;
+    margin-left: 10px;
   }
     
 }
