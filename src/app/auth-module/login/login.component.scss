@@ -6,3 +6,17 @@
   .round-button{
     border-radius: 20px;
   }
+
+
+  @media (max-width: 576px) {
+    #login-btn-container {
+      margin-bottom: 20px; 
+    }
+  }
+  //new
+  // @media (min-width:769px)and  (max-width: 1024px){
+  //   #login-btn-container {
+  //     margin-bottom: 100px; 
+  //   }
+  // }
+ 
