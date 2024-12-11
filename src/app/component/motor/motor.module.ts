@@ -6,7 +6,7 @@ import { VehicleSelectionComponent } from './vehicle-selection/vehicle-selection
 export const baseRoutes: Routes =[
   // { path: 'vehicleselection', component: VehicleSelectionComponent },
    { path: 'vehicleselection', component: VehicleSelectionComponent },
-  // { path: 'home', component: HomeComponent },
+   { path: 'two-wheeler',loadChildren: () => import('./two-wheeler/two-wheeler.module').then(m => m.TwoWheelerModule)} 
  
 ]
 

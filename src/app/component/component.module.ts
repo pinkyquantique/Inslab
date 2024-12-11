@@ -10,7 +10,8 @@ export const baseRoutes: Routes =[
   { path: 'home', component: HomeComponent },
   { path: 'motor', 
     component:StepperComponent,
-      loadChildren: () => import('../component/motor/motor.module').then(m => m.MotorModule) },
+      loadChildren: () => import('../component/motor/motor.module').then(m => m.MotorModule) 
+     },
 ]
 
 
