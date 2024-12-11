@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import {faEnvelope, faPhone, faArrowRight } from '@fortawesome/free-solid-svg-icons';
@@ -11,7 +12,10 @@ import {faEnvelope, faPhone, faArrowRight } from '@fortawesome/free-solid-svg-ic
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-  constructor(library: FaIconLibrary) {
+  constructor(library: FaIconLibrary,private router: Router) {
     library.addIcons(faEnvelope, faPhone, faArrowRight);
+  }
+  motor() {
+  this.router.navigate(['/pages/motor/vehicleselection'])
   }
 }
