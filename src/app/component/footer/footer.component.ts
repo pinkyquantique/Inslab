@@ -1,5 +1,4 @@
-import { isPlatformBrowser } from '@angular/common';
-import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { Component} from '@angular/core';
 
 
 @Component({
@@ -10,4 +9,12 @@ import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
   styleUrl: './footer.component.css'
 })
 export class FooterComponent{
+
+  scrollToTop() : void{
+    window.scrollTo({
+      top:0,
+      behavior:'smooth',
+    });
+
+  }
  }

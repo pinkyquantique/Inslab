@@ -106,66 +106,19 @@
         <span class="article_content">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,
              as opposed to using 'Content here, content here', making it look like readable English.</span>
         <div class="article-card">
-            <div class="art-card">
-                <img src="image/article_image1.png" alt="image1"/>
+            <div *ngFor="let article of articles" class="art-card">
+            <img [src]="article.image" alt="image1"/>
                 <div class="card-headline">
-                    <p>Headlines</p>
+                    <p>{{article.title}}</p>
                     <img src="icons/share.svg" alt="share"/>
                     <img src="icons/menu.svg" alt="menu"/>
                 </div>
                 <div class="card-article-content">
-                    <p>
-                        It is a long established fact that a reader will be distracted by the 
-                        readable content of a page when looking at its layout.
-                         look like readable English. <a>Read more..</a>
+                    <p>{{article.description}}<a href="{{article.link}}">Read more..</a>
                     </p>
                 </div>
             </div>
-            <div class="art-card">
-                <img src="image/article_image2.png" alt="image2"/>
-                <div class="card-headline">
-                    <p>Headlines</p>
-                    <img src="icons/share.svg" alt="share"/>
-                    <img src="icons/menu.svg" alt="menu"/>
-                </div>
-                <div class="card-article-content">
-                    <p>
-                        It is a long established fact that a reader will be distracted by the 
-                        readable content of a page when looking at its layout.
-                         look like readable English. <a>Read more..</a>
-                    </p>
-                </div>
-            </div>
-            <div class="art-card">
-                <img src="image/article_image3.png" alt="image3"/>
-                <div class="card-headline">
-                    <p>Headlines</p>
-                    <img src="icons/share.svg" alt="share"/>
-                    <img src="icons/menu.svg" alt="menu"/>
-                </div>
-                <div class="card-article-content">
-                    <p>
-                        It is a long established fact that a reader will be distracted by the 
-                        readable content of a page when looking at its layout.
-                         look like readable English. <a>Read more..</a>
-                    </p>
-                </div>
-            </div>
-            <div class="art-card">
-                <img src="image/article_image4.png" alt="image4" />
-                <div class="card-headline">
-                    <p>Headlines</p>
-                    <img src="icons/share.svg" alt="share"/>
-                    <img src="icons/menu.svg" alt="menu"/>
-                </div>
-                <div class="card-article-content">
-                    <p>
-                        It is a long established fact that a reader will be distracted by the 
-                        readable content of a page when looking at its layout.
-                         look like readable English. <a>Read more..</a>
-                    </p>
-                </div>
-            </div>
+          
         </div>
         <div class="card-button">
             <button type="button">View more articles</button>
@@ -202,51 +155,21 @@
           <div class="right-section">
             <h3>Read top articles</h3>
             <div class="articles-grid">
-              <div class="explore-card">
-                <img src="image/article_image1.png" alt="Article 1" class="explore-image" />
+              <div *ngFor="let article of articles.slice(0,3)" class="explore-card">
+                <img [src]="article.image" alt="Article 1" class="explore-image" />
                 <div class="explore-content">
                 <div class="explore-content-head">
-                  <h4>Headlines</h4>
+                  <h4>{{article.title}}</h4>
                   <img src="icons/share.svg" alt="share"/>
                     <img src="icons/menu.svg" alt="menu"/>
                 </div>
                   <p>
-                    It is a long established fact that a reader will be distracted by
-                    the readable content of a page when looking at its layout. 
-                    <a href="#">Read more</a>
+                   {{article.description}} <a href="{{article.link}}">Read more...</a>
                   </p>
                 </div>
               </div>
-              <div class="explore-card">
-                <img src="image/article_image2.png" alt="Article 2" class="explore-image" />
-                <div class="explore-content">
-                    <div class="explore-content-head">
-                        <h4>Headlines</h4>
-                        <img src="icons/share.svg" alt="share"/>
-                          <img src="icons/menu.svg" alt="menu"/>
-                      </div>
-                  <p>
-                    It is a long established fact that a reader will be distracted by
-                    the readable content of a page when looking at its layout. 
-                    <a href="#">Read more</a>
-                  </p>
-                </div>
-              </div>
-              <div class="explore-card">
-                <img src="image/article_image3.png" alt="Article 3" class="explore-image" />
-                <div class="explore-content">
-                    <div class="explore-content-head">
-                        <h4>Headlines</h4>
-                        <img src="icons/share.svg" alt="share"/>
-                          <img src="icons/menu.svg" alt="menu"/>
-                      </div>
-                  <p>
-                    It is a long established fact that a reader will be distracted by
-                    the readable content of a page when looking at its layout. 
-                    <a href="#">Read more</a>
-                  </p>
-                </div>
-              </div>
+             
+               
             </div>
           </div>
         </div>

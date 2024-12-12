@@ -17,6 +17,32 @@ export class HomeComponent {
   this.router.navigate(['/pages/motor/vehicleselection'])
   }
 
+  articles=[
+    {
+      title:'Headlines',
+      description:'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout look like readable English.',
+      image: 'image/article_image1.png',
+      link:'#'
+    },
+    {
+      title:'Headlines',
+      description:'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout look like readable English.',
+      image: 'image/article_image2.png',
+      link:'#'
+    },
+    {
+      title:'Headlines',
+      description:'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout look like readable English.',
+      image: 'image/article_image3.png',
+      link:'#'
+    },
+    {
+      title:'Headlines',
+      description:'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout look like readable English.',
+      image: 'image/article_image4.png',
+      link:'#'
+    }
+  ];
   faqs =[
     {
       question: 'Question 01',
