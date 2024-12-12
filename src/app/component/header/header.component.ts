@@ -23,7 +23,7 @@ export class HeaderComponent {
   onDocumentClick(event: Event) {
     const target = event.target as HTMLElement;
     const isClickInsideMenu = document.getElementById('nav-links')?.contains(target);
-
+   
     if (!isClickInsideMenu) {
       this.isMenuOpen = false;
     }

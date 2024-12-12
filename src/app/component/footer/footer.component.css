@@ -77,9 +77,15 @@ a:hover{
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
     margin: 0; 
-    text-align: center;
-    
+    text-align: center; 
   }
+.footer-bottom button{
+    background-color: transparent;
+    border:none;
+}
+.footer-bottom button img{
+    size: 10px;
+}
 @media (max-width: 768px) {
     .footer-content{
         flex-direction: column;

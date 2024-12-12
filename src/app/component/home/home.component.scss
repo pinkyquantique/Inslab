@@ -1,3 +1,6 @@
+*{
+    overflow-x:hidden;
+}
 .container{
     display: flex;
     flex-direction: column;
@@ -49,9 +52,9 @@
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 .card:hover{
-    background: linear-gradient(to bottom, #FFFFFF 0%, #c1ffd9 100%); /* Blue at the top transitioning to green at the bottom */
+    background: linear-gradient(to bottom, #FFFFFF 0%, #c1ffd9 100%); 
     box-shadow: 0  5px rgba(0, 0, 0, 50);
-    // transform: translateY(-5px);
+ 
 }
 .card:hover img {
     filter: hue-rotate(280deg) saturate(100%); 
@@ -91,99 +94,99 @@
 }
 .card-banner {
     display: flex;
-    align-items: flex-start; 
-    justify-content: space-between; 
-    background-color: #212529; 
-    border-radius: 20px;
-    padding: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #212529;
+    border-radius: 120px; /* Slightly reduced border-radius */
+    padding: 3rem; /* Reduced padding */
     margin: 20px auto;
-    width: 80%;
+    width: 90%;
+    max-width: 1200px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .card-banner img {
-    height: 300px; /* Fixed height for the image */
-    width: 300px; /* Fixed width for the image */
+    width: 40%; /* Reduced size for the image */
+    max-width: 350px;
+    height: auto; /* Preserve aspect ratio */
     border-radius: 15px;
 }
 
 .text-container {
     display: flex;
-    flex-direction: column; 
-    justify-content: space-between; 
-    gap: 20px;
+    flex-direction: column;
+    gap: 15px; /* Reduced spacing between elements */
     color: #ded6d6;
-    border-color: white;
+    flex: 1;
+    padding: 0 15px;
+    max-width: 550px; /* Reduced max-width of the text container */
+    box-sizing: border-box;
+}
+
+.badge-container {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .badge {
-    display: flex;
-    background: #C1D5FF;
-    border: 3px solid white;
-    color: #1D1B20;
+    display: inline-flex;
     align-items: center;
-    font-size: 14px;
-    font-weight: bold;
-    width: 128px;
-    height: 35px;
-    padding: 9px 10px;
-    border-radius: 11px;
-    // white-space: nowrap; /* Prevents badge text from wrapping */
-}
-.badge p{
-    margin-left: 30px;
-    margin-top: 10px;
-    font-size: 1.5rem;
-    color: rgba(227, 225, 225, 0.8);
+    justify-content: center;
+    background: #C1D5FF;
+    border: 2px solid white;
+    color: #1D1B20;
+    font-size: 9px;
+    height: 25px;
+    padding: 0 6px;
+    border-radius: 8px;
+    white-space: nowrap;
 }
 
-.text-content h2 {
-    font-size: 1.8rem;
-    line-height: 1.3;
-    gap: 2rem;
+.terms-conditions p{
+    font-size: 13px;
+    color: #d5d0dd;
     margin: 0;
-    
+    align-self: center;
+    white-space: nowrap;
+}
+.text-container h2 {
+    font-size: 2.2rem; /* Reduced font size */
+    line-height: 1.2; /* Reduced line height */
+    margin: 0;
+    text-align: left;
 }
 
 .Highlight {
-    color: #f7f6ed; 
+    color: #f7f6ed;
     font-weight: bold;
 }
 
-.text-content h6 {
-    font-size: 1.2rem;
-    line-height: 1.9;
+.text-container h6 {
+    font-size: 0.9rem; /* Reduced font size */
+    line-height: 1.4; /* Adjusted line height */
     margin: 0;
-    font-weight: 100;
-    color: rgba(227, 225, 225, 0.8); 
-}
-h2{
-
-    line-height: 1.3;
-}
-h6{
-    line-height: 1.6;
+    color: rgba(227, 225, 225, 0.8);
 }
 
 .apply-btn {
     background-color: transparent;
     color: white;
-    border: none;
-    width: 40%;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1.4rem;
+    padding: 8px 16px; /* Reduced padding */
+    font-size: 0.9rem; /* Reduced font size */
     cursor: pointer;
-    margin-left: -20px;
     display: flex;
-    gap: 1rem;
-   
-}
-.apply-btn img{
-    width: 20px;
-    margin-top: -139px;
+    align-items: center;
+    gap: 0.5rem;
+    max-width: fit-content;
+    margin-left: 0;
 }
 
+.apply-btn img {
+    width: 14px; /* Reduced size of the icon */
+    height: 14px;
+}
 .card-forum {
     width: 80%;
     background-color: #ffffff;
@@ -249,33 +252,281 @@ h6{
     line-height: 1.6;
     margin: 0;
 }
+// Article-div css
+.card-article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+    max-width: 3000px;
+    min-height: 100vh;
+    background-color: #212529;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+}
+
+.article_title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.article_content {
+    color: #FFFFFF;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 20px;
+    max-width: 900px;
+}
+
+.article-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.art-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    width: 26rem;
+    height: 400px;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.art-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-headline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-weight: bold;
+   
+}
+
+.card-headline img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-left: 25px; 
+}
+
+.card-article-content {
+    padding: 6px;
+    font-size: 0.5rem;
+    color: #333;
+}
+.card-article-content p{
+    font-size: 1.5rem;
+    font-family: "Roboto", sans-serif;
+}
+
+.card-article-content a {
+    color: #4080E0;
+    text-decoration: underline;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.card-button {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.card-button button {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
 
 
 
-
-@media(max-width: 1024px){
-    .cards{
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+    .cards {
         display: block;
+        width: 100%;
+        margin-left: 140px;
     }
-    .card{
-        display: flex;
-        flex-direction:column;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-left: 200px;
-    }
-    .card-contact{
+
+    .card {
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
+        justify-content: center;
         align-items: center;
-        // justify-content: center;
-        margin-left: 100px;
+        margin: 20px 0; /* Adds spacing between cards */
     }
-    .card-banner{
-        display: block;
+
+    .card-contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        margin-bottom: 20px; /* Adds space below contact section */
     }
-    .badge{
-        position: relative;
+
+    .card-banner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        width: 100%; /* Ensures the banner does not overflow */
+        padding: 15px;
+        box-sizing: border-box; /* Ensures padding doesn't affect the width */
+    }
+
+    .card-banner img {
+        max-width: 100%;
+        height: auto; /* Keeps the aspect ratio of the image */
+        margin-bottom: 15px; /* Adds spacing between image and other content */
+    }
+
+
+    .text-container {
+        max-width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+     .badge-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .terms-conditions {
+        margin-top: 4px;
+        text-align: center;
+    }
+
+    .apply-btn {
+        margin: 10px auto;
+        font-size: 1rem;
+    }
+    .article-card {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .article_content {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    .card-button button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+}
+
+
+
+
+/* For screens between 480px and 768px */
+@media (min-width: 480px) and (max-width: 767px) {
+    .card-banner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .card-banner img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .text-container h2 {
+        font-size: 2.5rem;
+    }
+
+    .terms-conditions {
+        text-align: left;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .text-container h6 {
+        font-size: 1.8rem;
+    }
+
+    .apply-btn {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+    .article_title {
+        font-size: 20px;
+    }
+
+    .article_content {
+        font-size: 12px;
+    }
+
+    .card-article-content {
+        font-size: 12px;
+    }
+
+    .card-button button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+}
+
+/* For screens larger than 768px */
+@media (min-width: 768px) {
+    .card-banner {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: auto;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .card-banner img {
+        max-width: 50%; /* Adjust image size for larger screens */
+        height: auto;
+        margin-right: 20px; /* Adds spacing between image and content */
+    }
+
+    .text-container {
+        max-width: 100%;
+        text-align: left;
+    }
+
+    .text-container h2 {
+        font-size: 3rem;
+    }
+
+    .text-container h6 {
+        font-size: 2rem;
+    }
+
+    .apply-btn {
+        font-size: 1.1rem;
+        padding: 10px 20px;
     }
 }
