@@ -171,4 +171,96 @@
             <button type="button">View more articles</button>
         </div>
      </div>
+     <!-- FAQs -->
+      <div class="faq-container">
+        <h2>FAQs</h2>
+        <p>Discover answer to common insurance questions.</p>
+        <div *ngFor="let faq of faqs; let i = index" class="faq-item">
+            <div class="faq-question" (click)="toggleFAQ(i)">
+                <h3> Question 0{{i+1}} </h3>
+                <img [src]="faq.isOpen ? 'icons/minus.svg' : 'icons/plus.svg'"
+                alt="toggle icon"
+                class="toggle-icon"/>
+            </div>
+            <div class="faq-answer" *ngIf="faq.isOpen">
+                {{faq.answer}}
+            </div>
+        </div>
+      </div>
+      <div class="explore-container">
+        <div class="left-section">
+            <h2>Explore Our Top Articles!</h2>
+            <p>
+              It is a long established fact that a reader will be distracted by the
+              readable content of a page when looking at its layout. The point of using
+              Lorem Ipsum is that it has a more-or-less normal distribution of letters,
+              as opposed to using 'Content here, content here', making it look like
+              readable English.
+            </p>
+            <a href="#" class="view-more-link">View more articles →</a>
+          </div>
+          <div class="right-section">
+            <h3>Read top articles</h3>
+            <div class="articles-grid">
+              <div class="explore-card">
+                <img src="image/article_image1.png" alt="Article 1" class="explore-image" />
+                <div class="explore-content">
+                <div class="explore-content-head">
+                  <h4>Headlines</h4>
+                  <img src="icons/share.svg" alt="share"/>
+                    <img src="icons/menu.svg" alt="menu"/>
+                </div>
+                  <p>
+                    It is a long established fact that a reader will be distracted by
+                    the readable content of a page when looking at its layout. 
+                    <a href="#">Read more</a>
+                  </p>
+                </div>
+              </div>
+              <div class="explore-card">
+                <img src="image/article_image2.png" alt="Article 2" class="explore-image" />
+                <div class="explore-content">
+                    <div class="explore-content-head">
+                        <h4>Headlines</h4>
+                        <img src="icons/share.svg" alt="share"/>
+                          <img src="icons/menu.svg" alt="menu"/>
+                      </div>
+                  <p>
+                    It is a long established fact that a reader will be distracted by
+                    the readable content of a page when looking at its layout. 
+                    <a href="#">Read more</a>
+                  </p>
+                </div>
+              </div>
+              <div class="explore-card">
+                <img src="image/article_image3.png" alt="Article 3" class="explore-image" />
+                <div class="explore-content">
+                    <div class="explore-content-head">
+                        <h4>Headlines</h4>
+                        <img src="icons/share.svg" alt="share"/>
+                          <img src="icons/menu.svg" alt="menu"/>
+                      </div>
+                  <p>
+                    It is a long established fact that a reader will be distracted by
+                    the readable content of a page when looking at its layout. 
+                    <a href="#">Read more</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Email Section -->
+        <div class="email-section">
+            <div class="email-content">
+              <h2>Would you like to be part of the change?</h2>
+              <p>Contact us to get the whole idea!</p>
+            </div>
+            <div class="email-input-wrapper">
+              <input type="email" placeholder="Enter email id" class="email-input" />
+              <button class="email-button">
+                <img src="icons/mail.svg" alt="Send Email" />
+              </button>
+            </div>
+          </div>
 </div>
