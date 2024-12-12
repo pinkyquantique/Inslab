@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { ChangeDetectorRef, Component, EventEmitter, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SharedService } from '../shared.service';
@@ -12,8 +12,8 @@ import { CommonModule } from '@angular/common';
   styleUrl: './vehicle-selection.component.scss'
 })
 export class VehicleSelectionComponent {
-  constructor(private router: Router,private _sharedService: SharedService) { }  // Inject the Router into your constructor
-  @Output() stepChange = new EventEmitter<void>();
+  constructor(private router: Router,private _sharedService: SharedService,  private cdr: ChangeDetectorRef) { }  // Inject the Router into your constructor
+  
 
   cards = [
     {
@@ -35,16 +35,20 @@ export class VehicleSelectionComponent {
       description: 'Taxi, Truck, Bus, PCCV, Three Wheelers like Van, Tempo, Auto, Miscellaneous; Get business protection, liability coverage, financial security.'
     }
   ];
+  ngOnInit() {
+    // this._sharedService.emitChange(0);
+    // this.cdr.detectChanges();
+  }
 
+  
+  ngAfterViewInit() {
+    this._sharedService.emitChange(0);
+  }
 
   goToNextStep(type:string) {
-    console.log(1,'click')
-    this._sharedService.emitChange("Data from child"); // Emit the next step index
+  
     this.router.navigate(['/pages/motor/two-wheeler/motor-detail'])
   }
-  // Method to navigate to the next step
-  nextStep() {
-    this.router.navigate(['/step2']); // Navigate to the next step route
-  }
+ 
 
 }

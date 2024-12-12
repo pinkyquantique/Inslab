@@ -1,0 +1,17 @@
+<div [formGroup]="form" class="mb-3">
+  <label>{{ field.label }}</label>
+  <div *ngFor="let option of field.options" >
+    <div class="form-check">
+      <input
+        type="radio"
+        [value]="option.value"
+        [formControlName]="field.name"
+        id="{{ field.name + option.value }}"
+        class="form-check-input"
+      />
+      <label class="form-check-label" for="{{ field.name + option.value }}">
+        {{ option.label }}
+      </label>
+    </div>
+  </div>
+</div>

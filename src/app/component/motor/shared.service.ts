@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { BehaviorSubject, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SharedService {
-  private emitChangeSource = new Subject<any>();
-  changeEmitted$ = this.emitChangeSource.asObservable();
-  constructor() { }
-  emitChange(change: any) {
-    this.emitChangeSource.next(change);
-}
+   stepSubject = new BehaviorSubject<number>(0);  // Default starting step
+  changeEmitted$ = this.stepSubject.asObservable();  // Observable to listen to changes
+
+  emitChange(stepIndex: number) {
+    this.stepSubject.next(stepIndex);  // Emit a new step index
+  }
 }

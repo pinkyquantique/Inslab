@@ -1,27 +1,38 @@
-<form [formGroup]="form" (ngSubmit)="onSubmit()">
-    <div *ngFor="let field of fields">
-      <label>{{ field.label }}</label>
-  
-      <div [ngSwitch]="field.type">
-        <input *ngSwitchCase="'text'" [formControlName]="field.name" type="text" class="form-control" />
-        <input *ngSwitchCase="'email'" [formControlName]="field.name" type="email" class="form-control" />
-        <input *ngSwitchCase="'checkbox'" [formControlName]="field.name" type="checkbox" />
-        <div *ngSwitchCase="'radio'">
-          <div *ngFor="let option of field.options">
-            <label>
-              <input [formControlName]="field.name" type="radio" [value]="option" />
-              {{ option }}
-            </label>
-          </div>
-        </div>
-        <div *ngSwitchCase="'select'">
-          <select [formControlName]="field.name" class="form-control">
-            <option *ngFor="let option of field.options" [value]="option">{{ option }}</option>
-          </select>
-        </div>
+<div class="container mt-4">
+  <form [formGroup]="form" (ngSubmit)="submitForm()">
+    <div class="row">
+      <div *ngFor="let field of schema" class="col-12 col-md-6 mb-3">
+        <ng-container [ngSwitch]="field.type">
+          <!-- Text input -->
+          <app-dynamic-input
+            *ngSwitchCase="'text'"
+            [field]="field"
+            [form]="form">
+          </app-dynamic-input>
+
+          <!-- Select input -->
+          <app-dynamic-select
+            *ngSwitchCase="'select'"
+            [field]="field"
+            [form]="form">
+          </app-dynamic-select>
+
+          <!-- Radio input -->
+          <app-dynamic-radio
+            *ngSwitchCase="'radio'"
+            [field]="field"
+            [form]="form">
+          </app-dynamic-radio>
+        </ng-container>
       </div>
     </div>
-  
-    <button type="submit" class="btn btn-primary">Submit</button>
+
+    <!-- Submit Button -->
+    <button 
+      type="submit" 
+      [disabled]="form.invalid" 
+      class="btn btn-primary">
+      Submit
+    </button>
   </form>
-  
+</div>

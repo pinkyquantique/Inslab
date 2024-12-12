@@ -8,11 +8,11 @@
               <div *ngFor="let step of steps; let i = index" class="step">
                 <div style="display: flex; flex-direction: row; align-items: center;">
                   <div class="circle" [class.active]="i <= currentStep" [class.completed]="completedSteps[i]">
-                    <span *ngIf="completedSteps[i]" class="badge badge-success">{{ i + 1 }}</span>
+                    <span *ngIf="completedSteps[i]" class=" badge-success">{{ i + 1 }}</span>
                     <span *ngIf="!completedSteps[i]">{{ i + 1 }}</span>
                   </div>
 
-                  <div *ngIf="i < steps.length - 1" class="pipe" [class.completed]="completedSteps[i]"></div>
+                  <div *ngIf="i < steps.length - 1" class="pipe" [class.active]="i <= currentStep"  [class.completed]="completedSteps[i]"></div>
                 </div>
 
                 <div class="step-name">{{ step.name }}</div>

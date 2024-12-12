@@ -1,23 +1,15 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-dynamic-input',
   standalone: true,
-  imports: [],
+  imports: [CommonModule,ReactiveFormsModule],
   templateUrl: './dynamic-input.component.html',
-  styleUrl: './dynamic-input.component.scss'
+  styleUrls: ['./dynamic-input.component.scss']
 })
 export class DynamicInputComponent {
+  @Input() form: any;
   @Input() field: any;
-  @Input() form: FormGroup | undefined;
-
-  ngOnInit() {
-    // Ensure form is defined before adding control
-    if (this.form && this.field) {
-      this.form.addControl(this.field.name, new FormControl(''));
-    } else {
-      console.warn('Form or field is not defined!');
-    }
-  }
 }
