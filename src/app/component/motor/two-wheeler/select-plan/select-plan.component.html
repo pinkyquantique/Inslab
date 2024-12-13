@@ -35,4 +35,30 @@
     </div>
       </div>
     </div>
- 
+
+ <div class="quotation-container">
+    <div class="filter-right-container">
+        <div class="price-container">
+            <h2>Ex Showroom Price</h2>
+            <input type="text" placeholder="1195044"/>
+        </div>
+        <div class="idv-container">
+            <div class="header">
+                <h3> IDV (Insured Value)</h3>
+                <p class="note">NOTE: IDV PRICE BETWEEN 463239 TO 959898</p>
+            </div>
+            <div class="slider-container">
+                <label for="idv-slider" class="slider-label">Lowest IDV: (from )</label>
+                <input type="range" id="idv_slider" min="{{minValue}}" max="{{maxValue}}" [(ngModel)]="currentValue" (input)="onSliderChange()" class="slider"/>
+            </div>
+            <div class="slider-value">
+                <span class="min-value">₹ {{ minValue }}</span>
+                <span class="current-value">₹ {{ currentValue }}</span>
+                <span class="max-value">₹ {{ maxValue }}</span>
+            </div>
+        </div>
+    </div>
+    <div class="quotation-display-left-container">
+
+    </div>
+ </div>
