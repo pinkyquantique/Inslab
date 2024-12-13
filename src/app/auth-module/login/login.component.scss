@@ -1,4 +1,7 @@
 
+*{
+  font-family: "roboto, sans serif";
+}
   .forgot-password-link {
     color: blue;
     text-decoration: underline;
@@ -13,10 +16,5 @@
       margin-bottom: 20px; 
     }
   }
-  //new
-  // @media (min-width:769px)and  (max-width: 1024px){
-  //   #login-btn-container {
-  //     margin-bottom: 100px; 
-  //   }
-  // }
+ 
  

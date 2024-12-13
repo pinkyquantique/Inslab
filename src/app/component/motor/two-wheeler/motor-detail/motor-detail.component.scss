@@ -1,0 +1,40 @@
+/* General card styles */
+.policy-card {
+    border: 1px solid transparent; /* Start with a transparent border */
+    border-radius: 10px;
+    transition: border-color 0.3s ease;
+    margin-bottom: 2rem;
+    height: 8rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adding black shadow */
+}
+
+/* Style for large radio button */
+.large-radio {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-bottom: 3.5rem;
+}
+
+/* Center radio button vertically and align it to the left of the text */
+.radio-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align radio button to the left */
+    margin-right: 1rem; /* Space between radio button and text */
+}
+
+/* Adjust alignment for radio button and text */
+.form-check-input {
+    margin-left: 0;
+}
+
+/* Adjust margin and spacing for the text */
+.form-check-label h2 {
+    margin-bottom: 0.5rem;
+    margin-left: 1rem; /* Add left margin to create space between text and radio button */
+}
+
+/* Change the card border color when radio button is selected */
+.policy-card.selected {
+    border-color: blue !important; /* Add class to the parent card when selected */
+}
