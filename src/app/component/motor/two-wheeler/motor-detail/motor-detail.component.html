@@ -9,7 +9,7 @@
     <div class="row">
         <div class="col-md-6">
             <div class="card policy-card" [ngClass]="{'selected': selectedPolicy === 'new'}" id="new-policy" (click)="onRadioSelect('new')">
-                <div class="card-body d-flex align-items-center">
+                <div class="card-body d-flex  align-items-center">
                     <div class="form-check mr-3 radio-wrapper">
                         <input class="form-check-input large-radio" type="radio" name="policyType" id="newRadio" value="new" (click)="onRadioSelect('new')">
                     </div>
@@ -84,7 +84,7 @@
                         <div class="form-check mr-3 radio-wrapper">
                             <input class="form-check-input large-radio" type="radio" name="policyType" id="newRadio" value="Individual" (click)="onRadioSelect('Individual')">
                         </div>
-                        <div>
+                        <div >
                             <label class="form-check-label" for="individualRadio">
                                <h5><b>Individual</b></h5>
                             </label>
@@ -131,27 +131,27 @@
     <div class="container mt-5 ">
         <div class="row">
             <div class="col">
-                <div class="card policy-card" [ngClass]="{'selected': selectedPolicy === 'none'}" id="new-policy" (click)="onRadioSelect('none')">
+                <div class="card h-card policy-card" [ngClass]="{'selected': selectedPolicy === 'none'}" id="new-policy" (click)="onRadioSelect('none')">
                     <div class="card-body d-flex align-items-center">
                         <div class="form-check mr-3 radio-wrapper">
-                            <input class="form-check-input large-radio" type="radio" name="policyType" id="newRadio" value="none" (click)="onRadioSelect('none')">
+                            <input class="form-check-input large-radio mt-3" type="radio" name="policyType" id="newRadio" value="none" (click)="onRadioSelect('none')">
                         </div>
                         <div>
-                            <label class="form-check-label" for="noneRadio">
-                               <h5><b>none</b></h5>
+                            <label class="form-check-label mb-5" for="noneRadio">
+                               <h5 ><b>none</b></h5>
                             </label>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card policy-card" [ngClass]="{'selected': selectedPolicy === '1 year CPA'}"  id="renew-policy" (click)="onRadioSelect('1 year CPA')">
+                <div class="card  h-card policy-card" [ngClass]="{'selected': selectedPolicy === '1 year CPA'}"  id="renew-policy" (click)="onRadioSelect('1 year CPA')">
                     <div class="card-body d-flex align-items-center">
                         <div class="form-check mr-3 radio-wrapper">
-                            <input class="form-check-input large-radio" type="radio" name="policyType" id="renewRadio" value="1 year CPA" >
+                            <input class="form-check-input large-radio mt-3" type="radio" name="policyType" id="renewRadio" value="1 year CPA" >
                         </div>
                         <div>
-                            <label class="form-check-label" for="1yearRadio">
+                            <label class="form-check-label mb-5" for="1yearRadio">
                                 <h5><b>1 year CPA</b></h5>
                             </label>
                         </div>
@@ -160,13 +160,13 @@
             </div>
 
             <div class="col">
-                <div class="card policy-card" [ngClass]="{'selected': selectedPolicy === '3 year CPA'}"  id="renew-policy" (click)="onRadioSelect('3 year CPA')">
+                <div class="card h-card policy-card" [ngClass]="{'selected': selectedPolicy === '3 year CPA'}"  id="renew-policy" (click)="onRadioSelect('3 year CPA')">
                     <div class="card-body d-flex align-items-center">
                         <div class="form-check mr-3 radio-wrapper">
-                            <input class="form-check-input large-radio" type="radio" name="policyType" id="renewRadio" value="3 year CPA" >
+                            <input class="form-check-input large-radio mt-3" type="radio" name="policyType" id="renewRadio" value="3 year CPA" >
                         </div>
                         <div>
-                            <label class="form-check-label" for="3yearRadio">
+                            <label class="form-check-label mb-5" for="3yearRadio">
                                 <h5 class="padding"><b>3 year CPA</b></h5>
                             </label>
                         </div>
