@@ -1,0 +1,125 @@
+.card-container {
+    background-color: #f8faff;
+    border: 2px solid #C1D5FF;
+    border-radius: 10px;
+    max-width: 1300px;
+    margin: 20px auto;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* width: 90%; */
+    box-sizing: border-box;
+    overflow: hidden; 
+  }
+  
+  .card-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap; 
+    /* gap: 0.8rem;  */
+  }
+  
+  .card-item {
+    text-align: center;
+    flex: 1; 
+    min-width: 120px; 
+    margin: 8px;
+  }
+  
+  h5 {
+    font-size: 12px;
+    color: #6b7280;
+    margin-bottom: 4px;
+  }
+  
+  p {
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    color: #1D1B20;
+    margin: 0;
+  }
+  
+  .divider {
+    width: 1px;
+    height: 80px;
+    border: 1px solid #C1D5FF;
+    margin: 0 16px;
+  }
+  
+  .actions-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end; /* Align to the right */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    flex: 1; /* Allow space sharing */
+    gap: 16px; /* Add spacing between items */
+  }
+  
+  .view-previous {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .edit-btn {
+    background-color: transparent;
+    color: #1D1B20;
+    border: 1px solid #1D1B20;
+    padding: 6px 16px;
+    border-radius: 18px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .navigation {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1rem;
+    color: #1D1B20;
+  }
+  
+  .nav-icon {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+  }
+  
+  
+  
+  /* Responsive Design for screens smaller than 768px */
+@media (max-width: 768px) {
+    .card-container{
+        width: 60%;
+    }
+    .card-content {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center align content */
+        gap: 10px; /* Add space between items */
+    }
+
+    .divider {
+        width: 60%; /* Make the divider horizontal */
+        height: 1px; /* Make the divider horizontal */
+        margin: 16px 0; /* Add margin for spacing */
+    }
+
+    .actions-container {
+        flex-direction: column; /* Stack the action buttons vertically */
+        align-items: center;
+        justify-content: center;
+        gap: 16px; /* Space between action buttons */
+        width: 50%; /* Make sure it spans the full width */
+    }
+
+    .view-previous {
+        flex-direction: row; /* Keep the "View Previous Edit" text and arrows in a row */
+        gap: 8px;
+        justify-content: center; /* Center align the view previous section */
+    }
+
+    .edit-btn {
+        width: 50%; /* Make the button span full width */
+    }
+}
