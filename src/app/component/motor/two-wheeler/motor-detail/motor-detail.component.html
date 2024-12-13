@@ -1,5 +1,10 @@
 <app-searchbar></app-searchbar>
-
+<!-- first div -->
+<div>
+<div class="headline">
+    <h3><b>Select policy type and plan.</b></h3>
+    <p>Fresh start or seamless renewal? Your motor insurance choice today?</p>
+</div>
 <div class="container mt-5 ">
     <div class="row">
         <div class="col-md-6">
@@ -12,31 +17,162 @@
                         <label class="form-check-label" for="newRadio">
                            <h5><b>New</b></h5>
                         </label>
-                        <p>Fresh start for your motor insurance policy.</p>
+                        <p>Select ‘New’ if you want to purchase insurance.</p>
                     </div>
                 </div>
             </div>
         </div>
         <div class="col-md-6">
-            <div class="card policy-card" [ngClass]="{'selected': selectedPolicy === 'renew'}" id="renew-policy" (click)="onRadioSelect('renew')">
+            <div class="card policy-card" [ngClass]="{'selected': selectedPolicy === 'Renew'}"  id="renew-policy" (click)="onRadioSelect('Renew')">
                 <div class="card-body d-flex align-items-center">
                     <div class="form-check mr-3 radio-wrapper">
-                        <input class="form-check-input large-radio" type="radio" name="policyType" id="renewRadio" value="renew" (click)="onRadioSelect('renew')">
+                        <input class="form-check-input large-radio" type="radio" name="policyType" id="renewRadio" value="renew" >
                     </div>
                     <div>
                         <label class="form-check-label" for="renewRadio">
                             <h5><b>Renew</b></h5>
                         </label>
-                        <p>Seamless renewal of your existing policy.</p>
+                        <p>Select ‘Renew’ if you want to renew your previous policy.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div class="dynamic-form-container">
+</div>
+<!-- second div -->
+<div>
+    <p style="margin-left: 10rem;">Select exclusive <strong>renewal plans</strong> as per your requirement.</p>
+    <div class="container mt-5  renewal-section">
+        <div class="row ">
+            <div class="col-md-6 ">
+                <div class="card info-card" id="renewal-info1">
+                    <div class="card-body d-flex h-25 mb-3 align-items-center">
+                        <div>
+                            <h5><b>Bundled</b></h5>
+                            <p>5 Year OD (Own Damage).</p>
+                            <p>5 Year TP (Third Party Damage).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card info-card" id="renewal-info2">
+                    <div class="card-body d-flex  h-25 mb-3 align-items-center">
+                        <div>
+                            <h5><b>Comprehensive</b></h5>
+                            <p>1 Year OD (Own Damage).</p>
+                            <p>3 Year TP (Third Party Damage).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<!-- Third Div  -->
+<div>
+    <div class="headline">
+        <h3><b>Select policy holder type.</b></h3>
+    </div>
+    <div class="container mt-5 ">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card policy-card" [ngClass]="{'selected': selectedPolicy === 'Individual'}" id="new-policy" (click)="onRadioSelect('Individual')">
+                    <div class="card-body d-flex align-items-center">
+                        <div class="form-check mr-3 radio-wrapper">
+                            <input class="form-check-input large-radio" type="radio" name="policyType" id="newRadio" value="Individual" (click)="onRadioSelect('Individual')">
+                        </div>
+                        <div>
+                            <label class="form-check-label" for="individualRadio">
+                               <h5><b>Individual</b></h5>
+                            </label>
+                            <p>Select ‘Individual’ if you want to purchase insurance policy for yourself.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card policy-card" [ngClass]="{'selected': selectedPolicy === 'Corporate'}"  id="renew-policy" (click)="onRadioSelect('Corporate')">
+                    <div class="card-body d-flex align-items-center">
+                        <div class="form-check mr-3 radio-wrapper">
+                            <input class="form-check-input large-radio" type="radio" name="policyType" id="renewRadio" value="Corporate" >
+                        </div>
+                        <div>
+                            <label class="form-check-label" for="corporateRadio">
+                                <h5><b>Corporate</b></h5>
+                            </label>
+                            <p>Select ‘Corporate’ if organization wants to make an insurance policy purchase.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Fourth div -->
+
+<!-- <div class="dynamic-form-container">
     <app-dynamic-form
       [config]="config"
       (ngSubmit)="onFormSubmit($event)"
     ></app-dynamic-form>
-  </div>
+  </div> -->
+
+  <!-- Fifth div -->
+
+  <div>
+    <div class="headline">
+        <h3><b>Compulsory Personal Accident (CPA) Cover</b></h3>
+        <p>Select CPA term.</p>
+    </div>
+    <div class="container mt-5 ">
+        <div class="row">
+            <div class="col">
+                <div class="card policy-card" [ngClass]="{'selected': selectedPolicy === 'none'}" id="new-policy" (click)="onRadioSelect('none')">
+                    <div class="card-body d-flex align-items-center">
+                        <div class="form-check mr-3 radio-wrapper">
+                            <input class="form-check-input large-radio" type="radio" name="policyType" id="newRadio" value="none" (click)="onRadioSelect('none')">
+                        </div>
+                        <div>
+                            <label class="form-check-label" for="noneRadio">
+                               <h5><b>none</b></h5>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card policy-card" [ngClass]="{'selected': selectedPolicy === '1 year CPA'}"  id="renew-policy" (click)="onRadioSelect('1 year CPA')">
+                    <div class="card-body d-flex align-items-center">
+                        <div class="form-check mr-3 radio-wrapper">
+                            <input class="form-check-input large-radio" type="radio" name="policyType" id="renewRadio" value="1 year CPA" >
+                        </div>
+                        <div>
+                            <label class="form-check-label" for="1yearRadio">
+                                <h5><b>1 year CPA</b></h5>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card policy-card" [ngClass]="{'selected': selectedPolicy === '3 year CPA'}"  id="renew-policy" (click)="onRadioSelect('3 year CPA')">
+                    <div class="card-body d-flex align-items-center">
+                        <div class="form-check mr-3 radio-wrapper">
+                            <input class="form-check-input large-radio" type="radio" name="policyType" id="renewRadio" value="3 year CPA" >
+                        </div>
+                        <div>
+                            <label class="form-check-label" for="3yearRadio">
+                                <h5 class="padding"><b>3 year CPA</b></h5>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
