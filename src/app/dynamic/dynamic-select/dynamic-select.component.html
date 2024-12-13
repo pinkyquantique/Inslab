@@ -1,17 +1,6 @@
-<div [formGroup]="form" class="mb-3">
-    <label for="{{ field.name }}" class="form-label">{{ field.label }}</label>
-    <select
-      [formControlName]="field.name"
-      id="{{ field.name }}"
-      class="form-select">
-      <option *ngFor="let option of field.options" [value]="option.value">
-        {{ option.label }}
-      </option>
-    </select>
-    <div *ngIf="form.get(field.name)?.invalid && form.get(field.name)?.touched" class="text-danger">
-      <div *ngIf="form.get(field.name)?.errors?.['required']">
-        {{ field.label }} is required.
-      </div>
-    </div>
-  </div>
-  
+<div [formGroup]="formGroup" class="form-group">
+  <label [for]="config.name">{{ config.label }}</label>
+  <select [id]="config.name" [formControlName]="config.name">
+    <option *ngFor="let option of config.options" [value]="option">{{ option }}</option>
+  </select>
+</div>

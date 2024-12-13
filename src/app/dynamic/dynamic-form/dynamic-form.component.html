@@ -1,38 +1,48 @@
-<div class="container mt-4">
-  <form [formGroup]="form" (ngSubmit)="submitForm()">
-    <div class="row">
-      <div *ngFor="let field of schema" class="col-12 col-md-6 mb-3">
-        <ng-container [ngSwitch]="field.type">
-          <!-- Text input -->
-          <app-dynamic-input
-            *ngSwitchCase="'text'"
-            [field]="field"
-            [form]="form">
-          </app-dynamic-input>
 
-          <!-- Select input -->
-          <app-dynamic-select
-            *ngSwitchCase="'select'"
-            [field]="field"
-            [form]="form">
-          </app-dynamic-select>
+      <!-- dynamic-form.component.html -->
 
-          <!-- Radio input -->
-          <app-dynamic-radio
-            *ngSwitchCase="'radio'"
-            [field]="field"
-            [form]="form">
-          </app-dynamic-radio>
-        </ng-container>
-      </div>
-    </div>
+<form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+  <div class="form-row">
+    <ng-container *ngFor="let field of config">
+      <ng-container [ngSwitch]="field.type">
+        <div class="form-field" [ngClass]="{ 'half-width': isHalfWidth(field) }">
+      <!-- Text Input -->
+      <app-dynamic-input
+        *ngSwitchCase="'text'"
+        [config]="field"
+        [formGroup]="formGroup"
+      ></app-dynamic-input>
 
-    <!-- Submit Button -->
-    <button 
-      type="submit" 
-      [disabled]="form.invalid" 
-      class="btn btn-primary">
-      Submit
-    </button>
-  </form>
-</div>
+      <!-- Select Input -->
+      <app-dynamic-select
+        *ngSwitchCase="'select'"
+        [config]="field"
+        [formGroup]="formGroup"
+      ></app-dynamic-select>
+
+      <!-- Radio Group -->
+      <app-dynamic-radio
+        *ngSwitchCase="'radio'"
+        [config]="field"
+        [formGroup]="formGroup"
+      ></app-dynamic-radio>
+
+      <!-- Checkbox Group -->
+      <app-dynamic-checkbox
+        *ngSwitchCase="'checkbox'"
+        [config]="field"
+        [formGroup]="formGroup"
+      ></app-dynamic-checkbox>
+
+      <!-- Submit Button -->
+      <app-dynamic-button
+        *ngSwitchCase="'button'"
+        [config]="field"
+      ></app-dynamic-button>
+   </div>
+    </ng-container>
+
+  </ng-container>
+
+  </div>
+</form>

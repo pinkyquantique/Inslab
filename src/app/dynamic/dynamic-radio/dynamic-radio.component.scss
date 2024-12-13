@@ -1,4 +1,21 @@
-.form-check {
-    display: block; /* Ensures the form-check elements are stacked vertically */
-    margin-bottom: 0.5rem; /* Adds spacing between radio buttons */
+/* radio-group.component.scss */
+.form-group {
+    margin-bottom: 1.5rem;
+  
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+  
+    div {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+  
+      input {
+        margin-right: 0.5rem;
+      }
+    }
   }
+  

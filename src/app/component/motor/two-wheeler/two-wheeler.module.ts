@@ -2,11 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { MotorDetailComponent } from './motor-detail/motor-detail.component';
+import { SelectPlanComponent } from './select-plan/select-plan.component';
 
 export const baseRoutes: Routes =[
   // { path: 'vehicleselection', component: VehicleSelectionComponent },
    { path: 'motor-detail', component: MotorDetailComponent },
-  // { path: 'home', component: HomeComponent },
+  { path: 'plan', component: SelectPlanComponent },
  
 ]
 

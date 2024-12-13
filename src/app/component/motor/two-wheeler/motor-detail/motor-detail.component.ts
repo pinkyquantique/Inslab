@@ -9,7 +9,7 @@ import { SharedService } from '../../shared.service';
   standalone: true,
   imports: [SearchbarComponent, DynamicFormComponent],
   templateUrl: './motor-detail.component.html',
-  styleUrls: ['./motor-detail.component.css'] // Corrected styleUrls
+  styleUrls: ['./motor-detail.component.scss'] // Corrected styleUrls
 })
 
 export class MotorDetailComponent implements OnInit {
@@ -17,42 +17,37 @@ export class MotorDetailComponent implements OnInit {
 
   constructor(private router: Router, private _sharedService: SharedService) {}
 
-  formSchema = [
+  config = [
     {
-      name: 'firstName',
-      label: 'First Name',
       type: 'text',
-      validations: {
-        required: true,
-        maxLength: 50
-      }
+      label: 'Name',
+      name: 'name',
+      placeholder: 'Enter your name',
+      required: true,
     },
     {
-      name: 'gender',
-      label: 'Gender',
-      type: 'radio',
-      options: [
-        { value: 'male', label: 'Male' },
-        { value: 'female', label: 'Female' },
-        { value: 'other', label: 'Other' }
-      ],
-      validations: {
-        required: true
-      }
-    },
-    {
-      name: 'country',
-      label: 'Country',
       type: 'select',
-      options: [
-        { value: 'us', label: 'United States' },
-        { value: 'ca', label: 'Canada' },
-        { value: 'mx', label: 'Mexico' }
-      ],
-      validations: {
-        required: true
-      }
-    }
+      label: 'Country',
+      name: 'country',
+      options: ['USA', 'Canada', 'Australia'],
+      required: true,
+    },
+    {
+      type: 'radio',
+      label: 'Gender',
+      name: 'gender',
+      options: ['Male', 'Female'],
+    },
+    {
+      type: 'checkbox',
+      label: 'Hobbies',
+      name: 'hobbies',
+      options: ['Reading', 'Traveling', 'Gaming'],
+    },
+    {
+      type: 'button',
+      label: 'Submit',
+    },
   ];
 
   ngOnInit() {
@@ -61,5 +56,9 @@ export class MotorDetailComponent implements OnInit {
   ngAfterViewInit() {
 
     this._sharedService.emitChange(this.currentStep);
+  }
+  onFormSubmit(formData: any): void {
+    console.log('Form submitted:', formData);
+    // Perform actions with the submitted form data
   }
 }

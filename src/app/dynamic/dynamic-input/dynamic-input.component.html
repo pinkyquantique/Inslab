@@ -1,21 +1,9 @@
-<div [formGroup]="form" class="mb-3 ">
-  <label for="{{ field.name }}" class="form-label">{{ field.label }}</label>
+<div [formGroup]="formGroup" class="form-group">
+  <label [for]="config.name">{{ config.label }}</label>
   <input
     type="text"
-    [formControlName]="field.name"
-    [placeholder]="field.label"
-    id="{{ field.name }}"
-    class="form-control"
+    [id]="config.name"
+    [formControlName]="config.name"
+    [placeholder]="config.placeholder"
   />
-  <div *ngIf="form.get(field.name)?.invalid && form.get(field.name)?.touched" class="text-danger">
-    <div *ngIf="form.get(field.name)?.errors?.['required']">
-      {{ field.label }} is required.
-    </div>
-    <div *ngIf="form.get(field.name)?.errors?.['maxlength']">
-      {{ field.label }} cannot exceed {{ field.validations?.maxLength }} characters.
-    </div>
-    <div *ngIf="form.get(field.name)?.errors?.['minlength']">
-      {{ field.label }} must be at least {{ field.validations?.minLength }} characters.
-    </div>
-  </div>
 </div>

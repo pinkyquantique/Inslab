@@ -10,7 +10,6 @@ import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
   styleUrl: './dynamic-radio.component.scss'
 })
 export class DynamicRadioComponent {
-  @Input() field: any;
-  @Input() form: any; 
-  //constructor(private fb: FormBuilder) {this.form = this.fb.group({});}
+  @Input() config!: any;
+  @Input() formGroup!: FormGroup;
 }

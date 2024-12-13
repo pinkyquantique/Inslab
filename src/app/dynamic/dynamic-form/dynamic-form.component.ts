@@ -4,42 +4,49 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { DynamicInputComponent } from '../dynamic-input/dynamic-input.component';
 import { DynamicSelectComponent } from '../dynamic-select/dynamic-select.component';
 import { DynamicRadioComponent } from '../dynamic-radio/dynamic-radio.component';
+import { DynamicCheckboxComponent } from '../dynamic-checkbox/dynamic-checkbox.component';
+import { DynamicButtonComponent } from '../dynamic-button/dynamic-button.component';
 
 @Component({
   selector: 'app-dynamic-form',
   standalone: true,
-  imports: [ReactiveFormsModule, CommonModule, DynamicInputComponent, DynamicSelectComponent, DynamicRadioComponent],
+  imports: [ReactiveFormsModule, CommonModule, DynamicInputComponent, DynamicSelectComponent, DynamicRadioComponent,DynamicCheckboxComponent,DynamicButtonComponent],
   templateUrl: './dynamic-form.component.html',
   styleUrls: ['./dynamic-form.component.scss']
 })
 export class DynamicFormComponent implements OnInit {
-  @Input() form: FormGroup;
-  @Input() schema: any[] = [];
+  @Input() config: any[] = [];
+  formGroup!: FormGroup;
 
-  constructor(private fb: FormBuilder) { 
-    this.form = this.fb.group({});
+  constructor(private fb: FormBuilder) {}
+
+  ngOnInit(): void {
+    this.buildForm();
   }
 
-  ngOnInit() {
-    const formControls = this.schema.reduce((controls, field) => {
-      const validations = [];
-      if (field.validations?.required) validations.push(Validators.required);
-      if (field.validations?.maxLength) validations.push(Validators.maxLength(field.validations.maxLength));
-      if (field.validations?.minLength) validations.push(Validators.minLength(field.validations.minLength));
-      if (field.validations?.pattern) validations.push(Validators.pattern(field.validations.pattern));
-      
-      controls[field.name] = [field.value || '', validations];
-      return controls;
-    }, {});
-
-    this.form = this.fb.group(formControls);
+  buildForm(): void {
+    const group: any = {};
+    this.config.forEach((field) => {
+      if (field.type !== 'button') {
+        group[field.name] = [
+          field.value || '',
+          field.required ? Validators.required : null,
+        ];
+      }
+    });
+    this.formGroup = this.fb.group(group);
   }
 
-  submitForm() {
-    if (this.form.valid) {
-      console.log('Form Submitted', this.form.value);
+  onSubmit(): void {
+    if (this.formGroup.valid) {
+      console.log('Form Submitted', this.formGroup.value);
     } else {
-      console.error('Form is invalid');
+      console.log('Form Invalid');
     }
+  }
+  isHalfWidth(field: any): boolean {
+    // Customize the logic to determine if a field should be half-width
+     
+      return field.type === 'text' || field.type === 'select'||field.type === 'radio' ||field.type === 'checkbox' ;  // Example logic
   }
 }

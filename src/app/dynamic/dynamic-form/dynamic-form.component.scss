@@ -1,0 +1,30 @@
+form {
+  
+    margin: 0 auto;
+    padding: 4rem;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+/* dynamic-form.component.scss */
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;  /* Adjust the gap between fields as needed */
+  }
+  
+  .form-field {
+    width: 100%;
+  }
+  
+  .half-width {
+    width: 48%;  /* Adjust the width to fit two fields in one row */
+  }
+  
+  @media (max-width: 768px) {
+    .half-width {
+      width: 100%;  /* Stack fields on smaller screens */
+    }
+  }
+  

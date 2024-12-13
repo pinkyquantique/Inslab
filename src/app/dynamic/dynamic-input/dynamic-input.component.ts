@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-dynamic-input',
@@ -10,6 +10,6 @@ import { ReactiveFormsModule } from '@angular/forms';
   styleUrls: ['./dynamic-input.component.scss']
 })
 export class DynamicInputComponent {
-  @Input() form: any;
-  @Input() field: any;
+  @Input() config!: any;
+  @Input() formGroup!: FormGroup;
 }
