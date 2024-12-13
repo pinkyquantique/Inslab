@@ -1,6 +1,7 @@
 <div [formGroup]="formGroup" class="form-group">
-  <label [for]="config.name">{{ config.label }}</label>
-  <select [id]="config.name" [formControlName]="config.name">
-    <option *ngFor="let option of config.options" [value]="option">{{ option }}</option>
+  <label [for]="config.name">{{ config.label }} <span *ngIf="config.required" class="required-asterisk">*</span></label>
+  <select [id]="config.name" [formControlName]="config.name" >
+    <option value="" disabled selected hidden>{{ config.placeholder || 'Select an option' }}</option>
+    <option *ngFor="let option of config.options" [value]="option.id">{{ option.value }}</option>
   </select>
 </div>

@@ -1,0 +1,70 @@
+.calendar-container {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+  }
+  
+  label {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  input[type="date"] {
+    padding: 5px;
+    font-size: 16px;
+  }
+  
+
+  /* text-input.component.scss */
+.form-group {
+    margin-bottom: 1.5rem;
+  
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+  
+    input {
+      width: 100%;
+      padding: 0.75rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      outline: none;
+      transition: border-color 0.3s;
+  
+      &:focus {
+        border-color: #007bff;
+      }
+    }
+  }
+  /* text-input.component.scss */
+  .form-group {
+    margin-bottom: 1.5rem;
+  
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+  
+    input {
+      width: 100%;
+      padding: 0.75rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      outline: none;
+      transition: border-color 0.3s;
+  
+      &:focus {
+        border-color: #007bff;
+      }
+    }
+  }
+  .required-asterisk {
+      color: red;
+      margin-left: 5px;
+      font-weight: bold;
+    }

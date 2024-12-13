@@ -1,7 +1,7 @@
 
       <!-- dynamic-form.component.html -->
 
-<form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+<form [formGroup]="formGroup">
   <div class="form-row">
     <ng-container *ngFor="let field of config">
       <ng-container [ngSwitch]="field.type">
@@ -34,11 +34,21 @@
         [formGroup]="formGroup"
       ></app-dynamic-checkbox>
 
+      <app-dynamic-calander    
+       *ngSwitchCase="'date'"
+  [config]="field"
+  [formGroup]="formGroup" >
+</app-dynamic-calander>
+
+      <div *ngIf="formGroup.get(field.name)?.invalid && formGroup.get(field.name)?.touched">
+        <small class="error">This field is required</small>
+      </div>
       <!-- Submit Button -->
       <app-dynamic-button
-        *ngSwitchCase="'button'"
-        [config]="field"
-      ></app-dynamic-button>
+      *ngSwitchCase="'button'"
+      [config]="field"
+      (buttonClick)="handleButtonClick(field.event)"
+    ></app-dynamic-button>
    </div>
     </ng-container>
 

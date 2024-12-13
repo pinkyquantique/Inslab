@@ -1,12 +1,12 @@
 <div [formGroup]="formGroup" class="form-group">
-  <label>{{ config.label }}</label>
+  <label>{{ config.label }} <span *ngIf="config.required" class="required-asterisk">*</span></label>
   <div *ngFor="let option of config.options">
     <input
       type="radio"
-      [id]="option"
-      [value]="option"
+      [id]="option.id"
+      [value]="option.id"
       [formControlName]="config.name"
     />
-    <label [for]="option">{{ option }}</label>
+    <label [for]="option">{{ option.value }}</label>
   </div>
 </div>

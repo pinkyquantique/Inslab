@@ -114,12 +114,12 @@
 
 <!-- Fourth div -->
 
-<!-- <div class="dynamic-form-container">
-    <app-dynamic-form
-      [config]="config"
-      (ngSubmit)="onFormSubmit($event)"
-    ></app-dynamic-form>
-  </div> -->
+<app-dynamic-form
+[config]="config"
+[formGroup]="formGroup"
+(formSubmit)="onFormSubmit()"
+(formCancel)="onFormCancel()"
+></app-dynamic-form>
 
   <!-- Fifth div -->
 

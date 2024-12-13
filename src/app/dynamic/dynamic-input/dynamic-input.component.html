@@ -1,5 +1,5 @@
 <div [formGroup]="formGroup" class="form-group">
-  <label [for]="config.name">{{ config.label }}</label>
+  <label [for]="config.name">{{ config.label }} <span *ngIf="config.required" class="required-asterisk">*</span></label>
   <input
     type="text"
     [id]="config.name"
