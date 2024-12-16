@@ -1,15 +1,24 @@
 <h2 class="text-center mt-5">Welcome, Please Login</h2>  
-<form action="#" method="post">
+
+<form [formGroup]="formGroup">
   <!-- Email ID -->
   <div class="form-group mt-4 px-5">
     <label for="email">Email ID</label>
-    <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required>
+    <input type="email" formControlName="email" class="form-control" id="email" name="email" placeholder="Enter email" required>
+    <div *ngIf="email?.invalid && email?.touched" class="text-danger">
+      <small *ngIf="email?.hasError('required')">Email is required.</small>
+      <small *ngIf="email?.hasError('email')">Please enter a valid email address.</small>
+    </div>
   </div>
   
   <!-- Password -->
   <div class="form-group mt-4 px-5">
     <label for="password">Password</label>
-    <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" required>
+    <input type="password" formControlName="password" class="form-control" id="password" name="password" placeholder="Enter password" required>
+    <div *ngIf="password?.invalid && password?.touched" class="text-danger">
+      <small *ngIf="password?.hasError('required')">Password is required.</small>
+      <small *ngIf="password?.hasError('minlength')">Password must be at least 6 characters long.</small>
+    </div>
   </div>
 
   <!-- Forgot Password Text and Link -->
@@ -21,6 +30,7 @@
   
   <!-- login Button -->
   <div class="d-flex justify-content-center mt-4 px-5 " id="login-btn-container">
-    <button type="submit" class="btn btn-dark round-button" style="width: 100%;">Login</button>
+    <button type="submit"  [disabled]="!!formGroup.invalid" 
+    (click)="login()" class="btn btn-dark round-button" style="width: 100%;">Login</button>
   </div>
 </form>

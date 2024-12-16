@@ -2,67 +2,76 @@
     background-color: #f8faff;
     border: 2px solid #C1D5FF;
     border-radius: 10px;
-    max-width: 1300px;
+    max-width: 1100px;
     margin: 20px auto;
     padding: 16px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* width: 90%; */
     box-sizing: border-box;
-    overflow: hidden; 
-  }
-  
-  .card-content {
+    overflow: hidden;
+}
+
+.card-content {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
-    flex-wrap: nowrap; 
-    /* gap: 0.8rem;  */
-  }
-  
-  .card-item {
+    flex-wrap: wrap;
+}
+
+.card-item {
     text-align: center;
-    flex: 1; 
-    min-width: 120px; 
+    flex: 1;
+    min-width: 120px;
     margin: 8px;
-  }
-  
-  h5 {
-    font-size: 12px;
-    color: #6b7280;
-    margin-bottom: 4px;
-  }
-  
-  p {
+    position: relative;
+}
+
+h5 {
+    font-size: 1.2rem;
+    color: rgb(104, 103, 103);
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 16px;
+    z-index: 10;
+    text-align: center;
+}
+
+p {
     font-size: 14px;
     font-family: 'Roboto', sans-serif;
     color: #1D1B20;
+    font-weight: 800px;
     margin: 0;
-  }
-  
-  .divider {
+    margin-right: 20px;
+    text-align: center;
+    padding-top: 24px;
+}
+
+.divider {
     width: 1px;
     height: 80px;
     border: 1px solid #C1D5FF;
     margin: 0 16px;
-  }
-  
-  .actions-container {
+}
+
+.actions-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end; /* Align to the right */
-    flex-wrap: nowrap; /* Prevent wrapping */
-    flex: 1; /* Allow space sharing */
-    gap: 16px; /* Add spacing between items */
-  }
-  
-  .view-previous {
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    flex: 1;
+    gap: 16px;
+}
+
+.view-previous {
     display: flex;
     align-items: center;
     gap: 8px;
-  }
-  
-  .edit-btn {
+}
+
+.edit-btn {
     background-color: transparent;
     color: #1D1B20;
     border: 1px solid #1D1B20;
@@ -70,56 +79,175 @@
     border-radius: 18px;
     font-size: 14px;
     cursor: pointer;
-  }
-  
-  .navigation {
+}
+
+.navigation {
     display: flex;
     align-items: center;
     gap: 5px;
     font-size: 1rem;
     color: #1D1B20;
-  }
-  
-  .nav-icon {
+}
+
+.nav-icon {
     width: 16px;
     height: 16px;
     cursor: pointer;
+}
+
+.quotation-container {
+    width: 1000px;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 50px;
+}
+
+.filter-right-container {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+}
+
+.price-container {
+    width: 60%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+    border-radius: 10px;
+    border: 0.2px solid rgb(218, 213, 213);
+    padding: 16px;
+    position: relative
+}
+
+.price-container h2 {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 10px;
+    left: 16px;
+    z-index: 10;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #1D1B20;
+    font-family: 'Roboto', sans-serif;
+}
+
+.price-container input {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 80px;
+    left: 16px;
+    width: 90%;
+    border: 1px solid rgb(143, 141, 141);
+    border-radius: 10px;
+    height: 43px;
+    z-index: 10;
+    text-align: center;
+}
+
+.idv-container {
+    background-color: #f8faff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin: 30px auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .header h3 {
+    font-size: 18px;
+    color: #1D1B20;
+    margin-bottom: 8px;
+  }
+  
+  .note {
+    color: #e63946;
+    font-size: 14px;
+    margin: 0;
+  }
+  
+  .slider-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .slider-label {
+    font-size: 14px;
+    color: #1D1B20;
+  }
+  
+  .slider {
+    width: 100%;
+    margin: 10px 0;
+    height: 10px;
+    border-radius: 5px;
+    background: #C1D5FF;
+  }
+  
+  .slider-value {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 14px;
+    color: #1D1B20;
+  }
+  
+  .min-value, .max-value {
+    color: #1D1B20;
+  }
+  
+  .current-value {
+    font-weight: bold;
+    color: #0077cc;
   }
   
   
-  
-  /* Responsive Design for screens smaller than 768px */
+
+/* Responsive Design for screens smaller than 768px */
 @media (max-width: 768px) {
-    .card-container{
-        width: 60%;
-    }
     .card-content {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center align content */
-        gap: 10px; /* Add space between items */
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
     }
 
     .divider {
-        width: 60%; /* Make the divider horizontal */
-        height: 1px; /* Make the divider horizontal */
-        margin: 16px 0; /* Add margin for spacing */
+        width: 50%;
+        height: 1px;
+        margin: 16px 0;
     }
 
     .actions-container {
-        flex-direction: column; /* Stack the action buttons vertically */
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 16px; /* Space between action buttons */
-        width: 50%; /* Make sure it spans the full width */
+        gap: 16px;
+        width: 80%;
     }
 
     .view-previous {
-        flex-direction: row; /* Keep the "View Previous Edit" text and arrows in a row */
+        flex-direction: row;
         gap: 8px;
-        justify-content: center; /* Center align the view previous section */
+        justify-content: center;
     }
 
     .edit-btn {
-        width: 50%; /* Make the button span full width */
+        width: 50%;
+    }
+
+    h5 {
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: auto;
+        padding-top: 10px;
     }
 }
