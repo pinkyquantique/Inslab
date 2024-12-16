@@ -159,7 +159,7 @@
 [config]="config"
 [formGroup]="formGroup"></app-dynamic-form>
 
-  <!-- Fifth div -->
+  <!-- Fifth div  for new -->
 
   <div>
     <div class="headline">
@@ -206,6 +206,47 @@
                         <div (click)="onFormSubmit()">
                             <label class="form-check-label" for="3yearRadio">
                                 <h5 class="padding"><b>3 year CPA</b></h5>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+ <!-- Fifth div  for new -->
+
+ <div>
+    <div class="headline">
+        <h3><b>Compulsory Personal Accident (CPA) Cover</b></h3>
+        <p>Select CPA term.</p>
+    </div>
+    <div class="container mt-5 ">
+        <div class="row">
+            <div class="col">
+                <div class="card h-card policy-card" [ngClass]="{'selected': selectedPolicy === 'Renew_none'}" id="new-policy" (click)="onRadioSelect('Renew_none')">
+                    <div class="card-body d-flex align-items-center">
+                        <div class="form-check mr-3 radio-wrapper">
+                            <input class="form-check-input large-radio mt-3" type="radio" name="policyType" id="RenewRadio" value="none" (click)="onRadioSelect('Renew_none')">
+                        </div>
+                        <div>
+                            <label class="form-check-label mb-5" for="RenewnoneRadio">
+                               <h5 ><b>none</b></h5>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card  h-card policy-card" [ngClass]="{'selected': selectedPolicy === 'Renew 1 year CPA'}"  id="renew-policy" (click)="onRadioSelect('Renew 1 year CPA')">
+                    <div class="card-body d-flex align-items-center">
+                        <div class="form-check mr-3 radio-wrapper">
+                            <input class="form-check-input large-radio mt-3" type="radio" name="policyType" id="renewRadio" value="1 year CPA" >
+                        </div>
+                        <div>
+                            <label class="form-check-label mb-5" for="Renew1yearRadio">
+                                <h5><b>1 year CPA</b></h5>
                             </label>
                         </div>
                     </div>
