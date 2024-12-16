@@ -48,14 +48,71 @@
                 <p class="note">NOTE: IDV PRICE BETWEEN 463239 TO 959898</p>
             </div>
             <div class="slider-container">
-                <label for="idv-slider" class="slider-label">Lowest IDV: (from )</label>
+                <label for="idv-slider" class="slider-label">Lowest IDV: (from {{minValue}})</label>
                 <input type="range" id="idv_slider" min="{{minValue}}" max="{{maxValue}}" [(ngModel)]="currentValue" (input)="onSliderChange()" class="slider"/>
             </div>
             <div class="slider-value">
-                <span class="min-value">₹ {{ minValue }}</span>
+                <span class="min-value"><img src="icons/downarrow.svg"/> Min: {{ minValue }}</span>
                 <span class="current-value">₹ {{ currentValue }}</span>
-                <span class="max-value">₹ {{ maxValue }}</span>
+                <span class="max-value"><img src="icons/up.svg"/> Max: {{ maxValue }}</span>
             </div>
+        </div>
+        <div class="accessories-container">
+          <div class="accessories-header" (click)="toggleaccessoryCollapse()">
+            <h3>Accessories & Covers</h3>
+            <span class="collapse-icon">
+              <img src="icons/minus.svg" *ngIf="!isaccessoriesCollapsed" alt="minus"/>
+              <img src="icons/plus.svg" *ngIf="isaccessoriesCollapsed" alt="plus"/>
+            </span>
+          </div>
+          <div class="access-list" *ngIf="!isaccessoriesCollapsed">
+            <div class="access-list" *ngFor="let accessory of accessories">
+              <span class="acess-name">{{accessory.name}}</span>
+              <label class="switch">
+                <input type="checkbox" [(ngModel)]="accessory.checked">
+                <span class="toggle"></span>
+              </label>
+            </div>
+
+          </div>
+        </div>
+        <div class="geo-container">
+          <div class="geo-header" (click)="toggelgeographyCollapse()">
+            <h3>Geographical Extension</h3>
+            <span class="collapse-icon">
+              <img src="icons/minus.svg" *ngIf="!isgeographicalCollapsed" alt="minus"/>
+              <img src="icons/plus.svg" *ngIf="isgeographicalCollapsed" alt="plus"/>
+            </span>
+          </div>
+          <div class="geo-list" *ngIf="!isgeographicalCollapsed">
+            <div class="geo-list" *ngFor="let geography of geographical">
+              <span class="geo-name">{{geography.country}}</span>
+              <label class="switch">
+                <input type="checkbox" [(ngModel)]="geography.checked">
+                <span class="toggle"></span>
+              </label>
+            </div>
+
+          </div>
+        </div>
+        <div class="add-container">
+          <div class="add-header" (click)="toggeladdonCollapse()">
+            <h3>Individual Add-ons</h3>
+            <span class="collapse-icon">
+              <img src="icons/minus.svg" *ngIf="!isaddonsCollapsed" alt="minus"/>
+              <img src="icons/plus.svg" *ngIf="isaddonsCollapsed" alt="plus"/>
+            </span>
+          </div>
+          <div class="add-list" *ngIf="!isaddonsCollapsed">
+            <div class="add-list" *ngFor="let addon of addons">
+              <span class="add-name">{{addon.add}}</span>
+              <label class="switch">
+                <input type="checkbox" [(ngModel)]="addon.checked">
+                <span class="toggle"></span>
+              </label>
+            </div>
+
+          </div>
         </div>
     </div>
     <div class="quotation-display-left-container">

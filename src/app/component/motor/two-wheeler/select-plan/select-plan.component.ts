@@ -16,4 +16,49 @@ export class SelectPlanComponent {
   onSliderChange(){
     console.log('Current IDV Value:', this.currentValue);
   }
+  isaccessoriesCollapsed = false;
+  isgeographicalCollapsed = false;
+  isaddonsCollapsed = false
+  accessories=[
+    {name:'Accessories', checked: true},
+    {name: 'Deductibles', checked: true},
+    {name: 'PA Covers', checked: true}
+  ];
+  geographical=[
+    {country:'Bangladesh', checked: true},
+    {country:'Maldives', checked: true},
+    {country:'Bhutan', checked: true},
+    {country:'Nepal', checked: true},
+    {country:'Pakistan', checked: true},
+    {country:'Sri Lanka', checked: true},
+  ];
+  addons = [
+    {add:'Engine Protection',checked:true},
+    {add:'Return Invoice',checked:true},
+    {add:'Consumables',checked:true},
+    {add:'Key Protect',checked:true},
+    {add:'Tyre Protect',checked:true},
+    {add:'Extra Towing',checked:true},
+    {add:'Roadside Assistance',checked:true},
+    {add:'EMI Protector',checked:true},
+    {add:'Loss of Personal Belongings',checked:true},
+    {add:'Protection of NCB',checked:true},
+    {add:'Inconvenience allowance',checked:true},
+    {add:'Loss of Income',checked:true},
+    {add:'Enhanced PA Cover - Owner driver',checked:true},
+    {add:'DRIVE ASSURE PRIME',checked:true},
+    {add:'DRIVE ASSURE PRIME',checked:true},
+    {add:'DRIVE ASSURE ECONOMY',checked:true},
+    {add:'DRIVE ASSURE ECONOMY PLUS',checked:true},
+  ];
+  toggleaccessoryCollapse(): void{
+    this.isaccessoriesCollapsed = !this.isaccessoriesCollapsed;
+  }
+  toggelgeographyCollapse(): void{
+    this.isgeographicalCollapsed = !this.isgeographicalCollapsed;
+  }
+  toggeladdonCollapse(): void{
+    this.isaddonsCollapsed = !this.isaddonsCollapsed;
+  }
+
 }

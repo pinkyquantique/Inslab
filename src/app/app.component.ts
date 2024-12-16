@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { DynamicTableComponent } from './dynamic/dynamic-table/dynamic-table.component';
 import { DynamicFormComponent } from './dynamic/dynamic-form/dynamic-form.component';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,DynamicTableComponent,DynamicFormComponent],
+  imports: [RouterOutlet,DynamicTableComponent,DynamicFormComponent,FormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
