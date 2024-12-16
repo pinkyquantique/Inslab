@@ -1,16 +1,20 @@
 <div class="form-group">
     <div    class="input-group">
-      <span class="input-group-text" id="calendarIcon">
-        <i class="bi bi-calendar"></i>
-      </span>
+      <label [for]="config.name">{{ config.label }} <span *ngIf="config.required" class="required-asterisk">*</span></label>
+      <div class="input-container">
+        <span class="calendar-icon" (click)="openPicker()">
+          <i class="bi bi-calendar"></i> <!-- Bootstrap icon for calendar -->
+        </span>
       <input
         type="text"
         class="form-control"
         placeholder="config.placeholder"
         [(ngModel)]="selectedmonthDate"
         (focus)="openPicker()"  
-        readonly
+      readonly
       />
+     
+    </div>
     </div>
   
     <!-- Date Picker Dropdown -->

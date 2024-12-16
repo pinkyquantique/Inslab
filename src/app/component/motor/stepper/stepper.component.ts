@@ -21,14 +21,13 @@ import { SharedService } from '../shared.service';
     }
     ngOnInit() {
       
-     
+      this._sharedService.changeEmitted$.subscribe((text: any) => {
+        this.submitForm(text);
+      });
      
     }
     ngAfterViewInit() {
-      this._sharedService.changeEmitted$.subscribe((text: any) => {
-       
-        this.submitForm(text);
-      });
+      
     }
     goToStep(stepIndex: number) {
       
@@ -45,5 +44,8 @@ import { SharedService } from '../shared.service';
           this.completedSteps[i] = i < this.currentStep;
         }
         this.cdr.detectChanges();
+  }
+  goBack() {
+    window.history.back();  // Navigate to the previous route in history
   }
 }

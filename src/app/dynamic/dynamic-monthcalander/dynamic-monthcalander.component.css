@@ -2,7 +2,7 @@
     z-index: 1000;
   }
   
-  .overlay {
+  /* .overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -11,12 +11,89 @@
     background: rgba(0, 0, 0, 0.3);
     z-index: 999;
   }
-  
+   */
   .input-group-text {
     cursor: pointer;
   }
   
   .input-group input {
     cursor: pointer;
+  }
+  
+
+  /* text-input.component.scss */
+.form-group {
+  margin-bottom: 1.5rem;
+
+  label {
+    font-family: Roboto;
+font-size: 12px;
+font-weight: 400;
+line-height: 16px;
+padding: 0px 0.5rem;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+
+   
+  }
+.note{
+  font-family: Roboto;
+font-size: 1rem;
+font-weight: 600;
+line-height: 1rem;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+color:  var(--success-green, #25AA43);
+text-transform: uppercase;
+
+}
+  input {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+    border-radius: 1rem !important;
+    height: 4rem;
+    &:focus {
+      border-color: #007bff;
+    }
+  }
+}
+/* text-input.component.scss */
+
+.required-asterisk {
+    color: red;
+    margin-left: 5px;
+    font-weight: bold;
+  }
+
+
+  
+  .input-container input {
+    padding-right: 35px;  /* Add padding to the right so the icon doesn't overlap text */
+    width: 100%;   
+      position: static;         /* Ensure the input takes full width */
+    box-sizing: border-box; /* Prevent the padding from affecting the width */
+  }
+  
+  .calendar-icon {
+    position: absolute;      /* Absolutely position the icon inside the input container */
+    right: 10px;             /* Position it on the right side */
+    top: 50%;    
+    padding: 2rem 0 0 0;            /* Center vertically within the input */
+    transform: translateY(-50%); /* Ensure it is vertically centered */
+    z-index: 1.2; 
+    width: 1.2rem;             /* Ensure it stays on top of the input */
+    cursor: pointer; 
+  /* Make the icon clickable */
+  }
+  
+  .calendar-icon i {
+    font-size: 1.2rem;  /* Adjust the size of the icon */
+  
   }
   

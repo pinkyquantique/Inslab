@@ -4,6 +4,8 @@
       <div class="card">
         <div class="card-body">
           <div class="stepper">
+            <span class="back-btn"  (click)="goBack()"> Go Back</span>
+            
             <div class="steps">
               <div *ngFor="let step of steps; let i = index" class="step">
                 <div style="display: flex; flex-direction: row; align-items: center;">

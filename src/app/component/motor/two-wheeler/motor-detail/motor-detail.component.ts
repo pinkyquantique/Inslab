@@ -5,25 +5,23 @@ import { SearchbarComponent } from '../../../../dynamic/searchbar/searchbar.comp
 import { CommonModule } from '@angular/common';
 import { DynamicFormComponent } from '../../../../dynamic/dynamic-form/dynamic-form.component';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { motorconfig } from './constant';
 
 @Component({
   selector: 'app-motor-deta il',
   standalone: true,
   imports: [SearchbarComponent, DynamicFormComponent,CommonModule,],
   templateUrl: './motor-detail.component.html',
-  styleUrls: ['./motor-detail.component.scss'] 
+  styleUrls: ['./motor-detail.component.scss'] // Corrected styleUrls
 })
 
 export class MotorDetailComponent implements OnInit, AfterViewInit {
   currentStep: number = 1;
   formGroup: FormGroup;
-  selectedPolicy: string = 'new';  // Track the selected policy (new or renew)
- 
-  constructor(private router: Router,
-    private _sharedService: SharedService,
-    private fb: FormBuilder) {
+  selectedPolicy: string = '';  // Track the selected policy (new or renew)
+
+  constructor(private router: Router, private _sharedService: SharedService,private fb: FormBuilder) {
     this.formGroup = this.fb.group({});
+   
   }
 config = [
   {
@@ -74,6 +72,7 @@ config = [
     },{
       type:'month',
       name: 'manufacturing-month', // A unique name for the field
+      placeholder: 'select  Month & year',
       label: 'Manufacturing Month & year',
       required: true,
       yearPlaceholder: 'Select Year',
@@ -151,6 +150,7 @@ config = [
     if (this.formGroup.valid) {
       console.log('Form Data:', this.formGroup.value);
       // Handle form submission logic
+      this.router.navigate(['/pages/motor/two-wheeler/plan'])
     } else {
       console.log('Form is invalid');
       this.markFormGroupTouched(this.formGroup);

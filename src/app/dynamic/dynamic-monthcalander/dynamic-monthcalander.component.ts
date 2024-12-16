@@ -9,7 +9,7 @@ import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule, 
   templateUrl: './dynamic-monthcalander.component.html',
   styleUrl: './dynamic-monthcalander.component.css'
 })
-export class DynamicMonthcalanderComponent  {
+export class DynamicMonthcalanderComponent  implements OnInit {
   @Input() config!: any;
   @Input() formGroup!: FormGroup;
 
@@ -26,7 +26,10 @@ export class DynamicMonthcalanderComponent  {
     const currentYear = new Date().getFullYear();
     this.years = Array.from({ length: 20 }, (_, index) => currentYear + index);  // Create a range of 20 years starting from current year
   }
-
+ngOnInit(): void {
+  this.selectedmonthDate=this.formGroup.controls[this.config.name].value;
+  
+}
   openPicker() {
     this.showPicker = true;
   }
