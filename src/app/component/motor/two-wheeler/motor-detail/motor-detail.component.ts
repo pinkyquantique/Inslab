@@ -12,15 +12,17 @@ import { motorconfig } from './constant';
   standalone: true,
   imports: [SearchbarComponent, DynamicFormComponent,CommonModule,],
   templateUrl: './motor-detail.component.html',
-  styleUrls: ['./motor-detail.component.scss'] // Corrected styleUrls
+  styleUrls: ['./motor-detail.component.scss'] 
 })
 
 export class MotorDetailComponent implements OnInit, AfterViewInit {
   currentStep: number = 1;
   formGroup: FormGroup;
-  selectedPolicy: string = '';  // Track the selected policy (new or renew)
+  selectedPolicy: string = 'new';  // Track the selected policy (new or renew)
  
-  constructor(private router: Router, private _sharedService: SharedService,private fb: FormBuilder) {
+  constructor(private router: Router,
+    private _sharedService: SharedService,
+    private fb: FormBuilder) {
     this.formGroup = this.fb.group({});
   }
 config = [
