@@ -1,19 +1,20 @@
-*{
+* {
     font-family: "roboto, sans serif";
 }
-.headline{
+
+.headline {
     margin-left: 10rem;
 }
+
 .policy-card {
-    border: 1px solid transparent; 
+    border: 1px solid transparent;
     border-radius: 10px;
     transition: border-color 0.3s ease;
     margin-bottom: 2rem;
     height: 8rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-left: -2rem;
 }
-
 
 .large-radio {
     width: 1.5rem;
@@ -21,36 +22,29 @@
     margin-bottom: 3.5rem;
 }
 
-
 .radio-wrapper {
     display: flex;
     align-items: center;
-    justify-content: flex-start; 
-    margin-right: 1rem; 
+    justify-content: flex-start;
+    margin-right: 1rem;
 }
-
 
 .form-check-input {
     margin-left: 0;
 }
 
-
 .form-check-label h5 {
     margin-bottom: 0.5rem;
-    
 }
 
-p{
+p {
     color: #1D1B2099;
-    
 }
 
 .policy-card.selected {
-    border-color: blue !important; 
+    border-color: blue !important;
 }
-.row{
-    margin-right: -4rem;
-}
+
 .renewal {
     margin-left: 10rem;
 }
@@ -69,8 +63,6 @@ p{
     margin-left: -2rem;
 }
 
-
-
 .info-card h5 {
     margin: 1rem;
     margin-left: 2rem;
@@ -79,22 +71,102 @@ p{
 .info-card p {
     color: #1D1B2099;
     margin-left: 2rem;
-    margin-top: 0.25rem; 
-    margin-bottom: 0.5rem; 
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
 }
 
-.row {
-    margin-right: -4rem;
-}
-
-
-.h-card{
+.h-card {
     height: 6rem;
     margin-right: 15px;
 }
 
+.p-card {
+    height: 4rem;
+    margin-right: 10px;
+}
+.sixth {
+    margin-left: 11rem;
+    height: 10rem;
+    padding-bottom: 5rem;
+}
+.col{
+    padding-left: 2rem;
+}
+.red-astrick{
+    color: red;
+}
 
+/* Media Queries for responsiveness */
+@media (max-width: 1200px) {
+    .headline, .renewal-section {
+        margin-left: 8rem;
+    }
+    .row{
+        margin-left: 3rem;
+    }
 
+    .large-radio {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-bottom: 3.5rem;
+    }
+}
 
+@media (max-width: 992px) {
+    .headline, .renewal-section, .sixth {
+        margin-left: 6rem;
+    }
 
+    .policy-card, .info-card {
+        height: auto;
+    }
+    .large-radio {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-bottom: 3.5rem;
+    }
+}
 
+@media (max-width: 768px) {
+    .headline, .renewal-section, .sixth {
+        margin-left: 2rem;
+    }
+
+    .policy-card, .info-card {
+        margin-left: 0;
+    }
+
+    .large-radio {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-bottom: 4.5rem;
+    }
+
+    .info-card h5 {
+        margin-left: 1rem;
+    }
+
+    .info-card p {
+        margin-left: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .headline, .renewal-section, .sixth {
+        margin-left: 1rem;
+    }
+
+    .policy-card, .info-card {
+        margin-left: 0;
+        height: auto;
+    }
+
+    .row {
+        margin-right: 0;
+    }
+    .large-radio {
+        width: 2rem;
+        height: 2rem;
+        margin-bottom: 4.5rem;
+    }
+}

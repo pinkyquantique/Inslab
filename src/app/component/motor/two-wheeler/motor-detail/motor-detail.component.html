@@ -3,7 +3,7 @@
 <div>
 <div class="headline">
     <h3><b>Select policy type and plan.</b></h3>
-    <p>Fresh start or seamless renewal? Your motor insurance choice today?</p>
+    <p>Fresh start or seamless renewal?Your motor insurance choice today?</p>
 </div>
 <div class="container mt-5 ">
     <div class="row">
@@ -32,7 +32,7 @@
                         <label class="form-check-label" for="renewRadio">
                             <h5><b>Renew</b></h5>
                         </label>
-                        <p>Select ‘Renew’ if you want to renew your previous policy.</p>
+                       <p>Select ‘Renew’ if you want to renew your previous policy.</p>
                     </div>
                 </div>
             </div>
@@ -41,8 +41,8 @@
 </div>
 </div>
 <!-- second div -->
-<div>
-    <p style="margin-left: 10rem;">Select exclusive <strong>renewal plans</strong> as per your requirement.</p>
+<div >
+    <p class="headline" >Select exclusive <strong>renewal plans</strong> as per your requirement.</p>
     <div class="container mt-5  renewal-section">
         <div class="row ">
             <div class="col-md-6 ">
@@ -174,5 +174,17 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
+
+<!-- Sixth div -->
+
+<div class="sixth ">
+    <p >Select reason for opting out CPA</p>
+    <h5 >Select reason <span class="red-astrick">*</span></h5>
+    <div class="col column">
+                <select class="form-select p-card policy-card" id="policyType" [ngClass]="{'selected': selectedPolicy === 'dropdown'}" (click)="onRadioSelect('dropdown')">
+                    <option value="3 year CPA">Placeholder</option>  
+                </select>
     </div>
 </div>

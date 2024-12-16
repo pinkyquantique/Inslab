@@ -10,7 +10,7 @@ import { motorconfig } from './constant';
 @Component({
   selector: 'app-motor-deta il',
   standalone: true,
-  imports: [SearchbarComponent, DynamicFormComponent,CommonModule],
+  imports: [SearchbarComponent, DynamicFormComponent,CommonModule,],
   templateUrl: './motor-detail.component.html',
   styleUrls: ['./motor-detail.component.scss'] // Corrected styleUrls
 })
