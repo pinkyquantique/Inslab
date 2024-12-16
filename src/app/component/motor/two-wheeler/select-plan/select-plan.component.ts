@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-select-plan',
   standalone: true,
@@ -13,9 +14,7 @@ export class SelectPlanComponent {
   maxValue = 959898;
   currentValue = this.minValue;
 
-  onSliderChange(){
-    console.log('Current IDV Value:', this.currentValue);
-  }
+  
   isaccessoriesCollapsed = false;
   isgeographicalCollapsed = false;
   isaddonsCollapsed = false
@@ -51,6 +50,12 @@ export class SelectPlanComponent {
     {add:'DRIVE ASSURE ECONOMY',checked:true},
     {add:'DRIVE ASSURE ECONOMY PLUS',checked:true},
   ];
+  constructor(private router: Router){
+     
+    }
+    onSliderChange(){
+      console.log('Current IDV Value:', this.currentValue);
+    }
   toggleaccessoryCollapse(): void{
     this.isaccessoriesCollapsed = !this.isaccessoriesCollapsed;
   }
@@ -75,5 +80,11 @@ export class SelectPlanComponent {
     this.isOpen = false;
     const selectedValue = (event.target as HTMLSelectElement).value;
     console.log('Sorted value',selectedValue);
+  }
+  onFormSubmit() {
+   
+   
+      this.router.navigate(['/pages/motor/two-wheeler/personal-detail'])
+   
   }
 }
