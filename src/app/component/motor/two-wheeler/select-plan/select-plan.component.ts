@@ -60,5 +60,20 @@ export class SelectPlanComponent {
   toggeladdonCollapse(): void{
     this.isaddonsCollapsed = !this.isaddonsCollapsed;
   }
-
+  selectedOption: string = 'lowToHigh';
+  isOpen: boolean =false;
+  
+  toggleDropDown() : void{
+    this.isOpen = !this.isOpen;
+    console.log(this.isOpen);
+  }
+  selectOption(option:string){
+    this.selectedOption = option;
+    this.isOpen = false;
+    }
+  onFilterChange(event : Event){
+    this.isOpen = false;
+    const selectedValue = (event.target as HTMLSelectElement).value;
+    console.log('Sorted value',selectedValue);
+  }
 }

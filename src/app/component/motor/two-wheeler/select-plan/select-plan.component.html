@@ -115,7 +115,29 @@
           </div>
         </div>
     </div>
-    <div class="quotation-display-left-container">
-
+    <div class="left-container">
+      <div class="left-headline">
+        <h3>Select the best suitable plans at exclusive rates.</h3>
+      </div>
+      <div class="filter-container">
+        <p>Showing 3 results for 2 members.</p>
+        <div class="filter-icon" (click)="toggleDropDown()">
+          <div class="filter-dropdown" >
+            <div class="dropdown-header">
+              <img src="icons/filter.svg" alt="filter" class="filter-image" />
+              <span> Sort By <b>{{selectedOption}}</b></span>
+              <img src="icons/filter_dropdown.svg" alt="filter_dropdown" 
+              class="dropdown" [class.rotate]="isOpen"/>
+            </div>
+            <ul class="dropdown-menu" *ngIf="isOpen">
+              <li (click)="selectOption('Low to High')">Low to High</li>
+              <li (click)="selectOption('High to Low')">High to Low</li>
+              <li (click)="selectOption('Newest')">Newest</li>
+              <li (click)="selectOption('Oldest')">Oldest</li>
+            </ul> 
+          </div>
+        </div>
+      </div>
+      
     </div>
  </div>
