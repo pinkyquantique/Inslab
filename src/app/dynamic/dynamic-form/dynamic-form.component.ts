@@ -7,11 +7,12 @@ import { DynamicRadioComponent } from '../dynamic-radio/dynamic-radio.component'
 import { DynamicCheckboxComponent } from '../dynamic-checkbox/dynamic-checkbox.component';
 import { DynamicButtonComponent } from '../dynamic-button/dynamic-button.component';
 import { DynamicCalanderComponent } from '../dynamic-calander/dynamic-calander.component';
+import { DynamicMonthcalanderComponent } from '../dynamic-monthcalander/dynamic-monthcalander.component';
 
 @Component({
   selector: 'app-dynamic-form',
   standalone: true,
-  imports: [ReactiveFormsModule, CommonModule, 
+  imports: [ReactiveFormsModule, CommonModule, DynamicMonthcalanderComponent,
     DynamicInputComponent, DynamicSelectComponent, 
     DynamicRadioComponent,DynamicCheckboxComponent,
     DynamicButtonComponent,DynamicCalanderComponent],
@@ -38,7 +39,7 @@ export class DynamicFormComponent {
     }
   }
   isHalfWidth(field: any): boolean {     
-      return field.type === 'text' || field.type === 'select'||field.type === 'radio' ||field.type === 'checkbox' ||field.type === 'date' ;  // Example logic
+      return field.type === 'text' || field.type === 'select'||field.type === 'radio' ||field.type === 'checkbox' ||field.type === 'date' ||field.type === 'month' ;  // Example logic
   }
   markFormGroupTouched(formGroup: FormGroup) {
     Object.values(formGroup.controls).forEach((control) => {

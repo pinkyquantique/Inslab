@@ -3,49 +3,47 @@
   margin-bottom: 1.5rem;
 
   label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-  }
+    font-family: Roboto;
+font-size: 12px;
+font-weight: 400;
+line-height: 16px;
+padding: 0px 1.5rem;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
 
+    // display: block;
+    // font-weight: bold;
+    // margin-bottom: 0.5rem;
+  }
+.note{
+  font-family: Roboto;
+font-size: 1rem;
+font-weight: 600;
+line-height: 1rem;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+color:  var(--success-green, #25AA43);
+text-transform: uppercase;
+
+}
   input {
     width: 100%;
-    padding: 0.75rem;
-    font-size: 1rem;
+    padding: 1rem;
+    font-size: 1.2rem;
     border: 1px solid #ccc;
     border-radius: 5px;
     outline: none;
     transition: border-color 0.3s;
-
+    border-radius: 1rem;
+    height: 4rem;
     &:focus {
       border-color: #007bff;
     }
   }
 }
 /* text-input.component.scss */
-.form-group {
-  margin-bottom: 1.5rem;
 
-  label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-  }
-
-  input {
-    width: 100%;
-    padding: 0.75rem;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    outline: none;
-    transition: border-color 0.3s;
-
-    &:focus {
-      border-color: #007bff;
-    }
-  }
-}
 .required-asterisk {
     color: red;
     margin-left: 5px;

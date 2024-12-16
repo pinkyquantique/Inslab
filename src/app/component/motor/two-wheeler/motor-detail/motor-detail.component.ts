@@ -69,22 +69,32 @@ config = [
       name: 'registration_number',
       placeholder: 'Enter your registration Number',
       required: true,
-    },
-    {
-      
-      type:'date',
+    },{
+      type:'month',
+      name: 'manufacturing-month', // A unique name for the field
       label: 'Manufacturing Month & year',
-      name: 'Manufacturing',
-      highlightToday: true,
-      dateFormat: 'MM/yyyy'
+      required: true,
+      yearPlaceholder: 'Select Year',
+      monthPlaceholder: 'Select Month',
+      note: 'Please select a valid year and month.'
     },
+    // {
+      
+    //   type:'date',
+    //   label: 'Manufacturing Month & year',
+    //   name: 'Manufacturing',
+    //   highlightToday: true,
+    //   datetype:'month',
+    //   dateFormat: 'MM/yyyy'
+    // },
     {
       
       type:'date',
       label: 'Purchase Registration Date',
       name: 'purchase_reg_date ',
+      placeholder: 'select date',
       highlightToday: true,
-      dateFormat: 'MM/yyyy'
+      dateFormat: 'dd/MM/yyyy'
     },
     
     {
@@ -92,6 +102,7 @@ config = [
       label: 'Invoice price of vehicle',
       name: 'Invoice price of vehicle',
       placeholder: 'Enter your registration code',
+      note:'Note : Invoice price between 4600051 to 9500000',
       required: true,
     },
     // {
@@ -105,26 +116,25 @@ config = [
     //   event: 'onFormCancel'
     // }
   ];
-  ngOnInit() {
+  async ngOnInit() {
+   
    
   
-    // Loop through config to add controls to formGroup
-    this.config.forEach((field) => {
-      if (field.type !== 'button' && field.name) {  // Ensure field.name is not undefined
+    await this.config.forEach((field) => {
+      if (field.type !== 'button' && field.name) {  
         const validators = [];
         if (field.required) {
           validators.push(Validators.required);
         }
-  
-        // Add the form control to formGroup dynamically
         this.formGroup.addControl(field.name, this.fb.control('', validators));
       }
     });
+    this._sharedService.emitChange(this.currentStep);
   }
   
 
   ngAfterViewInit() {
-    this._sharedService.emitChange(this.currentStep);
+ 
   }
  
 

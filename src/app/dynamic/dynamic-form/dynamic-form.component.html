@@ -40,6 +40,10 @@
   [formGroup]="formGroup" >
 </app-dynamic-calander>
 
+
+<app-dynamic-monthcalander   *ngSwitchCase="'month'" [config]="field" [formGroup]="formGroup" >
+</app-dynamic-monthcalander>
+
       <div *ngIf="formGroup.get(field.name)?.invalid && formGroup.get(field.name)?.touched">
         <small class="error">This field is required</small>
       </div>

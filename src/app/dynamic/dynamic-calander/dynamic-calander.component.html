@@ -1,24 +1,25 @@
-<!-- <div class="calendar-container">
-    <label>Select Date:</label>
-    <input 
-      type="date" 
-      [formControl]="selectedDate"
-      [min]="minDate"
-      [max]="maxDate"
-    >
-  </div> -->
+<!-- <div [formGroup]="formGroup" class="form-group">
+  <label [for]="config.name">{{ config.label }} <span *ngIf="config.required" class="required-asterisk">*</span></label>
+  <input
+    type="text"
+    [id]="config.name"
+    [formControlName]="config.name"
+    [placeholder]="config.placeholder"
+  />
+  <small class="note">{{ config.note }} </small>
+</div> -->
 
 
   <div [formGroup]="formGroup" class="form-group">
-    <label>{{ config.label }} <span *ngIf="config.required" class="required-asterisk">*</span></label>
-    <input 
-    type="date" 
-    [formControl]="selectedDate"
-    [min]="minDate"
-    [max]="maxDate"
-  >
+      <label >{{ config.label }}</label>
+   
+      <input
+      type="date"
+      [id]="config.name"
+      [formControlName]="config.name"
+      [placeholder]="config.placeholder"
+        
+      />
+     
     </div>
 
-  
-  
-  

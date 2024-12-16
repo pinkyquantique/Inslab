@@ -116,10 +116,7 @@
 
 <app-dynamic-form
 [config]="config"
-[formGroup]="formGroup"
-(formSubmit)="onFormSubmit()"
-(formCancel)="onFormCancel()"
-></app-dynamic-form>
+[formGroup]="formGroup"></app-dynamic-form>
 
   <!-- Fifth div -->
 
@@ -165,8 +162,8 @@
                         <div class="form-check mr-3 radio-wrapper">
                             <input class="form-check-input large-radio mt-3" type="radio" name="policyType" id="renewRadio" value="3 year CPA" >
                         </div>
-                        <div>
-                            <label class="form-check-label mb-5" for="3yearRadio">
+                        <div (click)="onFormSubmit()">
+                            <label class="form-check-label" for="3yearRadio">
                                 <h5 class="padding"><b>3 year CPA</b></h5>
                             </label>
                         </div>

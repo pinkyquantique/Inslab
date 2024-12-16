@@ -21,13 +21,14 @@ import { SharedService } from '../shared.service';
     }
     ngOnInit() {
       
-      this._sharedService.changeEmitted$.subscribe((text: any) => {
-        this.submitForm(text);
-      });
+     
      
     }
     ngAfterViewInit() {
-      
+      this._sharedService.changeEmitted$.subscribe((text: any) => {
+       
+        this.submitForm(text);
+      });
     }
     goToStep(stepIndex: number) {
       
