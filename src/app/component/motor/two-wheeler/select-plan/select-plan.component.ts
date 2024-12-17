@@ -81,6 +81,26 @@ export class SelectPlanComponent {
     const selectedValue = (event.target as HTMLSelectElement).value;
     console.log('Sorted value',selectedValue);
   }
+  insuranceCard = [
+    { 
+      totalPremium: 210000, 
+      idvCovered: 210000, 
+      claimSettled: 210000, 
+      selectedPlan: 'standard' 
+    },
+    { 
+      totalPremium: 220000, 
+      idvCovered: 220000, 
+      claimSettled: 220000, 
+      selectedPlan: 'premium' 
+    },
+    { 
+      totalPremium: 230000, 
+      idvCovered: 230000, 
+      claimSettled: 230000, 
+      selectedPlan: 'standard' 
+    }
+  ];
   onFormSubmit() {
    
    
