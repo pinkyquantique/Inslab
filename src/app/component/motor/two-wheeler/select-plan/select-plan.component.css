@@ -647,11 +647,58 @@ input:checked + .toggle::before {
   font-size: 10px;
   color: rgba(110, 133, 254, 1);
 }
+/* ad banner css */
+.ad-banner {
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(to right,#fbffff 10%,#d9e5ff 30%) ;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 900px;
+}
+
+.ad-content {
+  display: flex;
+  width: 100%;
+}
+
+.ad-text {
+  flex: 1;
+  padding: 20px;
+}
+
+.ad-text h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0 0 10px;
+}
+
+.ad-text p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #666;
+  margin: 0;
+}
+.ad-text span{
+  font-size: 10px;
+  margin-left: 60px;
+  color: #1D1B20;
+
+}
+.ad-image {
+  width: 400px;
+  height: 200px;
+  background-size: cover; 
+  border-radius: 12px;
+  /* background-color: #e6f0ff;  */
+}
 
 
 
 
-  
 
 /* Responsive Design for screens smaller than 768px */
 @media screen and (max-width: 768px) {

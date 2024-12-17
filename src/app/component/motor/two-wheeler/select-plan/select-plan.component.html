@@ -140,48 +140,64 @@
         </div>
       </div>
     
-    <div class="insurance-container">
-        <div class="insurance-card" *ngFor="let card of insuranceCard">
-          <div class="insurance-header">
-           <div class="company-info-wrapper">
-              <div class="company-info">
-                <img src="image/quotation_image.png" alt="quotation_image" class="logo" />
-                <div class="company-name">
-                  <h4>{{card.companyName}}
-                    <span *ngIf="card.recommended" class="badge">
-                      Recommended for You
-                    </span>
-                  </h4>
-                  <p>Total Premium : <span class="price">₹ {{card.totalPremium | number}}</span></p>
-
+      <div class="insurance-container">
+        <!-- Loop through the insuranceCard array to display each card -->
+        <div *ngFor="let card of insuranceCard; let i = index">
+          <div *ngIf="i !== 1" class="insurance-card">
+            <div class="insurance-header">
+              <div class="company-info-wrapper">
+                <div class="company-info">
+                  <img src="image/quotation_image.png" alt="quotation_image" class="logo" />
+                  <div class="company-name">
+                    <h4>{{card.companyName}}
+                      <span *ngIf="card.recommended" class="badge">
+                        Recommended for You
+                      </span>
+                    </h4>
+                    <p>Total Premium : <span class="price">₹ {{card.totalPremium | number}}</span></p>
+                  </div>
                 </div>
               </div>
-             </div>
-            <div class="btns">
-              <button class="btn-buy">Buy Now</button>
-              <button class="btn-share">Share</button>
+              <div class="btns">
+                <button class="btn-buy" (click)="onFormSubmit()">Buy Now</button>
+                <button class="btn-share">Share</button>
+              </div>
             </div>
-          </div>         
-          
-          <div class="plan-headline">
-            <span class="details">Plan Details</span>
-            <span class="insurance-type">standard <img src="icons/chevron-down.svg" alt="dropdown"/></span>
-            </div>
-            <div class="plan-details">
-            <ul>
-               <li> <img src="icons/idv_cover.svg"/> IDV Covered : <span class="insurance-value">₹ {{card.idvCovered | number}}</span></li>
-              <li> <img src="icons/claim_settle.svg"/> Claim Settled :<span class="insurance-value">₹ {{card.claimSettled | number}}</span></li>
-            </ul>
-         
-          </div>
-          <div class="plan-benefits">
-            <span *ngFor="let benfit of card.benefits">{{benfit}}</span>
-          </div>
-          <div class="footer">
-            <span class="coverge-details">View Coverage Details <img src="icons/chevron-down.svg"/></span>
             
+            <div class="plan-headline">
+              <span class="details">Plan Details</span>
+              <span class="insurance-type">standard <img src="icons/chevron-down.svg" alt="dropdown"/></span>
+            </div>
+            
+            <div class="plan-details">
+              <ul>
+                <li><img src="icons/idv_cover.svg"/> IDV Covered : <span class="insurance-value">₹ {{card.idvCovered | number}}</span></li>
+                <li><img src="icons/claim_settle.svg"/> Claim Settled :<span class="insurance-value">₹ {{card.claimSettled | number}}</span></li>
+              </ul>
+            </div>
+            
+            <div class="plan-benefits">
+              <span *ngFor="let benfit of card.benefits">{{benfit}}</span>
+            </div>
+            
+            <div class="footer">
+              <span class="coverge-details">View Coverage Details <img src="icons/chevron-down.svg"/></span>
+            </div>
           </div>
+          <div *ngIf="i === 1" class="ad-banner">
+            <div class="ad-content">
+              <div class="ad-text">
+                <h3>Secure Your travel plans Today!</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempororem ipsum </p>
+                <span>View More <img src="icons/arrow-right.svg"/></span>
+              </div>
+              <img src="image/ad_image.png" alt="Ad Banner" class="ad-image" />
+             
+            </div>
+          </div>
+      
         </div>
-    </div>
+      </div>
+      
     </div>
  </div>
