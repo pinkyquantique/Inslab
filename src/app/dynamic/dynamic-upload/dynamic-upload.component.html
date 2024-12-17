@@ -1,0 +1,62 @@
+<div class="form-group">
+    <!-- IN PROGRESS -->
+    <div *ngIf="uploadState === 'in-progress'" class="card shadow-sm mb-3 border-0">
+      <div class="card-body text-center">
+        <div class="spinner-border text-primary mb-3" role="status"></div>
+        <p class="text-muted mb-0">Your file upload is in progress. Please wait patiently!</p>
+        <small class="text-muted">Max. File size: 5 MB | Formats: .jpg, .png, .pdf</small>
+        <div class="progress mt-2">
+          <div
+            class="progress-bar progress-bar-striped progress-bar-animated"
+            role="progressbar"
+            [style.width.%]="uploadProgress"
+          ></div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- DEFAULT STATE -->
+    <div *ngIf="uploadState === 'default'" class="card shadow-sm mb-3 border-0">
+        <div
+          class="card-body text-center border border-2 border-dashed rounded"
+          (dragover)="onDragOver($event)"
+          (drop)="onFileDropped($event)"
+          (click)="fileInput.click()"
+          style="cursor: pointer;"
+        >
+          <i class="bi bi-upload fs-1 text-secondary"></i>
+          <p class="text-muted">Click to upload or drag and drop</p>
+          <small class="text-muted">Max. File size: 5 MB | Formats: .jpg, .png, .pdf</small>
+          <!-- Hidden File Input -->
+          <input
+            type="file"
+            #fileInput
+            class="d-none"
+            (change)="onFileSelected($event)"
+            accept=".jpg, .png, .pdf"
+          />
+        </div>
+      </div>
+      
+  
+    <!-- SUCCESS STATE -->
+    <div *ngIf="uploadState === 'success'" class="card shadow-sm mb-3 border-success">
+      <div class="card-body text-center text-success">
+        <i class="bi bi-check-circle-fill fs-1"></i>
+        <p>{{ (formGroup.get(config.name)?.value).name }} {{(formGroup.get(config.name)?.value).size}} </p>
+        <p class="mb-0">Your file has been successfully uploaded!</p>
+        <small class="text-muted">Max. File size: 5 MB | Formats: .jpg, .png, .pdf</small>
+      </div>
+    </div>
+  
+    <!-- ERROR STATE -->
+    <div *ngIf="uploadState === 'error'" class="card shadow-sm mb-3 border-danger">
+      <div class="card-body text-center text-danger">
+        <i class="bi bi-exclamation-triangle-fill fs-1"></i>
+        <p class="mb-0">Error: {{ errorMessage }}</p>
+        <small class="text-muted">Max. File size: 5 MB | Formats: .jpg, .png, .pdf</small>
+        <button class="btn btn-danger mt-2" (click)="resetUpload()">Try Again</button>
+      </div>
+    </div>
+  </div>
+  
