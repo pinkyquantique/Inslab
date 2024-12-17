@@ -47,8 +47,8 @@
   <div class="container mt-5 new-section">
     <div class="row">
       <div class="col-md-6">
-        <div class="card info-card" id="new-info1">
-          <div class="card-body d-flex h-25 mb-3 align-items-center">
+        <div class="card info-card" id="new-info1" >
+          <div class="card-body d-flex h-25 mb-3 align-items-center" >
             <div>
               <h5><b>Bundled</b></h5>
               <p>5 Year OD (Own Damage).</p>
@@ -90,7 +90,7 @@
         </div>
         <div class="col">
           <div class="card info-card" id="renewal-info2">
-            <div class="card-body d-flex h-25 mb-3 align-items-center">
+            <div class="card-body h-25 mb-3 align-items-center">
               <div>
                 <h5><b>Standalone</b></h5>
                 <p>1 Year OD (Own Damage).</p>
@@ -262,7 +262,7 @@
     <p >Select reason for opting out CPA</p>
     <h5 >Select reason <span class="red-astrick">*</span></h5>
     <div class="col column">
-        <select class="form-select p-card policy-card" id="policyType" [ngClass]="{'selected': selectedPolicy === 'dropdown'}" (click)="onRadioSelect('dropdown')">
+        <select class="form-select date-card p-card " id="policyType" [ngClass]="{'selected': selectedPolicy === 'dropdown1'}" (click)="onRadioSelect('dropdown1')">
             <option value="3 year CPA">Placeholder</option>  
         </select>
     </div>
@@ -332,14 +332,56 @@
     </div>
 </div>
 <p>Please enter your previous policy expiry date.</p>
-<h5 >Select reason <span class="red-astrick">*</span></h5>
-<div class="col">
-  <input type="date" class="w-50 p-card policy-card p-3 ">
+<h5 style="font-size: 12px;">Previous policy expiry date <span class="red-astrick">*</span></h5>
+<div class="col" >
+  <input type="date" class="w-50 date-card p-4 " [ngClass]="{'selected': selectedPolicy === 'date'}" (click)="onRadioSelect('date')">
+</div>
 </div>
 
+<!-- In previous policy detail if changing ownership is no -->
+<div class="sixth_renew">
+  <p>Do you have previous policy?</p>
+<div class="form-check-inline radio-group">
+    <label class="form-check-label" for="yesRoadside">
+        <input class="form-check-input" type="radio" name="roadsideAssistance" id="yesRoadside" value="yes"> Yes
+    </label>
+    <label class="form-check-label ml-4" for="noRoadside">
+        <input class="form-check-input" type="radio" name="roadsideAssistance" id="noRoadside" value="no"> No
+    </label>
 </div>
 
+<h5 style="font-size: 12px;">NCB<span class="red-astrick">*</span></h5>
+<div class="col" >
+  <select  class="w-50  date-card p-4" [ngClass]="{'selected': selectedPolicy === 'dropdown2'}" (click)="onRadioSelect('dropdown2')">
+    <option>Placeholder</option>
+  </select>
+</div> 
 
+<p>Previous policy NIL Dep</p>
+<div class="form-check-inline radio-group">
+    <label class="form-check-label" for="yesRoadside">
+        <input class="form-check-input" type="radio" name="roadsideAssistance" id="yesRoadside" value="yes"> Yes
+    </label>
+    <label class="form-check-label ml-4" for="noRoadside">
+        <input class="form-check-input" type="radio" name="roadsideAssistance" id="noRoadside" value="no"> No
+    </label>
+</div>
+</div>
+
+<!-- 2 Wheeler | Renew | Individual | Standalone
+Previous policy - Yes 
+Change in Ownership - Yes -->
+<div class="sixth_renew ">
+  <p>Please enter your previous policy expiry date.</p>
+<h5 style="font-size: 12px;">OD policy expiry date <span class="red-astrick">*</span></h5>
+<div class="col" >
+  <input type="date" class="w-50 date-card p-4 mb-3 " [ngClass]="{'selected': selectedPolicy === 'date2'}" (click)="onRadioSelect('date2')">
+</div>
+<h5 style="font-size: 12px;">TP policy expiry date <span class="red-astrick">*</span></h5>
+<div class="col" >
+  <input type="date" class="w-50 date-card p-4 " [ngClass]="{'selected': selectedPolicy === 'date2'}" (click)="onRadioSelect('date2')">
+</div>
+</div>
 
 
 <!-- Buttons -->
