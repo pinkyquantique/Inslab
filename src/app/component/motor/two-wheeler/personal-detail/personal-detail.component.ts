@@ -260,7 +260,7 @@ export class PersonalDetailComponent implements OnInit {
       required: true,
     },
     {
-      type: 'select',
+      type: 'upload',
       label: 'Upload Pre-Year TP Policy ',
       name: 'pre_year_tp_policy ',
       options: [{ id: 1, value: 'Mr' }, { id: 2, value: 'Miss' }, { id: 3, value: 'Mrs' }],

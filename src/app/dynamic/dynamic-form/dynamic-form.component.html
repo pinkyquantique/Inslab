@@ -40,6 +40,10 @@
   [formGroup]="formGroup" >
 </app-dynamic-calander>
 
+<app-dynamic-upload *ngSwitchCase="'upload'"
+[config]="field"
+[formGroup]="formGroup" >
+</app-dynamic-upload>
 
 <app-dynamic-monthcalander   *ngSwitchCase="'month'" [config]="field" [formGroup]="formGroup" >
 </app-dynamic-monthcalander>

@@ -8,6 +8,7 @@ import { DynamicCheckboxComponent } from '../dynamic-checkbox/dynamic-checkbox.c
 import { DynamicButtonComponent } from '../dynamic-button/dynamic-button.component';
 import { DynamicCalanderComponent } from '../dynamic-calander/dynamic-calander.component';
 import { DynamicMonthcalanderComponent } from '../dynamic-monthcalander/dynamic-monthcalander.component';
+import { DynamicUploadComponent } from '../dynamic-upload/dynamic-upload.component';
 
 @Component({
   selector: 'app-dynamic-form',
@@ -15,7 +16,7 @@ import { DynamicMonthcalanderComponent } from '../dynamic-monthcalander/dynamic-
   imports: [ReactiveFormsModule, CommonModule, DynamicMonthcalanderComponent,
     DynamicInputComponent, DynamicSelectComponent, 
     DynamicRadioComponent,DynamicCheckboxComponent,
-    DynamicButtonComponent,DynamicCalanderComponent],
+    DynamicButtonComponent,DynamicCalanderComponent,DynamicUploadComponent],
   templateUrl: './dynamic-form.component.html',
   styleUrls: ['./dynamic-form.component.scss']
 })
