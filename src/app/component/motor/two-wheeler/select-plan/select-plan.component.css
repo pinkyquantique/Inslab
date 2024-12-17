@@ -124,8 +124,13 @@ p {
 .filter-container {
     display: flex;
     align-items: center;
-    position: relative;
-    margin-top: -26px;
+    /* position: relative; */
+    margin-bottom: 40px;
+    height: 30px;
+    gap: 30px;
+  }
+  .filter-container p{
+    margin-bottom: 30px;
   }
   
   .filter-icon {
@@ -136,7 +141,7 @@ p {
   .filter-dropdown {
     position: absolute; 
     top: -10px; 
-    left: 200px;
+    left: 240px;
     background-color: #fff;
     border-radius: 5px;
     z-index: 10; 
@@ -144,13 +149,15 @@ p {
   
   .dropdown-header {
     padding: 10px;
+    height: 10px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
   
   .dropdown-header span {
-    font-size: 14px;
+    font-size: 10px;
   }
   
   .dropdown-menu {
@@ -181,9 +188,6 @@ p {
     margin-right: 10px;
     color:rgba(29, 27, 32, 0.6);
   }
-  
-  
-  
 
 .filter-right-container {
     flex: 1.9;
@@ -205,7 +209,7 @@ p {
 }
 
 
-.price-container h2 {
+.price-container h3 {
     margin: 0;
     padding: 0;
     position: absolute;
@@ -213,7 +217,7 @@ p {
     text-align: center;
     left: 16px;
     z-index: 10;
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     font-weight: 600;
     color: #1D1B20;
     font-family: 'Roboto', sans-serif;
@@ -443,6 +447,209 @@ input:checked + .toggle::before {
     transform: translateX(14px);
 }
 
+/* quotation plan div css */
+
+.insurance-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.insurance-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  background-color: #fff;
+}
+
+.insurance-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: 'Roboto', sans-serif;
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.company-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: auto;
+  
+}
+
+.company-info {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.company-info h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  white-space: nowrap;
+}
+.company-name{
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+  height: 10%;
+}
+.company-name p{
+  text-align: left;
+}
+.badge {
+  background-color: #ffd700;
+  color: #333;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 4px 12px;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+
+.company-info-wrapper p {
+  margin: 4px 0 0 0;
+  font-size: 14px;
+  color: #777;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-left:15px;
+}
+
+.btn-buy {
+  background-color: #333;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.btn-share {
+  background-color: #fff;
+  color: #333;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+
+.insurance-body p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.price {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.plan-details {
+  margin: 15px 0;
+}
+.plan-headline{
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.details{
+  font-weight: bold;
+  color: rgba(29, 27, 32, 1);
+}
+.insurance-type{
+  padding: 0 12px 0;
+  border-radius: 14px;
+  font-weight: 100;
+  background: rgba(64, 128, 224, 0.2);
+}
+.plan-details span{
+  margin-bottom: 10px;
+  font-size: 13px;
+  font-weight: bold;
+  color: rgba(29, 27, 32, 1);
+}
+
+.plan-details ul {
+  list-style: none;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.plan-details ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.insurance-value{
+  margin-left: 42rem;
+}
+.plan-details ul li img {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+
+.plan-benefits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 12px;
+  color: #555;
+}
+
+.plan-benefits span {
+  background-color: #f0f0f0;
+  padding: 5px 8px;
+  border-radius: 4px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  font-size: 10px;
+  color: rgba(110, 133, 254, 1);
+}
+
+
+
 
   
 
@@ -508,18 +715,110 @@ input:checked + .toggle::before {
         width: 100%;
       }
       .price-container{
-        width: 100%;
+        width: 320px;
+      }
+      .price-container h3{
+        font-size: 14px;
       }
       .price-container input{
-        width: 100px;
+        width: 150px;
 
       }
       .idv-container{
         width: 100%;
       }
+      .current-value{
+        font-size: 10px;
+        text-align: center;
+        margin-right: 20px;
+      }
       .geo-container, .add-container, .accessories-container {
         width: 100%;
         max-width: none;
+    }
+    .insurance-container {
+      width: 100%;
+      padding: 0 10px;
+    }
+  
+    .insurance-card {
+      padding: 15px;
+    }
+  
+    .insurance-header {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 5px;
+    }
+  
+    .logo {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+    }
+  
+    .company-info-wrapper {
+      margin-right: 0;
+    }
+  
+    .company-info {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .company-info h3 {
+      font-size: 14px;
+    }
+  
+    .company-name p {
+      font-size: 14px;
+    }
+  
+    .btns {
+      align-items: stretch;
+      margin-left: 0;
+    }
+  
+    .btn-buy {
+      font-size: 14px;
+      padding: 8px 12px;
+    }
+  
+    .btn-share {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  
+    .insurance-body p {
+      font-size: 14px;
+    }
+  
+    .price {
+      font-size: 16px;
+    }
+  
+    .plan-headline {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .plan-details span {
+      font-size: 12px;
+    }
+  
+    .plan-details ul li {
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+  
+    .plan-benefits {
+      font-size: 10px;
+    }
+  
+    .footer {
+      flex-direction: column;
+      align-items: flex-start;
+      font-size: 8px;
     }
     
 }

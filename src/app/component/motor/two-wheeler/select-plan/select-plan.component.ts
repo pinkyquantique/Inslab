@@ -88,22 +88,34 @@ export class SelectPlanComponent implements OnInit{
   }
   insuranceCard = [
     { 
+      companyName: 'Global India Insurance Broker Ltd.',
       totalPremium: 210000, 
       idvCovered: 210000, 
       claimSettled: 210000, 
-      selectedPlan: 'standard' 
+      selectedPlan: 'standard',
+      recommended: true,
+      benefits: ['6-MONTH REPAIR WARRANTY', 'ROADSIDE ASSISTANCE', 'FREE PICK UP & DROP'],
+     
     },
     { 
+      companyName: 'Global India Insurance Broker Ltd.',
       totalPremium: 220000, 
       idvCovered: 220000, 
       claimSettled: 220000, 
-      selectedPlan: 'premium' 
+      selectedPlan: 'premium',
+      recommended: false,
+      benefits: ['6-MONTH REPAIR WARRANTY', 'ROADSIDE ASSISTANCE', 'FREE PICK UP & DROP'],
+     
     },
     { 
+      companyName: 'Global India Insurance Broker Ltd.',
       totalPremium: 230000, 
       idvCovered: 230000, 
       claimSettled: 230000, 
-      selectedPlan: 'standard' 
+      selectedPlan: 'standard',
+      recommended: true,
+      benefits: ['6-MONTH REPAIR WARRANTY', 'ROADSIDE ASSISTANCE', 'FREE PICK UP & DROP'],
+     
     }
   ];
   onFormSubmit() {
