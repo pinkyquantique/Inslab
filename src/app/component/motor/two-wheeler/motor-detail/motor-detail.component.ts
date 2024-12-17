@@ -17,7 +17,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class MotorDetailComponent implements OnInit, AfterViewInit {
   currentStep: number = 1;
   formGroup: FormGroup;
-  selectedPolicy: string = '';  // Track the selected policy (new or renew)
+  selectedPolicy: string = 'new';  // Track the selected policy (new or renew)
 
   constructor(private router: Router, private _sharedService: SharedService,private fb: FormBuilder) {
     this.formGroup = this.fb.group({});

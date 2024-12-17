@@ -11,10 +11,10 @@
         <div class="card policy-card" [ngClass]="{'selected': selectedPolicy === 'new'}" id="new-policy" (click)="onRadioSelect('new')">
           <div class="card-body d-flex align-items-center">
             <div class="form-check mr-3 radio-wrapper">
-              <input class="form-check-input large-radio" type="radio" name="policyType" id="newRadio" value="new" (click)="onRadioSelect('new')" checked>
+              <input class="form-check-input large-radio" type="radio"  name="policyType" id="newRadio" value="new" (click)="onRadioSelect('new')" checked>
             </div>
             <div>
-              <label class="form-check-label" for="newRadio">
+              <label class="form-check-label" for="newRadio" >
                 <h5><b>New</b></h5>
               </label>
               <p>Select ‘New’ if you want to purchase insurance.</p>
@@ -204,7 +204,7 @@
                             <input class="form-check-input large-radio mt-3" type="radio" name="policyType" id="renewRadio" value="3 year CPA" >
                         </div>
                         <div (click)="onFormSubmit()">
-                            <label class="form-check-label" for="3yearRadio">
+                            <label class="form-check-label  mb-5" for="3yearRadio">
                                 <h5 class="padding"><b>3 year CPA</b></h5>
                             </label>
                         </div>
@@ -242,7 +242,7 @@
                 <div class="card  h-card policy-card" [ngClass]="{'selected': selectedPolicy === 'Renew 1 year CPA'}"  id="renew-policy" (click)="onRadioSelect('Renew 1 year CPA')">
                     <div class="card-body d-flex align-items-center">
                         <div class="form-check mr-3 radio-wrapper">
-                            <input class="form-check-input large-radio mt-3" type="radio" name="policyType" id="renewRadio" value="1 year CPA" >
+                            <input class="form-check-input large-radio mt-3" type="radio"  name="policyType" id="renewRadio" value="1 year CPA" >
                         </div>
                         <div>
                             <label class="form-check-label mb-5" for="Renew1yearRadio">
@@ -270,7 +270,7 @@
 
 <!-- Buttons -->
 
-<div class="d-flex justify-content-end mt-4 ">
+<div class="d-flex justify-content-end mt-5 ">
     <button class="btn btn-light  px-4  cancel-button"><b>Cancel</b></button>
     <button class="btn btn-dark px-4 next-button"><b>Next</b></button>
 </div>

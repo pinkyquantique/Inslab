@@ -63,8 +63,16 @@ text-decoration-skip-ink: none;
   background: linear-gradient(to right, #58CD72 0%, #58CD72 100%);
 
 }
-
-
+.sign{
+  margin-right:1rem ;
+  font-size: larger;
+}
+.back-btn{
+  margin-right:15rem ;
+  font-size: larger;
+  font-weight: bold;
+  cursor: pointer;
+}
 .step-name {
   font-size: 14px;
   color: #6c757d; 
