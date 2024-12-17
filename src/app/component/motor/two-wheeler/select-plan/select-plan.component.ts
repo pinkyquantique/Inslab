@@ -11,7 +11,7 @@ import { SharedService } from '../../shared.service';
   styleUrl: './select-plan.component.css'
 })
 export class SelectPlanComponent implements OnInit{
-  currentStep: number = 2;
+  currentStep: number = 1;
   minValue = 463239;
   maxValue = 959898;
   currentValue = this.minValue;

@@ -1,1 +1,199 @@
-<p>personal-detail works!</p>
+<div class="container mt-4">
+
+    <div class="card-container">
+        <div class="card-content">
+            <div class="card-item">
+                <h5>Product</h5>
+                <p>Two Wheeler</p>
+            </div>
+            <div class="divider"></div>
+            <div class="card-item">
+                <h5>Vehicle</h5>
+                <p>Honda Activa<br />MH09AP1122<br />Petrol, 1198</p>
+            </div>
+            <div class="divider"></div>
+            <div class="card-item">
+                <h5>Current Policy</h5>
+                <p>Comprehensive</p>
+            </div>
+            <div class="divider"></div>
+            <div class="card-item">
+                <h5>Policy Holder</h5>
+                <p>Individual</p>
+            </div>
+            <div class="divider"></div>
+            <div class="card-item">
+                <h5>Registered Date</h5>
+                <p>25/10/2023</p>
+            </div>
+            <div class="divider"></div>
+            <div class="actions-container">
+                <button class="edit-btn">Edit Change</button>
+                <div class="navigation">
+                    <img src="icons/arrow-left.svg" alt="Previous" class="nav-icon" />
+                    <span>View Previous Edit</span>
+                    <img src="icons/arrow-right.svg" alt="Next" class="nav-icon" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pt-4 row">
+        <div class="col-md-4">
+            <div class="side-card p-4 shadow-sm">
+                <h5 class="mb-3">Policy Details</h5>
+                <ul class="list-unstyled ">
+                    <li class="d-flex justify-content-between">Vehicle Value: <strong>₹ 19,50,001</strong></li>
+                    <li class="d-flex justify-content-between">Premium: <strong>₹ 50,000</strong></li>
+                    <li class="d-flex justify-content-between">Policy Term: <strong>1 Year</strong></li>
+                    <li class="d-flex justify-content-between">GST: <strong>₹ 9,000</strong></li>
+                </ul>
+                <hr />
+                <h5 class="text-end text-primary">Total: ₹ 19,50,001</h5>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+
+          
+            <fieldset class="mb-4">
+                <h4 class="fw-bold">Vehicle Information</h4>
+                <div class="pt-4">
+                    <p>Your personal data will be kept completely confidential.</p>
+                    <div class="row g-3">
+                        <app-dynamic-form [config]="vechiledetail"
+                            [formGroup]="vechiledetailformGroup"></app-dynamic-form>
+                    </div>
+                </div>
+            </fieldset>
+
+      
+            <fieldset class="mb-4">
+                <h4 class="fw-bold">Owner Details</h4>
+                <div class="pt-4">
+                    <p>General Details</p>
+
+                    <div class="row g-3">
+                        <app-dynamic-form [config]="ownergeneraldetailconfig"
+                            [formGroup]="ownergeneraldetailformGroup"></app-dynamic-form>
+                    </div>
+
+                </div>
+                <div class="pt-4">
+                    <p>Address Details</p>
+
+                    <div class="row g-3">
+                        <app-dynamic-form [config]="addressconfig" [formGroup]="addressformGroup"></app-dynamic-form>
+                    </div>
+
+                </div>
+                <div class="pt-4">
+                    <p>Marital Status</p>
+                    <div class="row g-3">
+                        <div class="d-flex flex-row align-items-center">
+                            <div class="form-check me-4" *ngFor="let option of maritalstatusoption">
+                              <input
+                                class="form-check-input custom-radio"
+                                type="radio"
+                                [id]="option.id"
+                                [value]="option.id"
+                                name="maritalStatus"
+                                [(ngModel)]="selectedMaritalStatus"
+                                (change)="onstatusChange(option.id)"
+                              />
+                              <label class="form-check-label" [for]="option.id">
+                                {{ option.value }}
+                              </label>
+                            </div>
+                          </div>                  
+                      </div>
+                      
+                 
+                      
+
+                </div>
+            </fieldset>
+            <fieldset class="mb-4">
+                <h4 class="fw-bold">Nominee Details</h4>
+                <div class="pt-4">
+                    <p>General Details</p>
+                    <div class="row g-3">
+                        <app-dynamic-form [config]="nomieegeneraldetailconfig"
+                            [formGroup]="nomieegeneraldetailformGroup"></app-dynamic-form>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="mb-4">
+                <h4 class="fw-bold">Hypothecation Details</h4>
+                <div class="pt-4">
+                    <!-- <p>General Details</p> -->
+                    <div class="row g-3">
+                        <app-dynamic-form [config]="nomieegeneraldetailconfig"
+                            [formGroup]="nomieegeneraldetailformGroup"></app-dynamic-form>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="mb-4">
+                <h4 class="fw-bold">Previous Policy Details</h4>
+                <div class="pt-4">
+                    <p>Enter your OD previous policy details.</p>
+                    <div class="row g-3">
+                        <app-dynamic-form [config]="odprepolicydetailconfig"
+                            [formGroup]="odprepolicydetailformGroup"></app-dynamic-form>
+                    </div>
+                </div>
+                <div class="pt-4">
+                    <p>Enter your TP previous policy details.</p>
+                    <div class="row g-3">
+                        <app-dynamic-form [config]="tpprepolicydetailconfig"
+                            [formGroup]="tpprepolicydetailformGroup"></app-dynamic-form>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="mb-4">
+                <h4 class="fw-bold">CKYC Details</h4>
+                <div class="pt-4">
+                    <p>Enter your CKYC details.</p>
+                    <div class="row g-3">
+                        <app-dynamic-form [config]="ckycdetailconfig"
+                            [formGroup]="ckycdetailformGroup"></app-dynamic-form>
+                    </div>
+                </div>
+                <div class="pt-4">
+                    <p>Are you Politically Exposed Person (PEP).</p>
+                    <div class="row g-3">
+                        <div class="d-flex flex-row align-items-center">
+                            <div class="form-check me-4" *ngFor="let option of epestatusoption">
+                              <input
+                                class="form-check-input custom-radio"
+                                type="radio"
+                                [id]="option.id"
+                                [value]="option.id"
+                                name="epelStatus"
+                                [(ngModel)]="selectedepestatus"
+                                (change)="onstatusChange(option.id)"
+                              />
+                              <label class="form-check-label" [for]="option.id">
+                                {{ option.value }}
+                              </label>
+                            </div>
+                          </div>                  
+                      </div>
+                      
+                 
+                      
+
+                </div>
+            </fieldset>
+            <!-- Submit Buttons -->
+            <div class="text-end mb-5">
+                <button type="button" class="btn btn-secondary me-2">Discard</button>
+                <button type="submit" class="btn btn-primary" (click)="onFormSubmit()">Next</button>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+</div>

@@ -1,0 +1,107 @@
+.container {
+  .card-container {
+    background-color: #F6F9FF;
+    border: 2px solid #C1D5FF;
+    border-radius: 10px;
+    max-width: 1100px;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    overflow: hidden;
+
+    .card-content {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      .card-item {
+        text-align: center;
+        flex: 1;
+        min-width: 120px;
+        margin: 8px;
+        position: relative;
+      }
+
+      .divider {
+        height: 10rem;
+        border: 0.1rem solid #C1D5FF;
+
+      }
+    }
+  }
+
+
+
+
+
+  .side-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    h5 {
+      font-weight: bold;
+      color: #333;
+    }
+
+    ul {
+      padding-left: 0;
+
+      li {
+        margin-bottom: 8px;
+        color: #555;
+
+        strong {
+          color: #000;
+        }
+      }
+    }
+
+    hr {
+      border-top: 2px solid #007bff;
+    }
+
+    .text-primary {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+  }
+
+  fieldset {
+    legend {
+      font-weight: 600;
+      font-size: 1.2rem;
+      color: #333;
+      border-bottom: 2px solid #007bff;
+      margin-bottom: 15px;
+    }
+
+    label {
+      font-weight: 500;
+    }
+
+    .form-control {
+      border-radius: 6px;
+    }
+  }
+
+  .btn {
+    border-radius: 6px;
+  }
+  p {
+    color: var(--text-black-60, #1D1B2099);
+  }
+}
+.form-check-input {
+  margin-top: 0.2rem; /* Align radio button vertically */
+}
+.gap20{
+  gap: 20rem !important;;
+}
+.form-check-label {
+  cursor: pointer; /* Pointer cursor for the label */
+}
+
+
