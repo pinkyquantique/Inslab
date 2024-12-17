@@ -52,19 +52,13 @@ export class LoginComponent{
       IKey: this.formGroup.controls["IKey"].value
     }
     console.log(loginForm);
-    // this.authService.login(this.email, this.password).subscribe((resp:any)=>{
-
-    //   if(!resp.error && resp){
-    //     document.location.reload();
-    //   }
-    //   else{
-    //     if(resp.error.error == 'Unauthorized'){
-    //       alert("No Entry");
-    //       return;
-    //     }
-    //   }
-
-
-    // })
+    let data = await this.authService.login(loginForm);
+    if(data==true){
+      this.router.navigate(['/pages/home']);
+    }
+    else{
+      alert("Invalid User");
+          return;
+    }
   }
 }
