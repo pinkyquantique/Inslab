@@ -39,7 +39,7 @@
  <div class="quotation-container">
     <div class="filter-right-container">
         <div class="price-container">
-            <h2>Ex Showroom Price</h2>
+            <h3>Ex Showroom Price</h3>
             <input type="text" placeholder="1195044"/>
         </div>
         <div class="idv-container">
@@ -120,13 +120,13 @@
         <h3>Select the best suitable plans at exclusive rates.</h3>
       </div>
       <div class="filter-container">
-        <p>Showing 3 results for 2 members.</p>       <button class="btn btn-dark px-4 next-button" (click)="onFormSubmit()"><b>Next</b></button>
+        <p>Showing 3 results for 2 members.</p>    <!--    <button class="btn btn-dark px-4 next-button" (click)="onFormSubmit()"><b>Next</b></button> -->
         <div class="filter-icon" (click)="toggleDropDown()">
           <div class="filter-dropdown" >
             <div class="dropdown-header">
               <img src="icons/filter.svg" alt="filter" class="filter-image" />
               <span> Sort By <b>{{selectedOption}}</b></span>
-              <img src="icons/filter_dropdown.svg" alt="filter_dropdown" 
+              <img src="icons/chevron-down.svg" alt="filter_dropdown" 
               class="dropdown" [class.rotate]="isOpen"/>
             </div>
             <ul class="dropdown-menu" *ngIf="isOpen">
@@ -139,6 +139,49 @@
           </div>
         </div>
       </div>
-      
+    
+    <div class="insurance-container">
+        <div class="insurance-card" *ngFor="let card of insuranceCard">
+          <div class="insurance-header">
+           <div class="company-info-wrapper">
+              <div class="company-info">
+                <img src="image/quotation_image.png" alt="quotation_image" class="logo" />
+                <div class="company-name">
+                  <h4>{{card.companyName}}
+                    <span *ngIf="card.recommended" class="badge">
+                      Recommended for You
+                    </span>
+                  </h4>
+                  <p>Total Premium : <span class="price">₹ {{card.totalPremium | number}}</span></p>
+
+                </div>
+              </div>
+             </div>
+            <div class="btns">
+              <button class="btn-buy">Buy Now</button>
+              <button class="btn-share">Share</button>
+            </div>
+          </div>         
+          
+          <div class="plan-headline">
+            <span class="details">Plan Details</span>
+            <span class="insurance-type">standard <img src="icons/chevron-down.svg" alt="dropdown"/></span>
+            </div>
+            <div class="plan-details">
+            <ul>
+               <li> <img src="icons/idv_cover.svg"/> IDV Covered : <span class="insurance-value">₹ {{card.idvCovered | number}}</span></li>
+              <li> <img src="icons/claim_settle.svg"/> Claim Settled :<span class="insurance-value">₹ {{card.claimSettled | number}}</span></li>
+            </ul>
+         
+          </div>
+          <div class="plan-benefits">
+            <span *ngFor="let benfit of card.benefits">{{benfit}}</span>
+          </div>
+          <div class="footer">
+            <span class="coverge-details">View Coverage Details <img src="icons/chevron-down.svg"/></span>
+            
+          </div>
+        </div>
+    </div>
     </div>
  </div>
