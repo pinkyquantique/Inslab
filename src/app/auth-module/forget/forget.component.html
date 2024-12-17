@@ -1,14 +1,19 @@
 <h2 class="text-center mt-5">Enter your Email ID</h2>
-<form (ngSubmit)="onSubmit()">
+<form [formGroup]="formGroup">
   <!-- Email ID -->
   <div class="form-group mt-4 px-5">
     <label for="email">Email ID</label>
-    <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" [(ngModel)]="email" required>
+    <input type="email" formControlName="email" class="form-control" id="email" name="email" placeholder="Enter email" required>
+    <div *ngIf="email?.invalid && email?.touched" class="text-danger">
+      <small *ngIf="email?.hasError('required')">Email is required.</small>
+      <small *ngIf="email?.hasError('email')">Please enter a valid email address.</small>
+    </div>
   </div>
 
   <!-- Submit Button -->
-  <div class="d-flex justify-content-center mt-4 px-5" id="login-btn-container">
-    <button type="submit" class="btn btn-dark round-button" style="width: 100%;">Submit</button>
+  <div class="d-flex justify-content-center mt-4 px-5 " id="login-btn-container">
+    <button type="submit" [disabled]="!!formGroup.invalid" 
+    (click)="onSubmit()" class="btn btn-dark round-button" style="width: 100%;">Submit</button>
   </div>
 </form>
 
