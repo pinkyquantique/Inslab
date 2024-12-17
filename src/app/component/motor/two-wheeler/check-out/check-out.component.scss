@@ -1,0 +1,139 @@
+*{
+   font-family: "roboto , sans serif"; 
+}
+.card-container {
+    background-color: #F6F9FF;
+    border: 2px solid #C1D5FF;
+    border-radius: 10px;
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.card-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card-item {
+    text-align: center;
+    flex: 1;
+    min-width: 120px;
+    margin: 8px;
+    position: relative;
+}
+
+h5 {
+    font-size: 1.2rem;
+    color: rgb(104, 103, 103);
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 16px;
+    z-index: 10;
+    text-align: center;
+}
+
+p {
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    color: #1D1B20;
+    font-weight: 800px;
+    margin: 0;
+    margin-right: 20px;
+    text-align: center;
+    padding-top: 24px;
+}
+
+.divider {
+    width: 1px;
+    height: 80px;
+    border: 1px solid #C1D5FF;
+    margin: 0 16px;
+}
+
+.actions-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    flex: 1;
+    gap: 16px;
+}
+
+
+.edit-btn {
+    background-color: transparent;
+    color: #1D1B20;
+    border: 1px solid #1D1B20;
+    padding: 6px 16px;
+    border-radius: 18px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1rem;
+    color: #1D1B20;
+}
+
+.nav-icon {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+// My css
+
+.container-fluid {
+    padding: 20px;
+  }
+  
+  .card {
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+  }
+  
+  .policy-details {
+    background-color: #f6f9ff;
+
+  }
+  .list-group-item {
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    background-color: #f6f9ff; ;
+  }
+  .total-premium {
+    background-color: #d1e7fd;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .proposal-review {
+    h5 {
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+    p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  
+  @media (max-width: 768px) {
+    .policy-details {
+      margin-bottom: 20px;
+    }
+  }
+  

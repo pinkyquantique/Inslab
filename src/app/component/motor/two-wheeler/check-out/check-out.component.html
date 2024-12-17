@@ -1,1 +1,90 @@
-<p>check-out works!</p>
+<div class="card-container">
+    <div class="card-content">
+      <div class="card-item">
+        <h5>Product</h5>
+        <p>Two Wheeler</p>
+      </div>
+      <div class="divider"></div>
+      <div class="card-item">
+        <h5>Vehicle</h5>
+        <p>Honda Activa<br />MH09AP1122<br />Petrol, 1198</p>
+      </div>
+      <div class="divider"></div>
+      <div class="card-item">
+        <h5>Current Policy</h5>
+        <p>Comprehensive</p>
+      </div>
+      <div class="divider"></div>
+      <div class="card-item">
+        <h5>Policy Holder</h5>
+        <p>Individual</p>
+      </div>
+      <div class="divider"></div>
+      <div class="card-item">
+        <h5>Registered Date</h5>
+        <p>25/10/2023</p>
+      </div>
+      <div class="divider"></div>
+      <div class="actions-container">
+        <button class="edit-btn">Edit Change</button>
+        <div class="navigation">
+          <img src="icons/arrow-left.svg" alt="Previous" class="nav-icon" />
+          <span>View Previous Edit</span>
+          <img src="icons/arrow-right.svg" alt="Next" class="nav-icon" />
+        </div>
+    </div>
+      </div>
+    </div>
+
+    <!-- My code -->
+
+    <div class="container-fluid">
+        <div class="row">
+          <!-- Left Column (Policy Details) -->
+          <div class="col-md-4 col-12 mb-3">
+            <div class="policy-details card p-5">
+              <h3 >Policy Details</h3>
+              <p class="list-group-item" >OD/Own Damage Premium: ₹ {{data.odPremium}}</p>
+              <p class="list-group-item">OD/Own Damage Premium: ₹ {{data.odPremium}}</p>
+              <p class="list-group-item">OD/Own Damage Premium: ₹ {{data.odPremium}}</p>
+              <p class="list-group-item">OD/Own Damage Premium: ₹ {{data.odPremium}}</p>
+              <p class="list-group-item">OD/Own Damage Premium: ₹ {{data.odPremium}}</p>
+              <div class="total-premium mt-3">
+                <h4>Total Premium</h4>
+                <h2>₹ {{data.totalPremium}}</h2>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Right Column (Review Proposal) -->
+          <div class="col-md-8 col-12">
+            <div class="proposal-review card p-3">
+              <h4>Review Your Proposal</h4>
+              <p>It's always better to review your proposal once before making any decision!</p>
+              <div class="row">
+                <!-- Owner Details -->
+                <div class="col-12">
+                  <h5>Owner Details</h5>
+                  <p>Insured Name: {{data.owner.insuredName}}</p>
+                  <p>Insured Aadhaar: {{data.owner.insuredAadhaar}}</p>
+                  <p>Insured PAN: {{data.owner.insuredPan}}</p>
+                  <p>Nominee Name: {{data.owner.nomineeName}} (Relation: {{data.owner.nomineeRelation}})</p>
+                  <!-- Add more fields as needed -->
+                </div>
+      
+                <!-- Vehicle Details -->
+                <div class="col-12 mt-3">
+                  <h5>Vehicle Details</h5>
+                  <p>Make: {{data.vehicle.make}}</p>
+                  <p>Model: {{data.vehicle.model}}</p>
+                  <p>Registration Number: {{data.vehicle.registrationNumber}}</p>
+                  <!-- Add more fields as needed -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+ 

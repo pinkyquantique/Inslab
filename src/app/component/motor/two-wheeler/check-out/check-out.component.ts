@@ -4,6 +4,7 @@ import { FormBuilder, FormsModule } from '@angular/forms';
 import { DynamicFormComponent } from '../../../../dynamic/dynamic-form/dynamic-form.component';
 import { Router } from '@angular/router';
 import { SharedService } from '../../shared.service';
+import { proposalData } from './constant';
 
 @Component({
   selector: 'app-check-out',
@@ -13,11 +14,13 @@ import { SharedService } from '../../shared.service';
   styleUrl: './check-out.component.scss'
 })
 export class CheckOutComponent implements OnInit {
+  data: any;
   currentStep: number = 3;
     constructor(private router: Router, private _sharedService: SharedService, private fb: FormBuilder) {}
 
     async ngOnInit() {
     // await this.formbuild();
+    this.data = proposalData;
     this._sharedService.emitChange(this.currentStep);
   }
 
