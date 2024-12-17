@@ -161,12 +161,12 @@
 
   <!-- Fifth div  for new -->
 
-  <div>
+<div>
     <div class="headline">
         <h3><b>Compulsory Personal Accident (CPA) Cover</b></h3>
         <p>Select CPA term.</p>
     </div>
-    <div class="container mt-5 ">
+<div class="container mt-5 ">
         <div class="row">
             <div class="col">
                 <div class="card h-card policy-card" [ngClass]="{'selected': selectedPolicy === 'none'}" id="new-policy" (click)="onRadioSelect('none')">
@@ -203,7 +203,7 @@
                         <div class="form-check mr-3 radio-wrapper">
                             <input class="form-check-input large-radio mt-3" type="radio" name="policyType" id="renewRadio" value="3 year CPA" >
                         </div>
-                        <div (click)="onFormSubmit()">
+                        <div>
                             <label class="form-check-label  mb-5" for="3yearRadio">
                                 <h5 class="padding"><b>3 year CPA</b></h5>
                             </label>
@@ -215,7 +215,7 @@
     </div>
 </div>
 
- <!-- Fifth div  for new -->
+ <!-- Fifth div  for Renew -->
 
  <div>
     <div class="headline">
@@ -256,7 +256,7 @@
     </div>
 </div>
 
-<!-- Sixth div -->
+<!-- Sixth div for new -->
 
 <div class="sixth ">
     <p >Select reason for opting out CPA</p>
@@ -267,6 +267,80 @@
         </select>
     </div>
 </div>
+
+<!-- Sixth div for Renew -->
+
+<div class="sixth_renew">
+  <h3><b>Previous Policy Details</b></h3>
+  <p>Do you have previous policy?</p>
+  <div class="form-check-inline radio-group">
+      <label class="form-check-label" for="yesRoadside">
+          <input class="form-check-input" type="radio" name="roadsideAssistance" id="yesRoadside" value="yes"> Yes
+      </label>
+      <label class="form-check-label ml-4" for="noRoadside">
+          <input class="form-check-input" type="radio" name="roadsideAssistance" id="noRoadside" value="no"> No
+      </label>
+  </div>
+
+  <p>Change in ownership last 1 year?</p>
+  <div class="form-check-inline radio-group">
+      <label class="form-check-label " for="yesRental">
+          <input class="form-check-input" type="radio" name="rentalCar" id="yesRental" value="yes" > Yes
+      </label>
+      <label class="form-check-label ml-4" for="noRental">
+          <input class="form-check-input" type="radio" name="rentalCar" id="noRental" value="no"> No
+      </label>
+  </div>
+  <p>Select your previous policy type.</p>
+  <div class="container mt-5">
+    <div class="row renew">
+        <div class="col">
+            <div class="card h-card policy-card" [ngClass]="{'selected': selectedPolicy === 'Comprehensive'}" id="Comprehensive" (click)="onRadioSelect('Comprehensive')">
+                <div class="card-body d-flex align-items-center">
+                    <div>
+                        <label class="mb-5 ms-4" for="Comprehensive">
+                           <h5><b>Comprehensive</b></h5>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col">
+            <div class="card h-card policy-card" [ngClass]="{'selected': selectedPolicy === 'Standalone'}" id="Standalone" (click)="onRadioSelect('Standalone')">
+                <div class="card-body d-flex align-items-center">
+                    <div>
+                        <label class="mb-5 ms-4" for="Standalone">
+                           <h5><b>Standalone</b></h5>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col">
+            <div class="card h-card policy-card" [ngClass]="{'selected': selectedPolicy === 'Third Party'}" id="Third Party" (click)="onRadioSelect('Third Party')">
+                <div class="card-body d-flex align-items-center">
+                    <div>
+                        <label class="mb-5 ms-4" for="Third Party">
+                           <h5><b>Third Party</b></h5>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<p>Please enter your previous policy expiry date.</p>
+<h5 >Select reason <span class="red-astrick">*</span></h5>
+<div class="col">
+  <input type="date" class="w-50 p-card policy-card p-3 ">
+</div>
+
+</div>
+
+
+
 
 <!-- Buttons -->
 

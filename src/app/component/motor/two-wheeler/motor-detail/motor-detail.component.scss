@@ -90,6 +90,11 @@ p {
     height: 10rem;
     padding-bottom: 5rem;
 }
+.sixth_renew{
+    margin-top: 3rem;
+    margin-left: 11rem;
+    padding-bottom: 5rem;
+}
 .col{
     padding-left: 2rem;
 }
@@ -112,6 +117,23 @@ p {
     margin-bottom: 10rem;
     font-size: 20px;
 }
+.radio-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15rem; 
+  }
+  
+  .radio-group input[type="radio"] {
+    margin-right: 0.5rem;
+  }
+  .renew{
+    margin-top: -2rem;
+    margin-left: -7rem;
+    margin-right: 6rem;
+   
+  }
+ 
 /* Media Queries for responsiveness */
 @media (max-width: 1200px) {
     .headline, .renewal-section {
@@ -184,5 +206,38 @@ p {
         width: 2rem;
         height: 2rem;
         margin-bottom: 4.5rem;
+    }
+}
+//reponsiveness for sixth div renew
+
+.sixth_renew {
+    margin-top: 3rem;
+    padding-bottom: 5rem;
+
+}
+
+/* Adjust layout for smaller screens like tablets */
+@media (max-width: 768px) {
+    .sixth_renew {
+        margin-left: 1rem;
+        margin-right: 3rem;
+    }
+}
+
+/* Adjust layout for small devices like phones */
+@media (max-width: 576px) {
+    .sixth_renew {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .col {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .policy-card {
+        margin-left: 0;
+        height: auto;
     }
 }
