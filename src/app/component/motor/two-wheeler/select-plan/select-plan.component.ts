@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { SharedService } from '../../shared.service';
 @Component({
   selector: 'app-select-plan',
   standalone: true,
@@ -9,7 +10,8 @@ import { Router } from '@angular/router';
   templateUrl: './select-plan.component.html',
   styleUrl: './select-plan.component.css'
 })
-export class SelectPlanComponent {
+export class SelectPlanComponent implements OnInit{
+  currentStep: number = 2;
   minValue = 463239;
   maxValue = 959898;
   currentValue = this.minValue;
@@ -50,9 +52,12 @@ export class SelectPlanComponent {
     {add:'DRIVE ASSURE ECONOMY',checked:true},
     {add:'DRIVE ASSURE ECONOMY PLUS',checked:true},
   ];
-  constructor(private router: Router){
+  constructor(private router: Router,private _sharedService: SharedService,){
      
-    }
+  }
+  async ngOnInit() {
+    this._sharedService.emitChange(this.currentStep);
+  }
     onSliderChange(){
       console.log('Current IDV Value:', this.currentValue);
     }
