@@ -36,7 +36,9 @@
 }
 
 .back-btn{
-  font-family: Roboto;
+display: flex;
+gap: 8px;
+font-family: Roboto;
 font-size: 20px;
 font-weight: 500;
 line-height: 28px;

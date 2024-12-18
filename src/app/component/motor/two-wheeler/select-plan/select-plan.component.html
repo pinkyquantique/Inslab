@@ -139,7 +139,22 @@
           </div>
         </div>
       </div>
-    
+      <div class="notification" *ngIf="isVisible">
+        <div class="notify-icon">
+          <img src="icons/warning.svg" alt="warning-sign"/>
+        </div>
+        <div class="message">
+          <strong>Policy Under Break-in Inspection</strong><br>
+          Your renewing policy will go under break-in inspection.
+
+          <img
+          src="icons/close.svg"
+          alt="close-button"
+          class="close"
+          (click)="closeNotification()"
+        />        </div>
+       
+      </div>
       <div class="insurance-container">
         <!-- Loop through the insuranceCard array to display each card -->
         <div *ngFor="let card of insuranceCard; let i = index">

@@ -124,4 +124,10 @@ export class SelectPlanComponent implements OnInit{
       this.router.navigate(['/pages/motor/two-wheeler/personal-detail'])
    
   }
+  // warning message close function
+  isVisible = true;
+  closeNotification(): void{
+    this.isVisible=false;
+    console.log("close button");
+  }
 }
