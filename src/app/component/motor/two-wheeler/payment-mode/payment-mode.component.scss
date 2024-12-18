@@ -1,3 +1,37 @@
 p {
     color: var(--text-black-60, #1D1B2099);
   }
+  .min-height-100{
+    min-height: 100% !important;
+  }
+
+
+  /* Card Styling */
+.card {
+    cursor: pointer;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+  }
+  
+  .card:hover {
+    border-color: #404040;
+    box-shadow: 0 0 10px rgba(74, 79, 196, 0.3);
+  }
+  
+  /* Selected Card */
+  .card.selected {
+    border-color: #404040;
+    box-shadow: 0 0 10px rgba(74, 79, 196, 0.3);
+  }
+  
+  /* Icon Styling */
+  .icon {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    color: #6c757d;
+  }
+  
+  .card.selected .icon {
+    color: #404040; /* Change icon color when selected */
+  }
+  

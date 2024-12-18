@@ -1,0 +1,104 @@
+<div class="container mt-5 padding-side">
+    <!-- Page Title -->
+    <h4 class="fw-bold">Make Online Payment</h4>
+    <p class=" mb-4">Select medium of payment to proceed.</p>
+  
+    <!-- Tabs Section -->
+    <ul class="nav nav-pills mb-3 d-flex w-100" role="tablist">
+        <li class="nav-item flex-grow-1" *ngFor="let option of paymentOptions">
+          <button
+            class="nav-link text-left w-100 d-flex align-items-center"
+            [class.active]="selectedTab === option.id"
+            (click)="selectTab(option.id)"
+          >
+            <img [src]="option.icon" alt="{{ option.label }} icon" class="me-2" width="20" height="20" />
+            <span>{{ option.label }}</span>
+          </button>
+        </li>
+      </ul>
+      
+  
+    <!-- Payment Summary -->
+    <div class="alert alert-light text-center background-color shadow-sm mb-4 ">
+      <p class="mb-0 fw-bold text-muted">FINAL PREMIUM (INCLUDING GST)</p>
+      <h2 class="fw-bold">₹ 19,50,001</h2>
+    </div>
+  
+    <!-- Dynamic Content Based on Tab Selection -->
+    <div *ngIf="selectedTab === 'upi'" class="d-flex flex-column">
+      <!-- UPI Content -->
+      <h5 class="fw-bold">Scan QR and Pay</h5>
+      <p class="text-muted">
+        Scan the QR using any UPI app on your mobile phone like PhonePe, Paytm, GooglePay, BHIM, etc.
+      </p>
+      <div class="mt-4">
+      <button class=" floatright btn btn-dark mb-3">Generate QR Code</button>
+    </div>
+    <div>
+      <p class=" mt-4 text-center text-muted">or</p>
+    </div>
+      <div>
+      <h5 class="fw-bold">Enter your UPI ID and Pay</h5>
+      <p class="text-muted">
+        Enter your UPI ID to continue paying via UPI apps.
+      </p>
+      <div class="mb-3">
+        <label for="upiId" class="form-label">UPI ID</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="e.g., 9221664567@xyz"
+          [(ngModel)]="upiId"
+        />
+      </div>
+      <button class="btn btn-secondary" [disabled]="!upiId">Verify and Pay</button>
+    </div>
+    </div>
+  
+    <div *ngIf="selectedTab === 'credit'">
+      <!-- Credit/Debit Card Content -->
+      <h5 class="fw-bold">Pay with Credit/Debit Card</h5>
+      <p class="text-muted">Enter your card details to complete the payment.</p>
+      <!-- Add Card Form -->
+      <div class="mb-3">
+        <label for="cardNumber" class="form-label">Card Number</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="XXXX XXXX XXXX XXXX"
+        />
+      </div>
+      <button class="btn btn-secondary">Pay Now</button>
+    </div>
+  
+    <div *ngIf="selectedTab === 'netbanking'">
+      <!-- Net Banking Content -->
+      <h5 class="fw-bold">Net Banking</h5>
+      <p class="text-muted">
+        Choose your bank to proceed with the net banking payment.
+      </p>
+      <select class="form-select">
+        <option>Bank A</option>
+        <option>Bank B</option>
+        <option>Bank C</option>
+      </select>
+      <button class="btn btn-secondary mt-3">Proceed to Pay</button>
+    </div>
+  
+    <div *ngIf="selectedTab === 'emi'">
+      <!-- EMI Content -->
+      <h5 class="fw-bold">Pay with EMIs</h5>
+      <p class="text-muted">
+        Select EMI plans suitable for you to make the payment.
+      </p>
+      <button class="btn btn-secondary">View EMI Options</button>
+    </div>
+  
+    <div *ngIf="selectedTab === 'wallet'">
+      <!-- Wallet Payment -->
+      <h5 class="fw-bold">Pay with Wallet</h5>
+      <p class="text-muted">Use your wallet balance to proceed with payment.</p>
+      <button class="btn btn-secondary">Pay via Wallet</button>
+    </div>
+  </div>
+  
