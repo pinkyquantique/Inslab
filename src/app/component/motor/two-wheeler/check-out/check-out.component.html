@@ -1,130 +1,245 @@
 <div class="card-container">
-    <div class="card-content">
-      <div class="card-item">
-        <h5>Product</h5>
-        <p>Two Wheeler</p>
+  <div class="card-content">
+    <div class="card-item">
+      <h5>Product</h5>
+      <p>Two Wheeler</p>
+    </div>
+    <div class="divider"></div>
+    <div class="card-item">
+      <h5>Vehicle</h5>
+      <p>Honda Activa<br />MH09AP1122<br />Petrol, 1198</p>
+    </div>
+    <div class="divider"></div>
+    <div class="card-item">
+      <h5>Current Policy</h5>
+      <p>Comprehensive</p>
+    </div>
+    <div class="divider"></div>
+    <div class="card-item">
+      <h5>Policy Holder</h5>
+      <p>Individual</p>
+    </div>
+    <div class="divider"></div>
+    <div class="card-item">
+      <h5>Registered Date</h5>
+      <p>25/10/2023</p>
+    </div>
+    <div class="divider"></div>
+    <div class="actions-container">
+      <button class="edit-btn">Edit Change</button>
+      <div class="navigation">
+        <img src="icons/arrow-left.svg" alt="Previous" class="nav-icon" />
+        <span>View Previous Edit</span>
+        <img src="icons/arrow-right.svg" alt="Next" class="nav-icon" />
       </div>
-      <div class="divider"></div>
-      <div class="card-item">
-        <h5>Vehicle</h5>
-        <p>Honda Activa<br />MH09AP1122<br />Petrol, 1198</p>
-      </div>
-      <div class="divider"></div>
-      <div class="card-item">
-        <h5>Current Policy</h5>
-        <p>Comprehensive</p>
-      </div>
-      <div class="divider"></div>
-      <div class="card-item">
-        <h5>Policy Holder</h5>
-        <p>Individual</p>
-      </div>
-      <div class="divider"></div>
-      <div class="card-item">
-        <h5>Registered Date</h5>
-        <p>25/10/2023</p>
-      </div>
-      <div class="divider"></div>
-      <div class="actions-container">
-        <button class="edit-btn">Edit Change</button>
-        <div class="navigation">
-          <img src="icons/arrow-left.svg" alt="Previous" class="nav-icon" />
-          <span>View Previous Edit</span>
-          <img src="icons/arrow-right.svg" alt="Next" class="nav-icon" />
+    </div>
+  </div>
+</div>
+
+<!-- My code -->
+
+<div class="container-fluid">
+  <div class="row">
+<!-- Left Column (Policy Details) -->
+    <div class="col-md-4 col-12 mb-3">
+      <div class="policy-details card p-5">
+        <div class="policy-header">
+          <h3><b>Policy Details</b></h3>
+          <img src="icons/edit.svg" alt="Edit" class="edit-icon" />
         </div>
-    </div>
+        <p class="list-group-item">
+          <span class="premium-description">OD(Own Damage) Premium:</span>
+          <span class="premium-amount">
+            <img src="icons/rupees.svg" alt="rupees" class="rupee-icon" />
+            {{data.odPremium}}
+          </span>
+        </p>
+        <p class="list-group-item">
+          <span class="premium-description">Addon Premium:</span>
+          <span class="premium-amount">
+            <img src="icons/rupees.svg" alt="rupees" class="rupee-icon" />
+            {{data.odPremium}}
+          </span>
+        </p>
+        <p class="list-group-item">
+          <span class="premium-description">Third party premium:</span>
+          <span class="premium-amount">
+            <img src="icons/rupees.svg" alt="rupees" class="rupee-icon" />
+            {{data.odPremium}}
+          </span>
+        </p>
+        <p class="list-group-item">
+          <span class="premium-description">Discount :</span>
+          <span class="premium-amount">
+            <img src="icons/rupees.svg" alt="rupees" class="rupee-icon" />
+            {{data.odPremium}}
+          </span>
+        </p>
+        <p class="list-group-item">
+          <span class="premium-description">PREMIUM:</span>
+          <span class="premium-amount">
+            <img src="icons/rupees.svg" alt="rupees" class="rupee-icon" />
+            {{data.odPremium}}
+          </span>
+        </p>
+        <p class="list-group-item">
+          <span class="premium-description">GST &#64;18%:</span>
+          <span class="premium-amount">
+            <img src="icons/rupees.svg" alt="rupees" class="rupee-icon" />
+            {{data.odPremium}}
+          </span>
+        </p>
+        <div class="total-premium mt-3">
+          <h4>Total Premium</h4>
+          <h2><span><img src="icons/rupees.svg" alt="rupees" /></span><b> {{data.totalPremium}}</b></h2>
+        </div>
       </div>
     </div>
 
-    <!-- My code -->
-
-    <div class="container-fluid">
+<!-- Right Column (Review Proposal) -->
+    <div class="col-md-8 col-12">
+      <div class="d-flex justify-content-between align-items-center">
+        <!-- Left side: Text -->
+        <div>
+          <h3 class="mt-0"><b>Review Your Proposal</b></h3>
+          <h6 style="color: #1D1B2099;">It's always better to review your proposal once before making any decision!</h6>
+        </div>
+    
+        <!-- Right side: Icons -->
+        <div class="d-flex">
+          <img src="icons/download.svg" alt="Download Icon" class="icon-size mx-2" />
+          <img src="icons/share.svg" alt="Share Icon" class="icon-size mx-2" />
+          <img src="icons/dots-vertical.svg" alt="More Options Icon" class="icon-size mx-2" />
+        </div>
+      </div>
+    
+      <div class="proposal-review card p-4">
+        <!-- Section Above Owner Details -->
         <div class="row">
-          <!-- Left Column (Policy Details) -->
-          <div class="col-md-4 col-12 mb-3">
-            <div class="policy-details card p-5">
-                <div class="policy-header">
-                    <h3><b>Policy Details</b></h3>
-                    <img src="icons/edit.svg" alt="Edit" class="edit-icon" />
-                </div>  
-                <p class="list-group-item">
-                    <span class="premium-description">OD(Own Damage) Premium:</span>
-                    <span class="premium-amount">
-                      <img src="icons/rupees.svg" alt="rupees" class="rupee-icon" />
-                      {{data.odPremium}}
-                    </span>
-                  </p>   
-                  <p class="list-group-item">
-                    <span class="premium-description">Addon Premium:</span>
-                    <span class="premium-amount">
-                      <img src="icons/rupees.svg" alt="rupees" class="rupee-icon" />
-                      {{data.odPremium}}
-                    </span>
-                  </p>  
-                  <p class="list-group-item">
-                    <span class="premium-description">Third party premium:</span>
-                    <span class="premium-amount">
-                      <img src="icons/rupees.svg" alt="rupees" class="rupee-icon" />
-                      {{data.odPremium}}
-                    </span>
-                  </p>  
-                  <p class="list-group-item">
-                    <span class="premium-description">Discount  :</span>
-                    <span class="premium-amount">
-                      <img src="icons/rupees.svg" alt="rupees" class="rupee-icon" />
-                      {{data.odPremium}}
-                    </span>
-                  </p>  
-                  <p class="list-group-item">
-                    <span class="premium-description">PREMIUM:</span>
-                    <span class="premium-amount">
-                      <img src="icons/rupees.svg" alt="rupees" class="rupee-icon" />
-                      {{data.odPremium}}
-                    </span>
-                  </p> 
-                  <p class="list-group-item">
-                    <span class="premium-description">GST &#64;18%:</span>
-                    <span class="premium-amount">
-                      <img src="icons/rupees.svg" alt="rupees" class="rupee-icon" />
-                      {{data.odPremium}}
-                    </span>
-                  </p> 
-              <div class="total-premium mt-3">
-                <h4>Total Premium</h4>
-                <h2><span><img src="icons/rupees.svg" alt="rupees" class="edit-icon"/></span> {{data.totalPremium}}</h2>
+          <!-- Left Section: Image -->
+          <div class="col-md-3 col-12 text-md-left">
+            <img src="/image/Global_Insurance.svg" alt="Placeholder Image" class="img-fluid" />
+          </div>
+    
+          <!-- Right Section: Heading, Paragraph, and Button -->
+          <div class="col-md-9 col-12">
+            <h3 class="mb-0 mt-0"><b>Global Insurance</b></h3>
+            <div class="d-flex justify-content-between">
+              <!-- Left Section -->
+              <div>
+                <h6 class="text-muted mb-4 mt-3">Overseas Motor Insurance.</h6>
+                <!-- Keeping the same button style as before -->
+                <button class="buton">ESSENTIAL PLAN</button>
+              </div>
+              <!-- Right Section -->
+              <div class="buttons">
+                <h4 class="text-muted text-end">PROPOSAL NUMBER: 160802</h4>
               </div>
             </div>
           </div>
-      
-          <!-- Right Column (Review Proposal) -->
-          <div class="col-md-8 col-12">
-            <div class="proposal-review card p-3">
-              <h4>Review Your Proposal</h4>
-              <p>It's always better to review your proposal once before making any decision!</p>
-              <div class="row">
-                <!-- Owner Details -->
-                <div class="col-12">
-                  <h5>Owner Details</h5>
-                  <p>Insured Name: {{data.owner.insuredName}}</p>
-                  <p>Insured Aadhaar: {{data.owner.insuredAadhaar}}</p>
-                  <p>Insured PAN: {{data.owner.insuredPan}}</p>
-                  <p>Nominee Name: {{data.owner.nomineeName}} (Relation: {{data.owner.nomineeRelation}})</p>
-                  <!-- Add more fields as needed -->
+        </div>
+    
+        <!-- Fix for HR -->
+        <div class="row">
+          <div class="col-12">
+            <hr class="my-0" style="background-color: #000; height: 1px; border: none;">
+          </div>
+        </div>
+    
+        <!-- Owner Details Section -->
+        <div class="mb-4">
+          <h3 class="section-title"><b>OWNER DETAILS</b></h3>
+          <div class="container">
+            <div class="row">
+              <!-- Cards inside the right side (col-md-9) -->
+              <div class="col-md-9">
+                <!-- Card 1: Insured Name, Insured Age, Previous Policy Number -->
+                <div class="blue-card">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="label">Insured Name</div>
+                      <div class="value">{{ data.owner.insuredName }}</div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                      <div class="label">Insured Age</div>
+                      <div class="value1">46</div>
+                    </div>
+                    <div class="col-md-4 text-end">
+                      <div class="label">Previous Policy Number</div>
+                      <div class="value2">484GTKMS48</div>
+                    </div>
+                  </div>
                 </div>
-      
-                <!-- Vehicle Details -->
-                <div class="col-12 mt-3">
-                  <h5>Vehicle Details</h5>
-                  <p>Make: {{data.vehicle.make}}</p>
-                  <p>Model: {{data.vehicle.model}}</p>
-                  <p>Registration Number: {{data.vehicle.registrationNumber}}</p>
-                  <!-- Add more fields as needed -->
+    
+                <!-- Card 2: Aadhaar, PAN, and GST (Example) -->
+                <div class="white-card">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="label">Insured Aadhaar Number</div>
+                      <div class="value">{{ data.owner.insuredAadhaar }}</div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                      <div class="label">Insured PAN Number</div>
+                      <div class="value1">{{ data.owner.insuredPan }}</div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="label">GST Number</div>
+                      <div class="value2">4875JYTGG58</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Vehicle Details Section -->
+        <div class="mb-4">
+          <h3 class="section-title"><b>VEHICLE DETAILS</b></h3>
+          <div class="container">
+            <div class="row">
+              <!-- Cards inside the right side (col-md-9) -->
+              <div class="col-md-9">
+                <!-- Card 1: Make, Model, Variant -->
+                <div class="blue-card">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="label">Make</div>
+                      <div class="value">{{ data.vehicle.make }}</div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                      <div class="label">Model</div>
+                      <div class="value">{{ data.vehicle.model }}</div>
+                    </div>
+                    <div class="col-md-4 text-end">
+                      <div class="label">Variant</div>
+                      <div class="value">Disc Brake Alloy</div>
+                    </div>
+                  </div>
+                </div>
+    
+                <!-- Card 2: Registration Number, Fuel Type, Registration Date -->
+                <div class="white-card">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="label">Registration Number</div>
+                      <div class="value">{{ data.vehicle.registrationNumber }}</div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                      <div class="label">Fuel Type</div>
+                      <div class="value">{{ data.vehicle.fuelType }}</div>
+                    </div>
+                    <div class="col-md-4 text-end">
+                      <div class="label">Registration Date</div>
+                      <div class="value">{{ data.vehicle.registrationDate }}</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      
-
- 
+    </div>
+  </div>
+</div>

@@ -1,179 +1,336 @@
-*{
-   font-family: "roboto , sans serif"; 
+* {
+  font-family: "roboto , sans serif";
 }
+
 .card-container {
-    background-color: #F6F9FF;
-    border: 2px solid #C1D5FF;
-    border-radius: 10px;
-    max-width: 1100px;
-    margin: 20px auto;
-    padding: 16px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
-    overflow: hidden;
+  background-color: #F6F9FF;
+  border: 2px solid #C1D5FF;
+  border-radius: 10px;
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .card-content {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .card-item {
-    text-align: center;
-    flex: 1;
-    min-width: 120px;
-    margin: 8px;
-    position: relative;
+  text-align: center;
+  flex: 1;
+  min-width: 120px;
+  margin: 8px;
+  position: relative;
 }
 
 h5 {
-    font-size: 1.2rem;
-    color: rgb(104, 103, 103);
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    top: 0;
-    left: 16px;
-    z-index: 10;
-    text-align: center;
+  font-size: 1.2rem;
+  color: rgb(104, 103, 103);
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 16px;
+  z-index: 10;
+  text-align: center;
 }
 
 p {
-    font-size: 14px;
-    font-family: 'Roboto', sans-serif;
-    color: #1D1B20;
-    font-weight: 800px;
-    margin: 0;
-    margin-right: 20px;
-    text-align: center;
-    padding-top: 24px;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  color: #1D1B20;
+  font-weight: 800px;
+  margin: 0;
+  margin-right: 20px;
+  text-align: center;
+  padding-top: 24px;
 }
 
 .divider {
-    width: 1px;
-    height: 80px;
-    border: 1px solid #C1D5FF;
-    margin: 0 16px;
+  width: 1px;
+  height: 80px;
+  border: 1px solid #C1D5FF;
+  margin: 0 16px;
 }
 
 .actions-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    flex-wrap: nowrap;
-    flex: 1;
-    gap: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+  flex: 1;
+  gap: 16px;
 }
 
 
 .edit-btn {
-    background-color: transparent;
-    color: #1D1B20;
-    border: 1px solid #1D1B20;
-    padding: 6px 16px;
-    border-radius: 18px;
-    font-size: 14px;
-    cursor: pointer;
+  background-color: transparent;
+  color: #1D1B20;
+  border: 1px solid #1D1B20;
+  padding: 6px 16px;
+  border-radius: 18px;
+  font-size: 14px;
+  cursor: pointer;
 }
 
 .navigation {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 1rem;
-    color: #1D1B20;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 1rem;
+  color: #1D1B20;
 }
 
 .nav-icon {
-    width: 16px;
-    height: 16px;
-    cursor: pointer;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
 }
 
 // My css
 
+// card-1
 .container-fluid {
-    padding: 20px;
-  }
-  
-  .card {
-    border-radius: 10px;
-    border: 1px solid #e0e0e0;
-  }
-  
-  .policy-details {
-    background-color: #f6f9ff;
+  padding: 20px;
+}
 
-  }
-  .policy-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+body, .container-fluid {
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+.card {
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  padding: 15px;
+}
 
-    h3 {
-      margin: 0;
-      font-weight: bold;
-    }
+.policy-details {
+  background-color: #f6f9ff;
 
-    .edit-icon {
-      width: 24px;
-      height: 24px;
-      cursor: pointer;
-    }
-  }
+}
 
-  .list-group-item {
-    display: flex;
-    justify-content: space-between;
-    font-size: 14px;
+.policy-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h3 {
+    margin: 0;
     font-weight: bold;
+  }
+
+  .edit-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+}
+
+.list-group-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  background-color: #f6f9ff;
+  padding: 2rem 0 0 0;
+  padding-right: 5px;
+}
+
+.premium-description {
+  color: #1D1B2099;
+  flex-grow: 1;
+  text-align: left;
+}
+
+.premium-amount {
+  display: flex;
+  align-items: center;
+  color: #000000;
+  text-align: right;
+  margin-right: -4rem;
+}
+
+.rupee-icon {
+  width: 12px;
+  margin-right: 0px;
+}
+
+.total-premium {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #d1e7fd;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.total-premium h2 span img {
+  vertical-align: middle;
+  margin-right: -1rem;
+}
+
+.total-premium h4 {
+  margin-bottom: -1rem;
+}
+
+.proposal-review {
+  h5 {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+}
+.img-fluid {
+  max-width: 100%; 
+  height: auto;
+}
+
+
+.icon-size {
+  width: 20px;
+  height: 20px;
+}
+
+.proposal-review {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #ffffff;
+
+  .section-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #333333;
+  }
+
+  .field-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #6c757d;
+    margin-bottom: 0.2rem;
+  }
+
+
+  .field-value {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #212529;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .row {
+    margin-bottom: 1rem;
+  }
+
+  .col-md-3 {
+    margin-right: -9rem;
+  }
+  .col-md-9, .col-md-4 {
+    padding: 0; 
+    word-wrap: break-word;
+  }
+
+  .buttons {
+    margin-right: -7rem;
+    margin-top: -3rem;
+  }
+
+  .buton {
+    background-color: #4080E033;
     border: none;
-    background-color: #f6f9ff; 
-    padding: 2rem 0 0 0;  
-    padding-right: 5px;
+    padding: 0.5rem 2rem;
+    border-radius: 3rem;
   }
-  
-  .premium-description {
-    color: #1D1B2099; 
-    flex-grow: 1;  
-    text-align: left; 
+
+  .blue-card,
+  .white-card {
+    width: 135%;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-sizing: border-box;
   }
-  
-  .premium-amount {
-    display: flex; 
-    align-items: center;
-    color: #000000; 
-    text-align: right;
-    margin-right: -4rem;
+
+  .blue-card {
+    background-color: #F6F9FF;
   }
-  
-  .rupee-icon {
-    width: 12px; 
-    margin-right: 0px; 
+
+  .white-card {
+    background-color: white;
   }
-  .total-premium {
-    background-color: #d1e7fd;
-    padding: 10px;
-    border-radius: 5px;
+
+  .label {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
   }
-  
-  .proposal-review {
-    h5 {
-      font-size: 1.1rem;
-      font-weight: bold;
+
+  .value {
+    font-size: 14px;
+    color: #555;
+    margin-left: 1rem;
+  }
+
+  .value1 {
+    font-size: 14px;
+    color: #555;
+    margin-right: 7rem;
+  }
+
+  .value2 {
+    font-size: 14px;
+    color: #555;
+    margin-right: 9rem;
+  }
+  .container {
+    padding: 20px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  @media (max-width: 767px) {
+
+    .text-center,
+    .text-end {
+      text-align: center !important;
     }
-    p {
+
+    .container {
+      padding: 10px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .field-label {
+      font-size: 0.8rem;
+    }
+
+    .field-value {
       font-size: 0.9rem;
     }
-  }
-  
-  
-  @media (max-width: 768px) {
     .policy-details {
       margin-bottom: 20px;
     }
   }
-  
+}
+
+// @media only screen and (max-width: 375px) and (max-height: 667px) {
+//   .blue-card{
+//     width: 100%;
+//   }
+// }

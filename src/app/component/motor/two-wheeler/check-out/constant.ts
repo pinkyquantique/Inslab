@@ -5,7 +5,7 @@ export const proposalData = {
     discount: 950001,
     premium: 950001,
     gst: 950001,
-    totalPremium: 1950001,
+    totalPremium: '19,50,001',
     owner: {
       insuredName: 'Neerav',
       insuredAadhaar: '2048497623656',
