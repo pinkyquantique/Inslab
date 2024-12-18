@@ -39,14 +39,14 @@
 display: flex;
 gap: 8px;
 font-family: Roboto;
-font-size: 20px;
+font-size: 18px;
 font-weight: 500;
 line-height: 28px;
 text-align: left;
 text-underline-position: from-font;
 text-decoration-skip-ink: none;
-
 }
+
 
 .pipe {
   width: 140px;
@@ -145,7 +145,14 @@ button {
       height: 30px;
       font-size: 14px;  /* Smaller text in circle */
     }
-
+    .back-btn{
+      font-size: 0;
+      padding: 0;
+      margin: 0;
+    }
+    .back-btn img{
+      margin-right: 0;
+    }
     .pipe {
       width: 100px;  /* Smaller pipe between steps */
       margin-right: 0;
@@ -164,12 +171,26 @@ button {
       padding: 10px;  /* Add some padding inside the card */
     }
   }
-
+  @media (max-width: 1024px){
+    .back-btn{
+      font-size: 0;
+      padding: 0;
+      margin: 0;
+    }
+  }
 
   @media (max-width: 550px) {
     .pipe {
       width: 20px;  /* Smaller pipe between steps */
       margin-right: 0;
       margin-top: 3px; 
+    }
+    .back-btn{
+      font-size: 0;
+      padding: 0;
+      margin: 0;
+    }
+    .back-btn img{
+      margin-right: 0;
     }
   }

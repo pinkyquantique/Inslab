@@ -104,7 +104,7 @@ p {
     padding: 20px;
     gap: 20px;
     box-sizing: border-box;
-}
+} 
 
 .left-container {
     flex: 3;
@@ -195,17 +195,16 @@ p {
 }
 
 .price-container {
-    width: auto;
-    max-width: 90%;
-    height: 30vh;
+  width: 77%;
+  height: 20rem;
     display: flex;
     flex-direction: column;
     margin-left: 10px;
-    border-radius: 10px;
+    border-radius: 12px;
     border: 0.2px solid rgb(218, 213, 213);
     padding: 16px;
     position: relative;
-    background: #F6F9FF;
+    background: #eff1f5;
 }
 
 
@@ -269,6 +268,7 @@ p {
   
   .slider-container {
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
@@ -328,6 +328,7 @@ p {
   
   .current-value {
     font-weight: bold;
+    position: relative;
     color: #1D1B20;
     width: 22%;
     text-align: center;
@@ -335,6 +336,7 @@ p {
     border-radius: 10px;
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); 
     display: flex; 
+    margin-right: 10px;
     align-items: center; 
     justify-content: center;
   }
@@ -568,13 +570,15 @@ input:checked + .toggle::before {
 
 
 .insurance-body p {
-  margin: 10px 0;
-  font-size: 16px;
+  margin: 9px 0;
+  font-size: 13px;
 }
 
 .price {
+  position:absolute;
   font-weight: bold;
   color: #2c3e50;
+  margin-right: 10px;
 }
 
 .plan-details {
@@ -704,18 +708,20 @@ input:checked + .toggle::before {
   background:#faedd0; 
   border-radius: 8px;
   padding: 5px 0 0 0;
+  position: relative;
 }
 .icon {
-  font-size: 18px;
-  margin:0;
+  font-size: 15px;
+ margin-left: 20px;
+ align-self: center;
 }
 
 .message {
   display: inline-block;
   flex-grow: 1;
   font-size: 12px;
-  top: 10px;
-  -ms-line-gap: 4px;
+  top: 6px;
+  line-height: 2rem;
   padding: 0 0 4px 0;
   margin-left:30px;
   font-family: 'Roboto', sans-serif;
@@ -738,7 +744,9 @@ input:checked + .toggle::before {
 
 
 /* Responsive Design for screens smaller than 768px */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+ 
+  
     .card-content {
         flex-direction: column;
         align-items: center;
@@ -790,22 +798,24 @@ input:checked + .toggle::before {
       }
     
       .current-value {
-        width: 30%;
+        width: 20%;
         height: 25px;
         font-size: 12px;
+        position: relative;
       }
 
       .filter-right-container{
         width: 100%;
       }
       .price-container{
-        width: 320px;
+        width: 100px;
+        height: 10px;
       }
       .price-container h3{
         font-size: 14px;
       }
       .price-container input{
-        width: 150px;
+        width: 100%;
 
       }
       .idv-container{
@@ -865,12 +875,12 @@ input:checked + .toggle::before {
     }
   
     .btn-buy {
-      font-size: 14px;
+      font-size: 10px;
       padding: 8px 12px;
     }
   
     .btn-share {
-      font-size: 14px;
+      font-size: 10px;
       padding: 8px 16px;
     }
   
@@ -883,7 +893,7 @@ input:checked + .toggle::before {
     }
   
     .plan-headline {
-      flex-direction: column;
+      flex-direction: row;
       align-items: flex-start;
     }
   

@@ -97,6 +97,17 @@ export class SelectPlanComponent implements OnInit{
       benefits: ['6-MONTH REPAIR WARRANTY', 'ROADSIDE ASSISTANCE', 'FREE PICK UP & DROP'],
      
     },
+    
+    { 
+      companyName: 'Global India Insurance Broker Ltd.',
+      totalPremium: 230000, 
+      idvCovered: 230000, 
+      claimSettled: 230000, 
+      selectedPlan: 'standard',
+      recommended: true,
+      benefits: ['6-MONTH REPAIR WARRANTY', 'ROADSIDE ASSISTANCE', 'FREE PICK UP & DROP'],
+     
+    },
     { 
       companyName: 'Global India Insurance Broker Ltd.',
       totalPremium: 220000, 
@@ -107,16 +118,6 @@ export class SelectPlanComponent implements OnInit{
       benefits: ['6-MONTH REPAIR WARRANTY', 'ROADSIDE ASSISTANCE', 'FREE PICK UP & DROP'],
      
     },
-    { 
-      companyName: 'Global India Insurance Broker Ltd.',
-      totalPremium: 230000, 
-      idvCovered: 230000, 
-      claimSettled: 230000, 
-      selectedPlan: 'standard',
-      recommended: true,
-      benefits: ['6-MONTH REPAIR WARRANTY', 'ROADSIDE ASSISTANCE', 'FREE PICK UP & DROP'],
-     
-    }
   ];
   onFormSubmit() {
    
