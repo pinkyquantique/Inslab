@@ -5,6 +5,7 @@ import { MotorDetailComponent } from './motor-detail/motor-detail.component';
 import { SelectPlanComponent } from './select-plan/select-plan.component';
 import { PersonalDetailComponent } from './personal-detail/personal-detail.component';
 import { CheckOutComponent } from './check-out/check-out.component';
+import { PaymentModeComponent } from './payment-mode/payment-mode.component';
 
 export const baseRoutes: Routes =[
   // { path: 'vehicleselection', component: VehicleSelectionComponent },
@@ -12,7 +13,7 @@ export const baseRoutes: Routes =[
   { path: 'plan', component: SelectPlanComponent },
   { path: 'personal-detail', component: PersonalDetailComponent },
   { path: 'check-out', component: CheckOutComponent },
-  
+  { path: 'payment-mode', component: PaymentModeComponent },
  
 ]
 

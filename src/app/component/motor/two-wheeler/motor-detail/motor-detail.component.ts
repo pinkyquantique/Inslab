@@ -148,14 +148,14 @@ config = [
   }
   onFormSubmit() {
     alert(1)
-    if (this.formGroup.valid) {
-      console.log('Form Data:', this.formGroup.value);
+    // if (this.formGroup.valid) {
+    //   console.log('Form Data:', this.formGroup.value);
       // Handle form submission logic
       this.router.navigate(['/pages/motor/two-wheeler/plan'])
-    } else {
-      console.log('Form is invalid');
-      this.markFormGroupTouched(this.formGroup);
-    }
+    // } else {
+    //   console.log('Form is invalid');
+    //   this.markFormGroupTouched(this.formGroup);
+    // }
   }
 
   onFormCancel() {

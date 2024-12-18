@@ -4,11 +4,13 @@ import { Router } from '@angular/router';
 import { SharedService } from '../../shared.service';
 import { FormBuilder, FormGroup, FormsModule, Validators } from '@angular/forms';
 import { DynamicFormComponent } from '../../../../dynamic/dynamic-form/dynamic-form.component';
+import { proposalData } from '../check-out/constant';
+import { PolicyDetailComponent } from '../policy-detail/policy-detail.component';
 
 @Component({
   selector: 'app-personal-detail',
   standalone: true,
-  imports: [CommonModule, DynamicFormComponent, FormsModule],
+  imports: [CommonModule, DynamicFormComponent, FormsModule,PolicyDetailComponent],
   templateUrl: './personal-detail.component.html',
   styleUrl: './personal-detail.component.scss'
 })
@@ -24,6 +26,7 @@ export class PersonalDetailComponent implements OnInit {
   odprepolicydetailformGroup: FormGroup;
   tpprepolicydetailformGroup: FormGroup;
   ckycdetailformGroup: FormGroup;
+
   constructor(private router: Router, private _sharedService: SharedService, private fb: FormBuilder) {
     this.vechiledetailformGroup = this.fb.group({});
     this.ownergeneraldetailformGroup = this.fb.group({});
@@ -289,7 +292,9 @@ export class PersonalDetailComponent implements OnInit {
   epestatusoption = [{ id: true, value: 'Yes' }, { id: false, value: 'No' }];
 
   async ngOnInit() {
+
     await this.formbuild();
+    
     this._sharedService.emitChange(this.currentStep);
   }
 
