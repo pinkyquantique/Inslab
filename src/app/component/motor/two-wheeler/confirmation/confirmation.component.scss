@@ -1,0 +1,204 @@
+body, html{
+    margin: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+.confirmation-gif {
+    width: 100%;
+    height: 50vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.confirmation {
+    width: 20%; 
+    height: auto; 
+}
+.confirmation-message{
+    width: 80%;
+    height: 50%;
+    margin-left:20rem;
+}
+.success-notification {
+    width: 85%;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    background-color: #e2f7e6;
+    border: 1px solid #329949;
+    border-radius: 12px;
+}
+.icon {
+    margin-right: 1rem; 
+}
+p{
+    margin:0;
+}
+.close {
+    margin-left: auto; 
+    color: #050404;
+}
+.close:hover{
+    color: #000;
+}
+.success-message {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    width: 85%;
+    padding: 1.5rem;
+    border-radius: 12px;
+}
+
+.success-message h3{
+    color: #000;
+    font-weight: 600;
+}
+.success-message p {
+    margin: 0; 
+}
+
+.success-message div {
+    display: flex;
+    flex-direction: column; 
+}
+
+.btn-download {
+    color: #0c0b0b;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 1.3rem 2.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center; 
+    gap: 0.5rem; 
+}
+
+.btn-download img {
+    width: 16px;
+    height: 16px; 
+}
+.invoice-details{
+    width: 80%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 20rem;
+    padding: 0 0 2px 0;
+}
+.company-details{
+    display: flex;
+    flex-direction:row;
+}
+.company-name{
+    margin-left: 10px;
+    line-height: 2.4rem;
+}
+h6{
+    font-size: 20px;
+    color: #000;
+    font-weight: 800;
+    font-family: 'Roboto', sans-serif;
+}
+.company-name p{
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    color: #343336;
+  
+}
+.selectplan{
+    
+    background-color: #4080E033;
+    color: #2d2d2e;
+    border-radius: 8px;
+    border: 1px black;
+    padding: 6px 7px 8px 10px;
+}
+
+.table-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  table {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #444;
+    color: #fff;
+    font-weight: bold;
+    padding: 12px;
+  }
+  
+  td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f8f9fc; /* Light background for even rows */
+  }
+  
+  tr:nth-child(odd) {
+    background-color: #fff; /* White background for odd rows */
+  }
+  
+  th,
+  td {
+    text-align: center;
+  }
+  .card {
+    background-color: #f8f9fc; /* Light grey background */
+    border: none;
+  }
+  
+  h5 {
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+  }
+  
+  p {
+    margin: 8px 0;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  p strong {
+    font-weight: 600;
+  }
+  
+  .float-end {
+    color: #333;
+    font-weight: 500;
+  }
+  
+  .container {
+    max-width: 1200px;
+  }
+  .terms-container {
+    background-color: #f8f9fc; /* Light background color */
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h5 {
+    color: #333;
+  }
+  
+ .p {
+    line-height: 1.6;
+    font-size: 1rem;
+  }
+  .btn{
+border-radius: 20px;
+  }
+  
+  

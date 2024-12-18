@@ -1,1 +1,135 @@
-<p>confirmation works!</p>
+<div class="confirmation-gif">
+    <img src="image/confirmation.gif" alt="...loading" class="confirmation"/>
+</div>
+<div class="confirmation-message">
+    <span class="success-notification" *ngIf="isVisible">
+        <img src="icons/complete_msg.svg" alt="success_logo" class="icon"/>
+        <p>Policy details has been shared on your email <b>neerav.desaigmail.com.</b></p>
+        <img src="icons/close.svg" alt="close_logo" class="close"(click)="closeNotification()"/>
+    </span>
+    <span class="success-message">
+        <div class="message">
+        <h3>Congratulations, Neerav Desai.</h3>
+        <p>Your policy has been booked successfully!!</p>
+    </div>
+        <button class="btn-download"><img src="icons/download.svg" alt="download"/>Download Policy</button>
+    </span>
+</div>
+<div class="insurance-details">
+    <div class="invoice-details">
+    <span class="company-details">
+        <span class="company-logo">
+        <img src="image/quotation_image.png" alt="company-logo"/></span>
+        <span class="company-name"><h6>Global Insurance...</h6>
+        <p>Overseas Motor Insurance</p>
+        <span class="selectplan">Essential Plan</span>
+    </span>
+        </span>
+        <span class="invoice">
+            <p>Invoice To: <br/><b>Neerav Desai</b><br/>
+                123 Streets, Bandung, West Java<br/>+123 456 789<br/>
+                customermail.com</p>
+        </span>
+    </div>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>MEMBERS</th>
+                    <th>PRICE</th>
+                    <th>QTY</th>
+                    <th>TOTAL</th>
+                    <th>TOTAL</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of tableData">
+                    <td>{{item.member}}</td>
+                    <td>{{item.price}}</td>
+                    <td>{{item.qty}}</td>
+                    <td>{{item.total1}}</td>
+                    <td>{{item.total2}}</td>   
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="container mt-4">
+        <div class="row">
+          <!-- Proposer Details -->
+          <div class="col-md-6 mb-4">
+            <div class="card p-4 shadow-sm rounded">
+              <h5 class="fw-bold mb-3">Proposer Details</h5>
+              <div class="details">
+                <p><strong>NAME</strong> <span class="float-end">{{ proposerDetails.name }}</span></p>
+                <p><strong>NUMBER</strong> <span class="float-end">{{ proposerDetails.number }}</span></p>
+                <p><strong>EMAIL</strong> <span class="float-end">{{ proposerDetails.email }}</span></p>
+                <p><strong>GENDER</strong> <span class="float-end">{{ proposerDetails.gender }}</span></p>
+                <p><strong>DATE OF BIRTH</strong> <span class="float-end">{{ proposerDetails.dateOfBirth }}</span></p>
+                <p>
+                  <strong>FULL ADDRESS</strong>
+                  <span class="float-end text-end d-block">{{ proposerDetails.address }}</span>
+                </p>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Plan Details -->
+          <div class="col-md-6 mb-4">
+            <div class="card p-4 shadow-sm rounded">
+              <h5 class="fw-bold mb-3">Plan Details</h5>
+              <div class="details">
+                <p><strong>COVER AMOUNT</strong> <span class="float-end">{{ planDetails.coverAmount }}</span></p>
+                <p><strong>BASE PREMIUM</strong> <span class="float-end">{{ planDetails.basePremium }}</span></p>
+                <p><strong>BASE PREMIUM AMOUNT</strong> <span class="float-end">{{ planDetails.basePremiumAmount }}</span></p>
+                <p><strong>PREMIUM PER MONTH</strong> <span class="float-end">{{ planDetails.premiumPerMonth }}</span></p>
+                <p><strong>GST 18% (PER MONTH)</strong> <span class="float-end">{{ planDetails.gst }}</span></p>
+                <p><strong>POLICY CREATION DATE</strong> <span class="float-end">{{ planDetails.policyCreationDate }}</span></p>
+      
+                <!-- Demo Items -->
+                <p *ngFor="let item of planDetails.demoItems">
+                  <strong>{{ item }}</strong>
+                </p>
+      
+                <p class="fw-bold"><strong>TOTAL PREMIUM</strong> <span class="float-end">{{ planDetails.totalPremium }}</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Nominee Details -->
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="card p-4 shadow-sm rounded">
+              <h5 class="fw-bold mb-3">Nominee Details</h5>
+              <div class="details">
+                <p><strong>NAME</strong> <span class="float-end">{{ nomineeDetails.name }}</span></p>
+                <p>
+                  <strong>RELATIONSHIP WITH PROPOSER</strong>
+                  <span class="float-end">{{ nomineeDetails.relationship }}</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="terms-condition">
+        <div class="container my-4">
+            <div class="terms-container p-4 rounded shadow-sm">
+              <h5 class="fw-bold mb-3">Terms & Conditions</h5>
+          
+              <div *ngFor="let term of terms" class="mb-4">
+                <p class="text-secondary mb-0">
+                  {{ term }}
+                </p>
+              </div>
+            </div>
+          
+            <div class="d-flex justify-content-end mt-4">
+              <button class="btn btn-dark btn-lg" (click)="goToDashboard()">
+                Take me to Dashboard
+              </button>
+            </div>
+          </div>
+          
+      </div>
+</div>
