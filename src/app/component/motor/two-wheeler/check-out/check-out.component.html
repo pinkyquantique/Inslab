@@ -40,7 +40,7 @@
 
 <div class="container-fluid">
   <div class="row">
-<!-- Left Column (Policy Details) -->
+    <!-- Left Column (Policy Details) -->
     <div class="col-md-4 col-12 mb-3">
       <div class="policy-details card p-5">
         <div class="policy-header">
@@ -96,7 +96,7 @@
       </div>
     </div>
 
-<!-- Right Column (Review Proposal) -->
+    <!-- Right Column (Review Proposal) -->
     <div class="col-md-8 col-12">
       <div class="d-flex justify-content-between align-items-center">
         <!-- Left side: Text -->
@@ -104,7 +104,7 @@
           <h3 class="mt-0"><b>Review Your Proposal</b></h3>
           <h6 style="color: #1D1B2099;">It's always better to review your proposal once before making any decision!</h6>
         </div>
-    
+
         <!-- Right side: Icons -->
         <div class="d-flex">
           <img src="icons/download.svg" alt="Download Icon" class="icon-size mx-2" />
@@ -112,7 +112,7 @@
           <img src="icons/dots-vertical.svg" alt="More Options Icon" class="icon-size mx-2" />
         </div>
       </div>
-    
+
       <div class="proposal-review card p-4">
         <!-- Section Above Owner Details -->
         <div class="row">
@@ -120,7 +120,7 @@
           <div class="col-md-3 col-12 text-md-left">
             <img src="/image/Global_Insurance.svg" alt="Placeholder Image" class="img-fluid" />
           </div>
-    
+
           <!-- Right Section: Heading, Paragraph, and Button -->
           <div class="col-md-9 col-12">
             <h3 class="mb-0 mt-0"><b>Global Insurance</b></h3>
@@ -138,14 +138,14 @@
             </div>
           </div>
         </div>
-    
-        <!-- Fix for HR -->
+
+        <!--  HR -->
         <div class="row">
           <div class="col-12">
             <hr class="my-0" style="background-color: #000; height: 1px; border: none;">
           </div>
         </div>
-    
+
         <!-- Owner Details Section -->
         <div class="mb-4">
           <h3 class="section-title"><b>OWNER DETAILS</b></h3>
@@ -153,38 +153,103 @@
             <div class="row">
               <!-- Cards inside the right side (col-md-9) -->
               <div class="col-md-9">
-                <!-- Card 1: Insured Name, Insured Age, Previous Policy Number -->
+                <!-- Card 1: -->
                 <div class="blue-card">
                   <div class="row">
                     <div class="col-md-4">
-                      <div class="label">Insured Name</div>
+                      <div class="label">INSURED NAME</div>
                       <div class="value">{{ data.owner.insuredName }}</div>
                     </div>
                     <div class="col-md-4 text-center">
-                      <div class="label">Insured Age</div>
-                      <div class="value1">46</div>
+                      <div class="label">INSURED AGE</div>
+                      <div class="value1">{{ data.owner.insuredAge}}</div>
                     </div>
                     <div class="col-md-4 text-end">
-                      <div class="label">Previous Policy Number</div>
-                      <div class="value2">484GTKMS48</div>
+                      <div class="label">PREVIOUS POLICY NUMBER</div>
+                      <div class="value2">{{ data.owner.previousPolicyNo}}</div>
                     </div>
                   </div>
                 </div>
-    
-                <!-- Card 2: Aadhaar, PAN, and GST (Example) -->
+
+                <!-- Card 2:  -->
                 <div class="white-card">
                   <div class="row">
                     <div class="col-md-4">
-                      <div class="label">Insured Aadhaar Number</div>
+                      <div class="label">INSURED AADHAAR NUMBER</div>
                       <div class="value">{{ data.owner.insuredAadhaar }}</div>
                     </div>
                     <div class="col-md-4 text-center">
-                      <div class="label">Insured PAN Number</div>
-                      <div class="value1">{{ data.owner.insuredPan }}</div>
+                      <div class="label1">INSURED PAN NUMBER</div>
+                      <div class="value8">{{ data.owner.insuredPan }}</div>
                     </div>
                     <div class="col-md-4">
-                      <div class="label">GST Number</div>
-                      <div class="value2">4875JYTGG58</div>
+                      <div class="label2">GST NUMBER</div>
+                      <div class="value3">{{ data.owner.GSTNo }}</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- card3 -->
+                <div class="blue-card">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="label">APPOINTEE NAME</div>
+                      <div class="value">{{ data.owner.AppointeeName }}</div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                      <div class="label">APPOINTEE AGE</div>
+                      <div class="value4">{{ data.owner.AppointeeAge}}</div>
+                    </div>
+                    <div class="col-md-4 text-end">
+                      <div class="label">RELATION WITH APPOINTEE</div>
+                      <div class="value5">{{ data.owner.AppointeeRelation}}</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- card4 -->
+                <div class="white-card">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="label">NOMINEE NAME</div>
+                      <div class="value">{{ data.owner.NomineeName }}</div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                      <div class="label3">NOMINEE AGE</div>
+                      <div class="value4">{{ data.owner.NomineeAge }}</div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="label2">RELATION WITH NOMINEE</div>
+                      <div class="value3">{{ data.owner.RelationWithNominee }}</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- card5 -->
+                <div class="blue-card">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="label">INSURED ADDRESS</div>
+                      <div class="value">{{ data.owner.InsuredAddress }}</div>
+                    </div>
+                    
+                  </div>
+                </div>
+
+                <!-- card6 -->
+                <div class="white-card">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="label">CITY</div>
+                      <div class="value">{{ data.owner.city }}</div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                      <div class="label">PINCODE</div>
+                      <div class="value6">{{ data.owner.pincode }}</div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="label4">STATE</div>
+                      <div class="value7">{{ data.owner.state }}</div>
                     </div>
                   </div>
                 </div>
@@ -192,7 +257,15 @@
             </div>
           </div>
         </div>
-    
+
+        <!--  HR -->
+        <div class="row">
+          <div class="col-12">
+            <hr class="my-0" style="background-color: #000; height: 1px; border: none;">
+          </div>
+        </div>
+
+
         <!-- Vehicle Details Section -->
         <div class="mb-4">
           <h3 class="section-title"><b>VEHICLE DETAILS</b></h3>
@@ -204,37 +277,149 @@
                 <div class="blue-card">
                   <div class="row">
                     <div class="col-md-4">
-                      <div class="label">Make</div>
-                      <div class="value">{{ data.vehicle.make }}</div>
+                      <div class="label">MAKE</div>
+                      <div class="value9">{{ data.vehicle.make }}</div>
                     </div>
                     <div class="col-md-4 text-center">
-                      <div class="label">Model</div>
+                      <div class="label">MODEL</div>
                       <div class="value">{{ data.vehicle.model }}</div>
                     </div>
                     <div class="col-md-4 text-end">
-                      <div class="label">Variant</div>
-                      <div class="value">Disc Brake Alloy</div>
+                      <div class="label5">VARIANT</div>
+                      <div class="value">{{ data.vehicle.varient }}</div>
                     </div>
                   </div>
                 </div>
-    
+
                 <!-- Card 2: Registration Number, Fuel Type, Registration Date -->
                 <div class="white-card">
                   <div class="row">
                     <div class="col-md-4">
-                      <div class="label">Registration Number</div>
-                      <div class="value">{{ data.vehicle.registrationNumber }}</div>
+                      <div class="label">CUBIC CAPACITY</div>
+                      <div class="value">{{ data.vehicle.cubicCapacity }}</div>
                     </div>
                     <div class="col-md-4 text-center">
-                      <div class="label">Fuel Type</div>
-                      <div class="value">{{ data.vehicle.fuelType }}</div>
+                      <div class="label">COLOR</div>
+                      <div class="value3">{{ data.vehicle.color }}</div>
                     </div>
                     <div class="col-md-4 text-end">
-                      <div class="label">Registration Date</div>
-                      <div class="value">{{ data.vehicle.registrationDate }}</div>
+                      <div class="label">SEATING CAPACITY</div>
+                      <div class="value10">{{ data.vehicle.seatingCapacity }}</div>
                     </div>
                   </div>
                 </div>
+
+                <!-- card3 -->
+                <div class="blue-card">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="label">BODY TYPE</div>
+                      <div class="value9">{{ data.vehicle.BodyType }}</div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                      <div class="label2">REGISTRATIONN DATE</div>
+                      <div class="value11">{{ data.vehicle.Registerdate }}</div>
+                    </div>
+                    <div class="col-md-4 text-end">
+                      <div class="label6">RTO</div>
+                      <div class="value2">{{ data.vehicle.RTO }}</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- card4 -->
+                <div class="white-card">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="label">REGISTRATION NUMBER</div>
+                      <div class="value">{{ data.vehicle.registrationNumber }}</div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                      <div class="label1">FUEL TYPE</div>
+                      <div class="value12">{{ data.vehicle.fuelType }}</div>
+                    </div>
+                    <div class="col-md-4 text-end">
+                      <div class="label">REGISTRATION DATE</div>
+                      <div class="value13">{{ data.vehicle.registrationDate }}</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- card5 -->
+                <div class="blue-card">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="label">ELECTRIC ACCESSORIES</div>
+                      <div class="value">{{ data.vehicle.ElectricAccessories }}</div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                      <div class="label7">NON-ELECTRIC ACCESSORIES</div>
+                      <div class="value4">-</div>
+                    </div>
+                    <div class="col-md-4 text-end">
+                      <div class="label5">CNG/LPG</div>
+                      <div class="value5">-</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- card6 -->
+                <div class="white-card">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="label">CARRIER TYPE</div>
+                      <div class="value">-</div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                      <div class="label">CNG/LPG KIT</div>
+                      <div class="value13">-</div>
+                    </div>
+                    <div class="col-md-4 text-end">
+                      <div class="label8">ENGINE NUMBER</div>
+                      <div class="value">{{ data.vehicle.EngineNo }}</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- card7 -->
+                <div class="blue-card">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="label">MANUFACTURING YEAR</div>
+                      <div class="value">2024</div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                      <div class="label2">MANUFACTURING MONTH</div>
+                      <div class="value8">{{ data.vehicle.ManufacturingMonth }}</div>
+                    </div>
+                    <div class="col-md-4 text-end">
+                      <div class="label9">VEHICLE IDV</div>
+                      <div class="value13">{{ data.vehicle.VehicleIDv }}</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- card8 -->
+                <div class="white-card">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="label">HYPOTHECATION/LEASE/HP</div>
+                      <div class="value">-</div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                      <div class="label">GVW</div>
+                      <div class="value">{{ data.vehicle.GVW }}</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!--  HR -->
+                <div class="row">
+                  <div class="col-12">
+                    <hr class="my-0" style="background-color: #000; height: 1px; border: none;">
+                  </div>
+                </div>
+              <!-- Another Div -->
               </div>
             </div>
           </div>

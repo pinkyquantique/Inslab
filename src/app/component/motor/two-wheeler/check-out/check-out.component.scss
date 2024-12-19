@@ -275,28 +275,169 @@ body, .container-fluid {
   }
 
   .label {
-    font-weight: bold;
-    font-size: 16px;
-    color: #333;
+    font-size: 12px;
+    color: #1D1B2099;
+    
   }
-
+  .label1 {
+    font-size: 12px;
+    color: #1D1B2099;
+    margin-left: 5rem;
+    font-weight: bold;
+    
+  }
+  .label2 {
+    font-size: 12px;
+    color: #1D1B2099;
+    margin-left: 10rem;
+    font-weight: bold;
+    
+  }
+  .label3 {
+    font-size: 12px;
+    color: #1D1B2099;
+    margin-right: 1rem;
+    font-weight: bold;
+    
+  }
+  .label4 {
+    font-size: 12px;
+    color: #1D1B2099;
+    margin-left: 11rem;
+    font-weight: bold;
+    
+  }
+  .label5 {
+    font-size: 12px;
+    color: #1D1B2099;
+    margin-right: 8.5rem;
+    font-weight: bold;
+    
+  }
+  .label6 {
+    font-size: 12px;
+    color: #1D1B2099;
+    margin-right: 10rem;
+    font-weight: bold;
+    
+  }
+  .label7 {
+    font-size: 12px;
+    color: #1D1B2099;
+    margin-left: 9rem;
+    font-weight: bold;
+    
+  }
+  .label8 {
+    font-size: 12px;
+    color: #1D1B2099;
+    margin-right: 2.5rem;
+    font-weight: bold;
+    
+  }
+  .label9 {
+    font-size: 12px;
+    color: #1D1B2099;
+    margin-right: 4rem;
+    font-weight: bold;
+    
+  }
   .value {
+    font-weight: bold;
     font-size: 14px;
-    color: #555;
+    color: #1D1B20;
     margin-left: 1rem;
+    white-space: nowrap;
   }
 
   .value1 {
+    font-weight: bold;
     font-size: 14px;
-    color: #555;
-    margin-right: 7rem;
+    color: #1D1B20;
+    margin-right: 6rem;
   }
 
   .value2 {
+    font-weight: bold;
     font-size: 14px;
-    color: #555;
+    color: #1D1B20;
     margin-right: 9rem;
   }
+  .value3{
+    font-weight: bold;
+    font-size: 14px;
+    color: #1D1B20;
+    margin-left: 10rem;
+
+  }
+  .value4{
+    font-weight: bold;
+    font-size: 14px;
+    color: #1D1B20;
+    margin-right: 8rem;
+  }
+  .value5{
+    font-weight: bold;
+    font-size: 14px;
+    color: #1D1B20;
+    margin-right: 12.5rem;
+  }
+  .value6{
+    font-weight: bold;
+    font-size: 14px;
+    color: #1D1B20;
+    margin-right: 1.5rem;
+    white-space: nowrap;
+  }
+  .value7{
+    font-weight: bold;
+    font-size: 14px;
+    color: #1D1B20;
+    margin-left: 11rem;
+
+  }
+  .value8 {
+    font-weight: bold;
+    font-size: 14px;
+    color: #1D1B20;
+    margin-left: 0rem;
+    white-space: nowrap;
+  }
+  .value9 {
+    font-weight: bold;
+    font-size: 14px;
+    color: #1D1B20;
+    margin-left: 0.5rem;
+    white-space: nowrap;
+  }
+  .value10{
+    font-weight: bold;
+    font-size: 14px;
+    color: #1D1B20;
+    margin-right: 11.5rem;
+  }
+
+  .value11 {
+    font-weight: bold;
+    font-size: 14px;
+    color: #1D1B20;
+    margin-left: 3rem;
+    white-space: nowrap;
+  }
+  .value12 {
+    font-weight: bold;
+    font-size: 14px;
+    color: #1D1B20;
+    margin-left: 4rem;
+    white-space: nowrap;
+  }
+  .value13 {
+    font-weight: bold;
+    font-size: 14px;
+    color: #1D1B20;
+    margin-right: 7rem;
+  }
+ 
   .container {
     padding: 20px;
     width: 100%;
