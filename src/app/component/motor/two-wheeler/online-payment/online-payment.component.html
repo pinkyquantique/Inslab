@@ -163,7 +163,18 @@
 
     <div *ngIf="selectedTab === 'wallet'">
         <!-- Wallet Payment -->
-        <h5 class="fw-bold">Pay with Wallet</h5>
-        <p class="text-muted">Use your wallet balance to proceed with payment.</p>
+        <h5 class="fw-bold">Wallet</h5>
+        <p class="text-muted">Note: As per government regulation, wallets can't be used for more than Rs.1,00,000/- per month.
+        </p>
+        <div class="row">
+            <div class="col-md-4 mb-4" *ngFor="let wallet of wallets">
+              <div class="card text-center p-3 shadow-sm wallet-card">
+                <img [src]="wallet.image" [alt]="wallet.label" class="card-img-top wallet-logo mx-auto" />
+                <div class="card-body">
+                  <p class="card-title m-0">{{ wallet.label }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
         <button class="btn btn-secondary">Pay via Wallet</button>
     </div>

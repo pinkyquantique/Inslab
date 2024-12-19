@@ -39,6 +39,14 @@ export class OnlinePaymentComponent implements OnInit {
     { id: 'sbi', label: 'SBI', image: 'image/sbi.png' },
     { id: 'icici', label: 'ICICI', image: 'image/icici.png' }
   ];
+  wallets = [
+    {id:'airtel', label:'airtel', image:'image/airtel.png'},
+    {id:'amazon', label:'amazon', image:'image/amazon.png'},
+    {id:'freecharge', label:'freecharge', image:'image/freecharge.png'},
+    {id:'jiomoney', label:'jiomoney', image:'image/jiomoney.png'},
+    {id:'paytm', label:'paytm', image:'image/paytm.png'},
+    {id:'phonepe', label:'phonepe', image:'image/phonepe.png'}
+  ];
   selectednetbankingOption: string = '';
   cardconfig = [{
     type: 'radio',
