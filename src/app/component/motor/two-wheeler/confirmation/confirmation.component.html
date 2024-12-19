@@ -4,7 +4,7 @@
 <div class="confirmation-message">
     <span class="success-notification" *ngIf="isVisible">
         <img src="icons/complete_msg.svg" alt="success_logo" class="icon"/>
-        <p>Policy details has been shared on your email <b>neerav.desaigmail.com.</b></p>
+        <p>Policy details has been shared on your email <b>{{proposerDetails.email}}.</b></p>
         <img src="icons/close.svg" alt="close_logo" class="close"(click)="closeNotification()"/>
     </span>
     <span class="success-message">
@@ -26,9 +26,9 @@
     </span>
         </span>
         <span class="invoice">
-            <p>Invoice To: <br/><b>Neerav Desai</b><br/>
-                123 Streets, Bandung, West Java<br/>+123 456 789<br/>
-                customermail.com</p>
+            <p>Invoice To: <br/><b>{{proposerDetails.name}}</b><br/>
+                {{proposerDetails.address}}<br/>{{proposerDetails.number}}<br/>
+                {{proposerDetails.email}}</p>
         </span>
     </div>
     <div class="table-container">

@@ -142,11 +142,11 @@ h6{
   }
   
   tr:nth-child(even) {
-    background-color: #f8f9fc; /* Light background for even rows */
+    background-color: #f8f9fc; 
   }
   
   tr:nth-child(odd) {
-    background-color: #fff; /* White background for odd rows */
+    background-color: #fff; 
   }
   
   th,
@@ -154,7 +154,7 @@ h6{
     text-align: center;
   }
   .card {
-    background-color: #f8f9fc; /* Light grey background */
+    background-color: #f8f9fc; 
     border: none;
   }
   
@@ -184,7 +184,7 @@ h6{
     max-width: 1200px;
   }
   .terms-container {
-    background-color: #f8f9fc; /* Light background color */
+    background-color: #f8f9fc; 
     border-radius: 12px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
@@ -198,7 +198,95 @@ h6{
     font-size: 1rem;
   }
   .btn{
-border-radius: 20px;
+    border-radius: 20px;
   }
+
+  @media screen and (max-width: 1024px) and (min-width: 468px) {
+    body, html {
+        margin: 0;
+        height: 100%;
+        overflow-x: hidden;
+    }
+    .confirmation-gif {
+        width: 100%;
+        height: 40vh;
+        flex-direction: column;
+    }
+    .confirmation {
+        width: 40%;
+    }
+    .confirmation-message {
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+    }
+    .success-notification {
+        width: 95%;
+        padding: 1rem;
+        flex-direction: row;
+    }
+    .icon {
+        margin-right: 0.5rem;
+    }
+    .close {
+        margin-left: 0;
+    }
+    .success-message {
+        width: 95%;
+        padding: 1rem;
+        flex-direction: row;
+    }
+    .success-message h3 {
+        font-size: 1.2rem;
+    }
+    .btn-download {
+        padding: 0.9rem 0.9rem;
+        font-size: 10px;
+    }
+    .invoice-details {
+        flex-direction: row;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .company-details {
+        flex-direction: row;
+       
+    }
+    .company-name {
+        margin-left: 10px;
+        line-height: 1.8rem;
+    }
+    .table-container {
+        width: 90%;
+    }
+    table {
+        font-size: 0.9rem;
+    }
+    th, td {
+        padding: 8px;
+    }
+    .card {
+        padding: 1rem;
+    }
+    h5 {
+        font-size: 1.2rem;
+    }
+    p {
+        font-size: 0.9rem;
+    }
+    .float-end {
+        font-size: 0.9rem;
+    }
+    .container {
+        padding: 1rem;
+    }
+    .terms-container {
+        padding: 1rem;
+    }
+    .btn {
+        padding: 0.8rem 1.2rem;
+    }
+}
+
   
   
