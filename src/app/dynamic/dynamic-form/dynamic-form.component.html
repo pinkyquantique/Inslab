@@ -1,66 +1,43 @@
-
-      <!-- dynamic-form.component.html -->
+<!-- dynamic-form.component.html -->
 
 <form [formGroup]="formGroup">
   <div class="form-row">
     <ng-container *ngFor="let field of config">
       <ng-container [ngSwitch]="field.type">
         <div class="form-field" [ngClass]="{ 'half-width': isHalfWidth(field) }">
-      <!-- Text Input -->
-      <app-dynamic-input
-        *ngSwitchCase="'text'"
-        [config]="field"
-        [formGroup]="formGroup"
-      ></app-dynamic-input>
+          <!-- Text Input -->
+          <app-dynamic-input *ngSwitchCase="'text'" [config]="field" [formGroup]="formGroup"></app-dynamic-input>
 
-      <!-- Select Input -->
-      <app-dynamic-select
-        *ngSwitchCase="'select'"
-        [config]="field"
-        [formGroup]="formGroup"
-      ></app-dynamic-select>
+          <!-- Select Input -->
+          <app-dynamic-select *ngSwitchCase="'select'" [config]="field" [formGroup]="formGroup"></app-dynamic-select>
 
-      <!-- Radio Group -->
-      <app-dynamic-radio
-        *ngSwitchCase="'radio'"
-        [config]="field"
-        [formGroup]="formGroup"
-      ></app-dynamic-radio>
+          <!-- Radio Group -->
+          <app-dynamic-radio *ngSwitchCase="'radio'" [config]="field" [formGroup]="formGroup"></app-dynamic-radio>
 
-      <!-- Checkbox Group -->
-      <app-dynamic-checkbox
-        *ngSwitchCase="'checkbox'"
-        [config]="field"
-        [formGroup]="formGroup"
-      ></app-dynamic-checkbox>
+          <!-- Checkbox Group -->
+          <app-dynamic-checkbox *ngSwitchCase="'checkbox'" [config]="field"
+            [formGroup]="formGroup"></app-dynamic-checkbox>
+          <app-onlymonth *ngSwitchCase="'onlymonth'" [config]="field" [formGroup]="formGroup"></app-onlymonth>
+          <app-onlyyear *ngSwitchCase="'onlyyear'" [config]="field" [formGroup]="formGroup"></app-onlyyear>
+          <app-dynamic-calander *ngSwitchCase="'date'" [config]="field" [formGroup]="formGroup">
+          </app-dynamic-calander>
 
-      <app-dynamic-calander    
-       *ngSwitchCase="'date'"
-  [config]="field"
-  [formGroup]="formGroup" >
-</app-dynamic-calander>
+          <app-dynamic-upload *ngSwitchCase="'upload'" [config]="field" [formGroup]="formGroup">
+          </app-dynamic-upload>
 
-<app-dynamic-upload *ngSwitchCase="'upload'"
-[config]="field"
-[formGroup]="formGroup" >
-</app-dynamic-upload>
+          <app-dynamic-monthcalander *ngSwitchCase="'month'" [config]="field" [formGroup]="formGroup">
+          </app-dynamic-monthcalander>
 
-<app-dynamic-monthcalander   *ngSwitchCase="'month'" [config]="field" [formGroup]="formGroup" >
-</app-dynamic-monthcalander>
+          <div *ngIf="formGroup.get(field.name)?.invalid && formGroup.get(field.name)?.touched">
+            <small class="error">This field is required</small>
+          </div>
+          <!-- Submit Button -->
+          <app-dynamic-button *ngSwitchCase="'button'" [config]="field"
+            (buttonClick)="handleButtonClick(field.event)"></app-dynamic-button>
+        </div>
+      </ng-container>
 
-      <div *ngIf="formGroup.get(field.name)?.invalid && formGroup.get(field.name)?.touched">
-        <small class="error">This field is required</small>
-      </div>
-      <!-- Submit Button -->
-      <app-dynamic-button
-      *ngSwitchCase="'button'"
-      [config]="field"
-      (buttonClick)="handleButtonClick(field.event)"
-    ></app-dynamic-button>
-   </div>
     </ng-container>
-
-  </ng-container>
 
   </div>
 </form>

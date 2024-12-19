@@ -1,0 +1,20 @@
+<div [formGroup]="formGroup" class="form-group position-relative">
+    <label>{{ config.label }}</label>
+    <div class="position-relative">
+      <select
+        [id]="config.name"
+        [formControlName]="config.name"
+        class="form-control custom-select-icon"
+      >
+        <option value="" disabled selected>Select Month</option>
+        <option *ngFor="let month of months" [value]="month.value">
+          {{ month.label }}
+        </option>
+      </select>
+      <!-- Calendar Icon -->
+      <span class="calendar-icon">
+        <i class="bi bi-calendar"></i>
+      </span>
+    </div>
+  </div>
+  

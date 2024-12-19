@@ -24,6 +24,7 @@
   button {
     transition: all 0.3s;
     border-radius: 2rem;
+    padding: 1rem 2rem;
   }
   .padding-side{
     padding: 0 14rem ;
@@ -45,3 +46,36 @@ margin-top: 4rem;
   .floatright{
     float: inline-end;
   }
+
+  .no-bullets {
+    list-style-type: none; 
+    padding: 0;            
+    margin: 0;            
+}
+.card {
+    text-align: center;
+  }
+  
+  .card img {
+    max-height: 100px; /* Adjust as needed */
+  }
+
+  /* Optional Custom Styles */
+.list-group {
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+  }
+  
+  .form-group {
+    position: relative;
+  }
+  
+  .list-group-item {
+    cursor: pointer;
+  }
+  
+  .list-group-item:hover {
+    background-color: #f8f9fa;
+  }
+  

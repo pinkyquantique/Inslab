@@ -9,14 +9,16 @@ import { DynamicButtonComponent } from '../dynamic-button/dynamic-button.compone
 import { DynamicCalanderComponent } from '../dynamic-calander/dynamic-calander.component';
 import { DynamicMonthcalanderComponent } from '../dynamic-monthcalander/dynamic-monthcalander.component';
 import { DynamicUploadComponent } from '../dynamic-upload/dynamic-upload.component';
+import { OnlymonthComponent } from '../onlymonth/onlymonth.component';
+import { OnlyyearComponent } from '../onlyyear/onlyyear.component';
 
 @Component({
   selector: 'app-dynamic-form',
   standalone: true,
   imports: [ReactiveFormsModule, CommonModule, DynamicMonthcalanderComponent,
     DynamicInputComponent, DynamicSelectComponent, 
-    DynamicRadioComponent,DynamicCheckboxComponent,
-    DynamicButtonComponent,DynamicCalanderComponent,DynamicUploadComponent],
+    DynamicRadioComponent,DynamicCheckboxComponent,OnlyyearComponent,
+    DynamicButtonComponent,DynamicCalanderComponent,DynamicUploadComponent,OnlymonthComponent],
   templateUrl: './dynamic-form.component.html',
   styleUrls: ['./dynamic-form.component.scss']
 })
@@ -40,7 +42,7 @@ export class DynamicFormComponent {
     }
   }
   isHalfWidth(field: any): boolean {     
-      return field.type === 'text' || field.type === 'select'||field.type === 'radio' ||field.type === 'checkbox' ||field.type === 'date' ||field.type === 'month' ;  // Example logic
+      return field.type === 'onlymonth'|| field.type === 'onlyyear' || field.type === 'text' || field.type === 'select'||field.type === 'radio' ||field.type === 'checkbox' ||field.type === 'date' ||field.type === 'month' ;  // Example logic
   }
   markFormGroupTouched(formGroup: FormGroup) {
     Object.values(formGroup.controls).forEach((control) => {

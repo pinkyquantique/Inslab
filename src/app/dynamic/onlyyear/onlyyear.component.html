@@ -1,0 +1,21 @@
+<div [formGroup]="formGroup" class="form-group position-relative">
+    <label>{{ config.label }}</label>
+    <div class="position-relative">
+      <select
+        [id]="config.name"
+        [formControlName]="config.name"
+        class="form-control custom-select-icon"
+        style="height: auto; max-height: 4rem; overflow-y: scroll;"
+      >
+        <option value="" disabled selected>Select Year</option>
+        <option *ngFor="let year of years" [value]="year">
+          {{ year }}
+        </option>
+      </select>
+      <!-- Calendar Icon -->
+      <span class="calendar-icon">
+        <i class="bi bi-calendar"></i>
+      </span>
+    </div>
+  </div>
+  

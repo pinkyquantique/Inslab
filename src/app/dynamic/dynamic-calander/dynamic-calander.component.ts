@@ -7,7 +7,7 @@ import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angul
   standalone: true,
   imports: [CommonModule,ReactiveFormsModule,FormsModule],
   templateUrl: './dynamic-calander.component.html',
-  styleUrl: './dynamic-calander.component.css'
+  styleUrl: './dynamic-calander.component.scss'
 })
 export class DynamicCalanderComponent implements OnInit {
  

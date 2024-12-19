@@ -1,0 +1,67 @@
+/* select-input.component.scss */
+.form-group {
+    margin-bottom: 1.5rem;
+  
+    label {
+      font-family: Roboto;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 16px;
+      padding: 0px 0.5rem;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+    }
+  
+    select {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.2rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      outline: none;
+      transition: border-color 0.3s;
+      border-radius: 1rem;
+      height: 4rem;
+  
+      &:focus {
+        border-color: #007bff;
+      }
+    }
+  }
+  .required-asterisk {
+    color: red;
+    margin-left: 5px;
+    font-weight: bold;
+  }
+
+  .form-group {
+    position: relative;
+  
+    .custom-select-icon {
+      padding-right: 2.5rem; /* Reserve space for the icon */
+      -webkit-appearance: none; /* Remove default dropdown styling for browsers */
+      -moz-appearance: none;
+      appearance: none;
+      background-color: #fff;
+      cursor: pointer;
+    }
+  
+    .calendar-icon {
+      position: absolute;
+      top: 50%;
+      right: 1rem; /* Adjust the position of the icon */
+      transform: translateY(-50%);
+      pointer-events: none; /* Prevent the icon from interfering with the dropdown */
+      color: #6c757d; /* Icon color */
+      font-size: 1.2rem;
+    }
+  }
+  .custom-select-icon {
+    width: 200px; /* Adjust width as needed */
+    height: 10px; /* Adjust height as needed */
+  }
+  
+  .custom-select-icon option {
+    height: 3rem; /* Adjust height of the options */
+   // font-size: 4rem; /* Adjust font size for the options */
+  }
