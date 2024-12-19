@@ -46,8 +46,10 @@ export const proposalData = {
       EngineNo:'HNGA125ENG56789',
       ManufacturingMonth:'MARCH',
       VehicleIDv:'₹ 85,000',
-      GVW:'282 kg'
-
+      GVW:'282 kg',
+      schedulePremium:'40,001',
+      GST:'9,000',
+     
 
 
     

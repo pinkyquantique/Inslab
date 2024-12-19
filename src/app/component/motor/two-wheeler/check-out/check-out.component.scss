@@ -102,7 +102,7 @@ p {
 }
 
 body, .container-fluid {
-  overflow-x: hidden; /* Prevent horizontal scroll */
+  overflow-x: hidden; 
 }
 .card {
   border-radius: 10px;
@@ -156,11 +156,45 @@ body, .container-fluid {
   text-align: right;
   margin-right: -4rem;
 }
+.premium-schedule-amount {
+  display: flex;
+  align-items: center;
+  color: #000000;
+  text-align: right;
+  margin-right: 0rem;
+  font-weight: bold;
+  font-size: 16px;
+  padding-top: 3rem;
+}
+.premium-schedule-amount1 {
+  display: flex;
+  align-items: center;
+  color: #000000;
+  text-align: right;
+  margin-right: -41rem;
+  font-weight: bold;
+  font-size: 16px;
+  padding-top: 0rem;
+  padding-bottom: -3rem;
+  margin-top: -2rem;
+}
+.premium-schedule-amount2 {
+  display: flex;
+  align-items: center;
+  color: #000000;
+  text-align: right;
+  margin-right: 0rem;
+  font-weight: bold;
+  font-size: 16px;
+  padding-top: 0rem;
+}
 
 .rupee-icon {
-  width: 12px;
-  margin-right: 0px;
+  width: 15px;
+  margin-right: 3px;
+  font-size: 16px;
 }
+
 
 .total-premium {
   display: flex;
@@ -443,6 +477,36 @@ body, .container-fluid {
     width: 100%;
     overflow: hidden;
   }
+  .premium_policy{
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #ffffff;
+    width: 60vw;
+    
+  }
+  .declarative{
+    color: #1D1B2099;
+  }
+  .note{
+    padding-bottom: 3rem;
+  }
+
+  .proposal-button{
+    width: 150px; 
+    margin-right: 10px;
+    border-radius: 26px;
+    margin-bottom: 20rem;
+    border: 1px solid black;
+    font-size: 20px;
+}
+.buy-button{
+    width: 100px; 
+    margin-right: 18px;
+    margin-right: 15px;
+    border-radius: 26px;
+    margin-bottom: 10rem;
+    font-size: 20px;
+}
 
   @media (max-width: 767px) {
 
@@ -456,6 +520,37 @@ body, .container-fluid {
     }
   }
 
+  .heading{
+    margin-bottom: 0.3rem;
+    font-size: 14px;
+    color: #1D1B2099;
+  }
+.para {
+    padding-top: 0.5rem;
+    padding-right: 12rem;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.para1 {
+  padding-top: 0.5rem;
+  padding-right: 20rem;
+  font-weight: bold;
+  font-size: 16px;
+}
+.para2 {
+  padding-top: 0.5rem;
+  padding-right: 28rem;
+  font-weight: bold;
+  font-size: 16px;
+}
+.para3{
+  padding-top: 1.5rem;
+  padding-right: 1rem;
+  font-weight: bold;
+  font-size: 16px;
+
+}
   @media (max-width: 768px) {
     .field-label {
       font-size: 0.8rem;
@@ -470,8 +565,7 @@ body, .container-fluid {
   }
 }
 
-// @media only screen and (max-width: 375px) and (max-height: 667px) {
-//   .blue-card{
-//     width: 100%;
-//   }
-// }
+
+
+
+

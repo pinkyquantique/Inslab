@@ -416,10 +416,127 @@
                 <!--  HR -->
                 <div class="row">
                   <div class="col-12">
+                    <hr class="my-0" style="background-color: #000; height: 1px; border: none; width: 200vh;">
+                  </div>
+                </div>
+
+                <h4><b>SCHEDULE OF PREMIUM</b></h4>
+        <!-- Another Div -->
+            <div class="col-md-8 col-12 premium_policy p-4">
+                <!-- Row 1 - White -->
+                <div class="row mb-3" style="background-color: white;">
+                    <div class="col-md-6">
+                        <h4 class="heading">OWN DAMAGE PREMIUM</h4>
+                        <p class="para">BASIC OWN DAMAGE PREMIUM.</p>
+                    </div>
+                    <div class="col-md-6 d-flex justify-content-end align-items-center"> <!-- Flexbox for left-right alignment -->
+                      <span class="premium-schedule-amount">
+                        <img src="icons/rupees.svg" alt="rupees" class="rupee-icon" />
+                        {{data.vehicle.schedulePremium}}
+                      </span>
+                    </div>
+                </div>
+            
+                
+                <!--  HR -->
+                <div class="row">
+                  <div class="col-12">
                     <hr class="my-0" style="background-color: #000; height: 1px; border: none;">
                   </div>
                 </div>
-              <!-- Another Div -->
+                <!-- Row 2 - White -->
+                <div class="row mb-3" style="background-color: white;">
+                    <div class="col-md-6">
+                        <h4 class="heading">ADDON PREMIUM</h4>
+                        <p class="para1">SUB TOTAL (ADDONS)</p>
+                    </div>
+                    <div class="col-md-6 d-flex justify-content-end align-items-center"> <!-- Flexbox for left-right alignment -->
+                      <span class="premium-schedule-amount">
+                        <img src="icons/rupees.svg" alt="rupees" class="rupee-icon" />
+                        {{data.vehicle.schedulePremium}}
+                      </span>
+                    </div>
+                </div>
+            
+                
+                <!--  HR -->
+                <div class="row">
+                  <div class="col-12">
+                    <hr class="my-0" style="background-color: #000; height: 1px; border: none;">
+                  </div>
+                </div>
+
+                <!-- Row 3 - White -->
+                <div class="row mb-3" style="background-color: white;">
+                    <div class="col-md-6">
+                        <h4 class="heading">THIRD PARTY PREMIUM</h4>
+                        <p class="para">BASIC THIRD PARTY PREMIUM</p>
+                    </div>
+                    <div class="col-md-6 d-flex justify-content-end align-items-center"> <!-- Flexbox for left-right alignment -->
+                      <span class="premium-schedule-amount">
+                        <img src="icons/rupees.svg" alt="rupees" class="rupee-icon" />
+                        {{data.vehicle.schedulePremium}}
+                      </span>
+                    </div>
+                </div>
+            
+                
+                <!--  HR -->
+                <div class="row">
+                  <div class="col-12">
+                    <hr class="my-0" style="background-color: #000; height: 1px; border: none;">
+                  </div>
+                </div>
+
+                <!-- Row 4 - #F6F9FF -->
+                <div class="row " style="background-color: #F6F9FF;">
+                    <div class="col-md-6">
+                        <h4 class="heading">PREMIUM</h4>
+                        <p class="para2">GST &#64;18%:</p>
+                        <p class="para3">FINAL INSURANCE PREMIUM (INCLUDING GST)</p>
+                        
+                    </div>
+                    <div class="col-md-6 d-flex justify-content-end align-items-center"> 
+                      <span class="premium-schedule-amount2">
+                        <img src="icons/rupees.svg" alt="rupees" class="rupee-icon" />
+                        {{data.vehicle.GST}}
+                      </span>
+                    </div>
+                    <div class="col-md-6 d-flex justify-content-end align-items-center"> 
+                      <span class="premium-schedule-amount1">
+                        <img src="icons/rupees.svg" alt="rupees" class="rupee-icon" />
+                        {{data.totalPremium}}
+                      </span>
+                    </div>
+                </div>
+            </div>
+              
+            <!--  HR -->
+            <div class="row">
+              <div class="col-12">
+                <hr class="my-4" style="background-color: #000; height: 1px; border: none; width: 200vh;">
+              </div>
+            </div>
+
+        <!-- Declaration Div -->
+
+            <div class="declarative">
+              <div class="note">
+                <h6><b>NOTE:</b></h6>
+                <ul>
+                  <li>Policy issuance is subject to realization of cheque.</li>
+                  <li>Consolidated stamp duty paid to state exchequer.</li>
+                  <li>The policy is subject to compulsory deductible of rs.1000.</li>
+                  <li>You agree to receive the policy document (without enclosing the terms & conditions) from the company and the company will display terms & conditions on its website which can be accessed by you online. * subject to imt endt. Nos. & memorandum: 22, </li>
+                </ul>
+              </div>
+              <div class="declare">
+                <h6><b>Declaration:</b>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus earum quod, ullam quisquam reiciendis nulla numquam eius id aut voluptatum, commodi quaerat repellendus ad vitae sapiente sint debitis blanditiis aliquam cupiditate veniam mollitia? Dignissimos iste facere nihil earum libero modi consectetur ipsum. Tempora quam quia, nostrum eum, dignissimos provident recusandae esse facere error harum, amet ex ad cum. Ipsum repudiandae a tenetur consequuntur maiores adipisci distinctio? Reiciendis laudantium debitis a rerum sunt harum tenetur officia sit itaque quas, voluptate error qui modi, eaque aliquam blanditiis quo ducimus! Sit quam repudiandae, dolorem porro est minus ab minima eveniet sint similique nisi?</h6>
+              </div>
+            </div>
+
+         
+            
               </div>
             </div>
           </div>
@@ -427,4 +544,11 @@
       </div>
     </div>
   </div>
+</div>
+
+<!-- Buttons -->
+
+<div class="d-flex justify-content-end mt-5 ">
+  <button class="btn btn-light  px-4  proposal-button"><b>Save Proposal</b></button>
+  <button class="btn btn-dark px-4 buy-button"><b>Continue to Buy</b></button>
 </div>
