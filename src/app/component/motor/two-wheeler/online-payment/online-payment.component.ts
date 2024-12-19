@@ -124,4 +124,5 @@ export class OnlinePaymentComponent implements OnInit {
     this.searchTerm = bank.label;
     this.showDropdown = false;
   }
+  selectedPaymentMethod = 'debit';
 }
