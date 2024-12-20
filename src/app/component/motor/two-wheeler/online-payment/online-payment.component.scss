@@ -186,12 +186,14 @@ h4 {
 
 /* Wallet Note Section */
 .wallet-note h5 {
+  text-align: left;
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
 .wallet-note p {
+  text-align: left;
   font-size: 14px;
   color: #555;
   margin-bottom: 30px;
@@ -250,9 +252,15 @@ h4 {
 }
 
 .btn-cancel {
+  border: 1px solid black; 
+    padding: 10px 25px;
+    font-size: 14px;
+    border-radius: 20px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    transition: all 0.3s ease;
   background-color: #fff;
   color: #333;
-  border: 1px solid #ddd;
 }
 
 .btn-cancel:hover {
@@ -295,23 +303,38 @@ h4 {
 }
 
 @media (max-width: 768px) {
-  .wallet-card {
-      max-width: 100px;
+  .wallets-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px; 
   }
 
+  .wallet-note h5,
+  .wallet-note p {
+    text-align: center;
+  }
+
+  .wallet-actions {
+    justify-content: center; 
+  }
+
+  .btn {
+    width: auto; 
+    font-size: 13px; 
+    padding: 8px 15px; 
+  }
   .radio-group {
       flex-direction: column;
       gap: 0.5rem;
   }
   .custom-dropdown {
-    flex-direction: column; /* Stack items vertically */
-    align-items: flex-start; /* Align items to the left */
+    flex-direction: column; 
+    align-items: flex-start; 
     padding: 6px;
 }
 .custom-dropdown select {
     font-size: 12px;
-    padding: 8px 10px; /* Reduce padding */
-    width: 100%; /* Full width for select */
+    padding: 8px 10px; 
+    width: 100%; 
 }
 }
 
@@ -320,17 +343,18 @@ h4 {
       padding: 0 1rem;
   }
 
-  .wallet-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    height: 40vh;
+  .wallets-grid {
+    grid-template-columns: 1fr; /* Single column for smallest screens */
   }
-  .wallet-card{
-    width: 50px;
-    height: 50px;
-    display: flex;
-    flex-direction: row;
+
+  .wallet-actions {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px;
+    align-items: center; /* Center-align stacked buttons */
+  }
+
+  .btn {
+    width: 40%; /* Make buttons full-width */
   }
 
   .custom-dropdown select {

@@ -1,36 +1,61 @@
 <div class="confirmation-gif">
     <img src="image/confirmation.gif" alt="...loading" class="confirmation"/>
 </div>
-<div class="confirmation-message">
-    <span class="success-notification" *ngIf="isVisible">
-        <img src="icons/complete_msg.svg" alt="success_logo" class="icon"/>
-        <p>Policy details has been shared on your email <b>{{proposerDetails.email}}.</b></p>
-        <img src="icons/close.svg" alt="close_logo" class="close"(click)="closeNotification()"/>
+<div class="container mt-3">
+  <div class="alert alert-success d-flex align-items-center justify-content-between">
+    <span>
+      <i class="bi bi-check-circle-fill me-2"></i>
+      Policy details have been shared on your email <strong>{{ proposerDetails.email }}</strong>.
     </span>
-    <span class="success-message">
-        <div class="message">
-        <h3>Congratulations, Neerav Desai.</h3>
-        <p>Your policy has been booked successfully!!</p>
-    </div>
-        <button class="btn-download"><img src="icons/download.svg" alt="download"/>Download Policy</button>
-    </span>
+    <button type="button" class="btn-close" aria-label="Close"></button>
+  </div>
 </div>
-<div class="insurance-details">
-    <div class="invoice-details">
-    <span class="company-details">
-        <span class="company-logo">
-        <img src="image/quotation_image.png" alt="company-logo"/></span>
-        <span class="company-name"><h6>Global Insurance...</h6>
-        <p>Overseas Motor Insurance</p>
-        <span class="selectplan">Essential Plan</span>
-    </span>
-        </span>
-        <span class="invoice">
-            <p>Invoice To: <br/><b>{{proposerDetails.name}}</b><br/>
-                {{proposerDetails.address}}<br/>{{proposerDetails.number}}<br/>
-                {{proposerDetails.email}}</p>
-        </span>
+<div class="container my-5">
+  <!-- Congratulations Section -->
+  <div class="text-center">
+    <h2>Congratulations, Neerav Desai.</h2>
+    <p class="text-muted">Your policy has been booked successfully!!</p>
+  </div>
+  <div class="text-end mt-3">
+    <button class="btn-secondary">
+      <img src="icons/download.svg"/> Download Policy
+    </button>
+  </div>
+  <!-- Policy Card -->
+  <div class="card shadow-sm mt-4">
+    <div class="row g-0 align-items-center">
+      <!-- Logo Section -->
+      <div class="col-md-2 d-flex align-items-center justify-content-center">
+        <img
+          src="image/banner_img.png"
+          class="img-fluid p-3"
+          alt="Global Insurance Logo"
+        />
+      </div>
+
+      <!-- Policy Details Section -->
+      <div class="col-md-7">
+        <div class="card-body py-2">
+          <h5 class="card-title">Global Insurance</h5>
+          <p class="card-text text-muted mb-1">Overseas Motor Insurance</p>
+          <span class="badge bg-primary text-uppercase">Essential Plan</span>
+        </div>
+      </div>
+
+      <!-- Invoice Section -->
+      <div class="col-md-3 text-right pe-4">
+        <small class="text-muted">Invoice to :</small>
+        <h6 class="mb-0">Neerav Desai</h6>
+        <p class="text-muted mb-0">123 Streets, Bandung, West Java</p>
+        <p class="text-muted mb-0">+123 456 789</p>
+        <p class="text-muted mb-0">customermail.com</p>
+      </div>
     </div>
+  </div>
+</div>
+
+
+<div class="insurance-details">
     <div class="table-container">
         <table>
             <thead>
@@ -125,7 +150,7 @@
             </div>
           
             <div class="d-flex justify-content-end mt-4">
-              <button class="btn btn-dark btn-lg" (click)="goToDashboard()">
+              <button class="btn-common" (click)="goToDashboard()">
                 Take me to Dashboard
               </button>
             </div>

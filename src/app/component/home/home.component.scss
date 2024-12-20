@@ -724,6 +724,7 @@
         margin-left: 10px;
       }
       .explore-card {
+        margin-left: 20px;
         width: 50%; 
       }
       .email-section {
@@ -819,39 +820,3 @@
 
 }
 
-/* For screens larger than 768px */
-@media (min-width: 768px) {
-    .card-banner {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        height: auto;
-        width: 100%;
-        padding: 20px;
-    }
-
-    .card-banner img {
-        max-width: 50%; /* Adjust image size for larger screens */
-        height: auto;
-        margin-right: 20px; /* Adds spacing between image and content */
-    }
-
-    .text-container {
-        max-width: 100%;
-        text-align: left;
-    }
-
-    .text-container h2 {
-        font-size: 3rem;
-    }
-
-    .text-container h6 {
-        font-size: 2rem;
-    }
-
-    .apply-btn {
-        font-size: 1.1rem;
-        padding: 10px 20px;
-    }
-}
