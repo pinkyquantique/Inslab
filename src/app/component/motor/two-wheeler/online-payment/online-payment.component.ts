@@ -10,7 +10,7 @@ import { DynamicFormComponent } from '../../../../dynamic/dynamic-form/dynamic-f
   standalone: true,
   imports: [CommonModule, FormsModule, DynamicFormComponent],
   templateUrl: './online-payment.component.html',
-  styleUrl: './online-payment.component.scss'
+  styleUrls: ['./online-payment.component.scss'],
 })
 export class OnlinePaymentComponent implements OnInit {
   data: any;
