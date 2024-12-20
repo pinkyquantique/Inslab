@@ -19,6 +19,9 @@ export class OnlinePaymentComponent implements OnInit {
   searchTerm = '';
   showDropdown = false;
   selectedBank: any = null;
+  toggleDropDown(){
+    this.showDropdown = !this.showDropdown;
+  }
   paymentOptions = [
     { id: 'upi', label: 'UPI', icon: 'icons/upi-icon.svg' },
     { id: 'credit', label: 'Credit/Debit Card', icon: 'icons/debit-card.svg' },

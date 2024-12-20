@@ -60,25 +60,50 @@ p {
 }
 
 .card img {
-  max-height: 100px; /* Adjust as needed */
+  max-height: 100px; 
 }
 
-/* Optional Custom Styles */
 .list-group {
   max-height: 200px;
   overflow-y: auto;
   z-index: 1000;
 }
 
-.form-group {
+.custom-dropdown {
   position: relative;
+  max-width: 800px;
+
 }
 
-.list-group-item {
+.with-icons {
+  width: 100%;
+  padding-left: 40px; 
+  padding-right: 40px; 
+}
+
+.search-icon {
+  left: 10px; 
+  top: 50%;
+  transform: translateY(-50%);
+  height: 20px; 
+}
+
+.dropdown-icon {
+  right: 10px; 
+  top: 50%;
+  transform: translateY(-50%);
+  height: 20px; 
+}
+
+/* Dropdown option items */
+.dropdown-options .list-group-item {
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
 }
 
-.list-group-item:hover {
+.dropdown-options .list-group-item:hover {
   background-color: #f8f9fa;
 }
 
@@ -120,125 +145,129 @@ h4 {
   accent-color: black;
 }
 
-.dropdown-container {
-  position: relative;
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.custom-dropdown {
-  position: relative;
-  display: flex;
-  align-items: center;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 0;
-  margin-top: 10px;
-  background-color: #fff;
-}
-
-.custom-dropdown select {
-  width: 100%;
-  padding: 10px 36px; /* Leave space for the icons */
-  font-size: 14px;
-  border: none;
-  background: transparent;
-  outline: none;
-  appearance: none; /* Removes default browser styling */
-  -webkit-appearance: none;
-  -moz-appearance: none;
-}
-
-.search-icon {
-  position: absolute;
-  left: 8px;
-  width: 20px;
-  height: 20px;
-  pointer-events: none; /* Prevents the icon from interfering with clicks */
-}
-
-.dropdown-icon {
-  position: absolute;
-  right: 8px;
-  width: 20px;
-  height: 20px;
-  pointer-events: none;
-}
-
-select {
-  padding: 10px;
-  font-size: 14px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  width: 150%;
-}
-
 .actions {
   display: flex;
   justify-content: right;
   gap: 16px;
 }
 
-.cancel-btn,
-.btn-common {
-  margin-top: 10px;
-}
-
-.cancel-btn {
-  border: 1px solid black;
-  background-color: #f5f5f5;
-  color: #000;
-}
-
-.wallet-section {
-  width: 100px;
-  font-family: Arial, sans-serif;
-  padding: 10px 0;
-}
-
 .wallet-container {
-  width: 80%;
-  height: 75vh;
-  margin-left: 140px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
-.wallet-note {
-  margin-left: 60px;
+/* Wallet Note Section */
+.wallet-note h5 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.wallet-note p {
   font-size: 14px;
   color: #555;
   margin-bottom: 30px;
 }
 
+/* Wallet Grid */
+.wallet-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Wallet Note Section */
+.wallet-note h5 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.wallet-note p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* Wallet Grid */
+.wallets-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
 .wallet-card {
-  gap: 1rem;
-  margin: 0;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-  transition: transform 0.2s, box-shadow 0.2s;
   border: 1px solid #ddd;
-  width: 100%;
-  max-width: 260px;
+  border-radius: 8px;
+  padding: 10px; /* Reduced padding */
+  text-align: center;
+  background-color: #fff;
+  transition: transform 0.2s, box-shadow 0.2s;
+  height: auto; /* Make height dynamic */
 }
 
 .wallet-card:hover {
-  transform: scale(1.02);
+  transform: scale(1.03);
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .wallet-logo {
-  width: 100px;
-  height: 50px;
-  object-fit: contain;
-  margin: 0 auto;
+  width: 60px; /* Reduced logo size */
+  height: auto;
+  margin-bottom: 5px; /* Reduced margin */
 }
 
-.card-title {
+.wallet-label {
   font-size: 14px;
-  color: #333;
   font-weight: bold;
-  margin-top: 10px;
+  color: #333;
 }
+
+/* Action Buttons */
+.wallet-actions {
+  display: flex;
+  justify-content: flex-end; /* Align buttons to the right */
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 8px 16px; /* Reduced padding */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-cancel {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.btn-cancel:hover {
+  background-color: #f5f5f5;
+}
+
+.btn-pay {
+  background-color: #333;
+  color: #fff;
+}
+
+.btn-pay:hover {
+  background-color: #000;
+}
+
 
 /* Responsive Design */
 @media (max-width: 1200px) {
@@ -256,6 +285,13 @@ select {
   .padding-side {
       padding: 0 4rem;
   }
+  .custom-dropdown{
+    padding: 8px;
+    gap: 6px;
+  }
+  .custom-dropdown select{
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -267,6 +303,16 @@ select {
       flex-direction: column;
       gap: 0.5rem;
   }
+  .custom-dropdown {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
+    padding: 6px;
+}
+.custom-dropdown select {
+    font-size: 12px;
+    padding: 8px 10px; /* Reduce padding */
+    width: 100%; /* Full width for select */
+}
 }
 
 @media (max-width: 576px) {
@@ -289,7 +335,7 @@ select {
 
   .custom-dropdown select {
       padding: 10px;
-      font-size: 12px;
+      font-size: 10px;
   }
 
   button {

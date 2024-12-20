@@ -89,19 +89,20 @@
                 </div>
             </div>
         </div>
-
-
-
         <div class="container mt-5">
             <div class="form-group position-relative">
                 <label for="searchDropdown" class="form-label">Select Bank</label>
 
-                <!-- Searchable Input -->
-                <input type="text" class="form-control" id="searchDropdown" placeholder="Search Bank"
-                    [(ngModel)]="searchTerm" (input)="filterList()" />
+                <div class="custom-dropdown position-relative">
 
+                    <input type="text" class="form-control with-icons" id="searchDropdown" placeholder="Search Bank"
+                        [(ngModel)]="searchTerm" (input)="filterList()" />
+                    <img src="icons/search.svg" alt="search-icon" class="search-icon position-absolute" />
+                    <img src="icons/chevron-down.svg" alt="dropdown-icon" class="dropdown-icon position-absolute"
+                        (click)="toggleDropDown()" />
+                </div>
                 <!-- Dropdown Options -->
-                <ul class="list-group position-absolute w-100" *ngIf="filteredList.length && showDropdown">
+                <ul class="list-group position-relative dropdown-options" *ngIf="filteredList.length && showDropdown">
                     <li class="list-group-item list-group-item-action" *ngFor="let bank of filteredList"
                         (click)="selectBank(bank)">
                         <img [src]="bank.image" alt="{{ bank.label }}" width="30" class="me-2" />
@@ -140,45 +141,63 @@
                 <div class="flex-grow-1 rounded-3" *ngFor="let option of netbankinglist">
                     <div class="card p-4 d-flex justify-content-center align-items-center"
                         [class.selected]="selectednetbankingOption === option.id">
-                        <img [src]="option.image" [alt]="option.label" class="bank-img" />
+                        <img [src]="option.image" [alt]="option.label" class="img-fluid" />
                     </div>
                 </div>
             </div>
-            <div class="dropdown-container">
-                <div class="custom-dropdown">
-                  <img src="icons/search.svg" alt="Search" class="search-icon" />
-                  <select [(ngModel)]="searchTerm">
-                    <option *ngFor="let bank of filteredList">{{ bank.label }}</option>
-                  </select>
-                  <img src="icons/chevron-down.svg" alt="Dropdown" class="dropdown-icon" />
+
+            <div class="container mt-5">
+                <div class="form-group position-relative">
+                    <label for="searchDropdown" class="form-label">Select Bank</label>
+
+                    <div class="custom-dropdown position-relative">
+
+                        <input type="text" class="form-control with-icons" id="searchDropdown" placeholder="Search Bank"
+                            [(ngModel)]="searchTerm" (input)="filterList()" />
+                        <img src="icons/search.svg" alt="search-icon" class="search-icon position-absolute" />
+                        <img src="icons/chevron-down.svg" alt="dropdown-icon" class="dropdown-icon position-absolute"
+                            (click)="toggleDropDown()" />
+                    </div>
+                    <!-- Dropdown Options -->
+                    <ul class="list-group position-relative dropdown-options"
+                        *ngIf="filteredList.length && showDropdown">
+                        <li class="list-group-item list-group-item-action" *ngFor="let bank of filteredList"
+                            (click)="selectBank(bank)">
+                            <img [src]="bank.image" alt="{{ bank.label }}" width="30" class="me-2" />
+                            {{ bank.label }}
+                        </li>
+                    </ul>
                 </div>
-              </div>
-                <div class="actions">
-                    <button class="cancel-btn">Cancel</button>
-                    <button class="btn-common" [disabled]="!selectedBank">Make Payment</button>
-                  </div>
-                </div>
+
+                <p class="mt-3">Selected Bank: {{ selectedBank?.label || 'None' }}</p>
+            </div>
+            <div class="actions">
+                <button class="cancel-btn">Cancel</button>
+                <button class="btn-common" [disabled]="!selectedBank">Make Payment</button>
+            </div>
         </div>
     </div>
+</div>
 
-    <div *ngIf="selectedTab === 'wallet'">
-        <!-- Wallet Payment -->
-         <div class="wallet-container">
-         <div class="wallet-note">
-        <h5 class="fw-bold">Wallet</h5>
-        <p>Note: As per government regulation, wallets can't be used for more than Rs.1,00,000/- per month.
-        </p>
-    </div>
-        <div class="row justify-content-center gx-0">
-            <div class="col-md-4 d-flex justify-content-center mb-3" *ngFor="let wallet of wallets">
-              <div class="card text-center p-3 shadow-sm wallet-card">
-                <img [src]="wallet.image" [alt]="wallet.label" class="card-img-top wallet-logo mx-auto" />
-                <div class="card-body">
-                  <p class="card-title m-0">{{ wallet.label }}</p>
-                </div>
-              </div>
-            </div>
+<div *ngIf="selectedTab === 'wallet'">
+    <!-- Wallet Payment -->
+    <div class="wallet-container">
+        <div class="wallet-note">
+          <h5>Wallet</h5>
+          <p>
+            Note: As per government regulation, wallets can't be used for more than
+            Rs.1,00,000/- per month.
+          </p>
+        </div>
+        <div class="wallets-grid">
+          <div class="wallet-card" *ngFor="let wallet of wallets">
+            <img [src]="wallet.image" [alt]="wallet.label" class="wallet-logo" />
+            <p class="wallet-label">{{ wallet.label }}</p>
           </div>
-        <button class="btn-common floatright">Pay via Wallet</button>
-    </div>
+        </div>
+        <div class="wallet-actions">
+          <button class="btn btn-cancel">Cancel</button>
+          <button class="btn btn-pay">Make Payment</button>
+        </div>
+      </div>
 </div>
