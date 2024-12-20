@@ -22,6 +22,7 @@ export class OnlinePaymentComponent implements OnInit {
   toggleDropDown(){
     this.showDropdown = !this.showDropdown;
   }
+  selectedPaymentMethod = 'debit';
   paymentOptions = [
     { id: 'upi', label: 'UPI', icon: 'icons/upi-icon.svg' },
     { id: 'credit', label: 'Credit/Debit Card', icon: 'icons/debit-card.svg' },
@@ -135,5 +136,11 @@ export class OnlinePaymentComponent implements OnInit {
     this.searchTerm = bank.label;
     this.showDropdown = false;
   }
-  selectedPaymentMethod = 'debit';
+
+  
+  onFormSubmit() {
+    this.router.navigate(['/pages/motor/two-wheeler/confirmation'])
+  }
+
+
 }

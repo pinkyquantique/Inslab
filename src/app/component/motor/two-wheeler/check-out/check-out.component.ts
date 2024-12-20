@@ -16,12 +16,14 @@ import { proposalData } from './constant';
 export class CheckOutComponent implements OnInit {
   data: any;
   currentStep: number = 3;
-    constructor(private router: Router, private _sharedService: SharedService, private fb: FormBuilder) {}
+  constructor(private router: Router, private _sharedService: SharedService, private fb: FormBuilder) { }
 
-    async ngOnInit() {
+  async ngOnInit() {
     // await this.formbuild();
     this.data = proposalData;
     this._sharedService.emitChange(this.currentStep);
   }
-
+  onFormSubmit() {
+    this.router.navigate(['/pages/motor/two-wheeler/payment-mode'])
+  }
 }

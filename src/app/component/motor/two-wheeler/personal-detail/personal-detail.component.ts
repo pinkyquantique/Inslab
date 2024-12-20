@@ -75,7 +75,7 @@ export class PersonalDetailComponent implements OnInit {
       type: 'select',
       label: 'Title',
       name: 'title',
-      options: [{ id: 1, name: 'Mr' }, { id: 2, name: 'Miss' }, { id: 3, name: 'Mrs' }],
+      options: [{ id: 1, value: 'Mr' }, { id: 2, value: 'Miss' }, { id: 3, value: 'Mrs' }],
       required: true,
     },
     {
@@ -206,21 +206,21 @@ export class PersonalDetailComponent implements OnInit {
       type: 'select',
       label: 'Select Agreement',
       name: 'agreement',
-      options: [{ id: 1, name: 'Mr' }, { id: 2, name: 'Miss' }, { id: 3, name: 'Mrs' }],
+      options: [{ id: 1, value: 'Mr' }, { id: 2, value: 'Miss' }, { id: 3, value: 'Mrs' }],
       required: true,
     },
     {
       type: 'select',
       label: 'Select Financier',
       name: 'financier',
-      options: [{ id: 1, name: 'Mr' }, { id: 2, name: 'Miss' }, { id: 3, name: 'Mrs' }],
+      options: [{ id: 1, value: 'Mr' }, { id: 2, value: 'Miss' }, { id: 3, value: 'Mrs' }],
       required: true,
     },
     {
       type: 'select',
       label: 'Select City',
       name: 'City',
-      options: [{ id: 1, name: 'Mr' }, { id: 2, name: 'Miss' }, { id: 3, name: 'Mrs' }],
+      options: [{ id: 1, value: 'Mr' }, { id: 2, value: 'Miss' }, { id: 3, value: 'Mrs' }],
       required: true,
     }
   ]
