@@ -120,24 +120,30 @@
           <div class="col-md-3 col-12 text-md-left">
             <img src="/image/Global_Insurance.svg" alt="Placeholder Image" class="img-fluid" />
           </div>
-
+        
           <!-- Right Section: Heading, Paragraph, and Button -->
-          <div class="col-md-9 col-12">
-            <h3 class="mb-0 mt-0"><b>Global Insurance</b></h3>
-            <div class="d-flex justify-content-between">
-              <!-- Left Section -->
-              <div>
-                <h6 class="text-muted mb-4 mt-3">Overseas Motor Insurance.</h6>
-                <!-- Keeping the same button style as before -->
-                <button class="buton">ESSENTIAL PLAN</button>
-              </div>
-              <!-- Right Section -->
-              <div class="buttons">
-                <h4 class="text-muted text-end">PROPOSAL NUMBER: 160802</h4>
+          <div class="col-md-9 col-12 d-flex flex-column flex-md-row position-relative">
+            <div class="mb-3 mb-md-0 global">
+              <h3 class="mb-0 mt-0"><b>Global Insurance</b></h3>
+              <div class="d-flex justify-content-between">
+                <!-- Left Section -->
+                <div>
+                  <h6 class="text-muted mb-4 mt-3">Overseas Motor Insurance.</h6>
+                  <button class="buton">ESSENTIAL PLAN</button>
+                </div>
               </div>
             </div>
+        
+            <!-- Proposal Number (Desktop/Laptop) - Positioned at top-right -->
+            <h4 class="text-muted position-absolute d-none d-md-block" style="top: 0; left: 47rem; right: -8rem;">PROPOSAL NUMBER: 160802</h4>
+          </div>
+        
+          <!-- Proposal Number (Mobile/Tablet) - Centered below everything -->
+          <div class="col-12 text-center mt-3 d-md-none">
+            <h4 class="text-muted">PROPOSAL NUMBER: 160802</h4>
           </div>
         </div>
+        
 
         <!--  HR -->
         <div class="row">
@@ -535,8 +541,6 @@
               </div>
             </div>
 
-         
-            
               </div>
             </div>
           </div>
@@ -549,6 +553,6 @@
 <!-- Buttons -->
 
 <div class="d-flex justify-content-end mt-5 pb-5">
-  <button class="btn btn-light  px-5 py-3 proposal-button"><b>Save Proposal</b></button>&nbsp;&nbsp;&nbsp;
-  <button class="btn btn-dark px-4 buy-button"><b>Continue to Buy</b></button>
+  <button class="btn btn-light  px-5 py-3 border border-1 border-dark rounded-pill "><b>Save Proposal</b></button>&nbsp;&nbsp;&nbsp;
+  <button class="btn btn-dark px-4 rounded-pill"><b>Continue to Buy</b></button>
 </div>
