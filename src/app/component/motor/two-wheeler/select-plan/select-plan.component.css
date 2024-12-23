@@ -350,7 +350,20 @@ p {
 }
 
 /* accessories list */
+.accessory-input {
+  margin-bottom: -60px;
+  padding: 13px;
+  margin-left: -45px;
+}
 
+#accessoriesAmount {
+  border-radius: 7px;
+  padding: 10px;
+  margin-bottom: 40px;
+  margin-left: 40px;
+  width: 95%;
+  border: 1px solid gray;
+}
 
 .geo-container,
 .add-container,
@@ -405,17 +418,12 @@ p {
 .add-list,
 .access-list {
   margin-top: 20px;
+  display: flex;
+  flex-direction: column; /* Ensures list items are in a column */
+  gap: 8px; /* Adds space between each item */
 }
 
-.geo-list .geo-list,
-.add-list .add-list,
-.access-list .access-list {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 0;
-  border-bottom: 1px solid #f1f1f1;
-}
+
 
 .geo-name,
 .add-name,
@@ -423,6 +431,16 @@ p {
   font-size: 12px;
   color: rgba(29, 27, 32, 0.8);
   font-family: 'Roboto', sans-serif;
+  flex: 1; /* Ensures the name takes up available space */
+}
+
+.accessorylabel {
+  font-size: 10px;
+  margin-top: -30px;
+  margin-left: 40px;
+  display: block;
+  color: gray;
+  font-weight: 400;
 }
 
 .switch {
@@ -430,6 +448,7 @@ p {
   display: inline-block;
   width: 34px;
   height: 20px;
+  margin-left: auto; /* Pushes the toggle to the far right */
 }
 
 .switch input {
@@ -468,6 +487,10 @@ input:checked+.toggle {
 
 input:checked+.toggle::before {
   transform: translateX(14px);
+}
+
+.accessory-input {
+  margin-top: 10px; /* Adjust spacing for the input box */
 }
 
 /* quotation plan div css */
@@ -692,7 +715,7 @@ input:checked+.toggle::before {
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 20px auto;
-  max-width: 720px;
+  max-width: 630px;
 }
 
 .ad-content {
@@ -780,7 +803,181 @@ input:checked+.toggle::before {
 .close:hover {
   color: #000;
 }
+/* share form */
 
+/* Popup Container */
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Background Overlay */
+.popup-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Popup Content */
+.popup-content {
+  position: relative;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  padding: 20px;
+  z-index: 1001;
+}
+
+/* Popup Header */
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 10px;
+}
+
+.popup-header h3 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.close-btn {
+  cursor: pointer;
+  font-size: 20px;
+  color: #aaa;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+/* Popup Body */
+.popup-body {
+  padding: 20px 0;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+.popup-content{
+  width: 45%;
+}
+.input-container {
+  width: 100%; 
+  height: 50px; 
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+.sharetitle{
+  position: relative;
+  top: -20px;
+}
+.emailid{
+  position: absolute;
+  top: 0%;
+  left: 15px;
+  transform: translateY(-50%);
+  pointer-events: none; 
+  font-size: 15px;
+  font-family: 'Roboto',sans-serif;
+  font-weight: 300;
+
+}
+
+input[type="text"] {
+  width: 120px;
+  border: none;
+  outline: none;
+  padding-left: 30px; /* Adjust for label width */
+  text-align: left;
+
+}
+
+.share-button {
+  position: absolute;
+  background-color: none;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: #294E9F;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+button.share-btn {
+  background-color: none;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.share-btn:hover {
+  background-color: #004999;
+}
+
+/* Separator */
+.or-separator {
+  text-align: center;
+  font-size: 14px;
+  color: #999;
+  margin: 10px 0;
+}
+
+/* Popup Footer */
+.popup-footer {
+  display: flex;}
+
+button.link-btn,
+button.pdf-btn {
+  display: flex;
+  align-items: center; /* Center icon and text vertically */
+  padding: 5px 10px; /* Add padding for spacing */
+  margin-right: 10px; /* Add margin for gap between buttons */
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  color:#294E9F;
+}
+.icon{
+  margin-right: 5px;
+  color: #294E9F;
+}
+button.link-btn:hover,
+button.pdf-btn:hover {
+  text-decoration: underline;
+}
+
+/* Trigger Button */
+.open-popup-btn {
+  padding: 10px 20px;
+  background-color: #0066cc;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.open-popup-btn:hover {
+  background-color: #004999;
+}
 
 /* Responsive Design for screens smaller than 768px */
 @media screen and (max-width: 1024px) and (min-width: 768px) {
@@ -1158,6 +1355,6 @@ input:checked+.toggle::before {
     font-size: 8px;
   }
   .ad-banner{
-    width: 60%;
+    width: 50%;
   }
 }

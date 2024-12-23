@@ -712,13 +712,11 @@
     
       .articles-grid {
         flex-direction: column;
-        margin-right: 400px;
-        gap: 10px;
+        gap: 20px;
       }
     
       .right-section {
         margin-top: 20px;
-        width: 200%;
       }
       .explore-content{
         margin-left: 10px;
@@ -754,7 +752,7 @@
 
 
 /* For screens between 480px and 768px */
-@media (min-width: 480px) and (max-width: 767px) {
+@media (min-width: 480px) and (max-width: 768px) {
     .card-banner {
         display: flex;
         flex-direction: column;
@@ -794,7 +792,7 @@
     }
        .article-card {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        width: 60%;
+        width: 120%;
         gap: 4rem;
     }
     .card-headline{
@@ -817,6 +815,7 @@
         font-size: 12px;
         padding: 6px 12px;
     }
+   
 
 }
 

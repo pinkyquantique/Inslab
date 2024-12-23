@@ -15,8 +15,9 @@ export class SelectPlanComponent implements OnInit{
   minValue = 463239;
   maxValue = 959898;
   currentValue = this.minValue;
-
-  
+  isPopupVisible: boolean = false;
+  email: string = '';
+  mobileNumber: string = '';
   isaccessoriesCollapsed = false;
   isgeographicalCollapsed = false;
   isaddonsCollapsed = false
@@ -130,5 +131,29 @@ export class SelectPlanComponent implements OnInit{
   closeNotification(): void{
     this.isVisible=false;
     console.log("close button");
+  }
+
+  openPopup() {
+    this.isPopupVisible = true;
+  }
+
+  closePopup() {
+    this.isPopupVisible = false;
+  }
+
+  shareByEmail() {
+    if (this.email) {
+      alert(`Sharing proposal via email: ${this.email}`);
+    } else {
+      alert('Please enter a valid email.');
+    }
+  }
+
+  shareByMobile() {
+    if (this.mobileNumber) {
+      alert(`Sharing proposal via mobile number: ${this.mobileNumber}`);
+    } else {
+      alert('Please enter a valid mobile number.');
+    }
   }
 }
