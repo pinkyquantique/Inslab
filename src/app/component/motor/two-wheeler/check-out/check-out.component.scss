@@ -293,7 +293,8 @@ body, .container-fluid {
 
   .blue-card,
   .white-card {
-    width: 135%;
+   
+    //width: 135%;
     padding: 20px;
     margin-bottom: 15px;
     border-radius: 8px;
@@ -307,10 +308,11 @@ body, .container-fluid {
   .white-card {
     background-color: white;
   }
-
+ 
   .label {
-    font-size: 12px;
+    font-size: 9px;
     color: #1D1B2099;
+    padding: 0;
     
   }
   .label1 {
@@ -378,9 +380,9 @@ body, .container-fluid {
   }
   .value {
     font-weight: bold;
-    font-size: 14px;
+    font-size: 12px;
     color: #1D1B20;
-    margin-left: 1rem;
+    
   }
 
   .value1 {
@@ -497,18 +499,6 @@ body, .container-fluid {
   }
   
 
- 
-  // @media (max-width: 767px) {
-
-  //   .text-center,
-  //   .text-end {
-  //     text-align: center !important;
-  //   }
-
-  //   .container {
-  //     padding: 10px;
-  //   }
-  // }
   .heading{
     margin-bottom: 0.3rem;
     font-size: 14px;
@@ -540,23 +530,7 @@ body, .container-fluid {
   font-size: 16px;
 
 }
-  // @media (max-width: 768px) {
-  //   .field-label {
-  //     font-size: 0.8rem;
-  //   }
-
-  //   .field-value {
-  //     font-size: 0.9rem;
-  //   }
-  //   .policy-details {
-  //     margin-bottom: 20px;
-  //   }
-  //   .global{
-  //   margin-top: -10rem;
-  //   margin-left: 15rem;
-
-  // }
-  // }
+ 
 }
 
 //responsiveness for globall section 
@@ -652,37 +626,52 @@ body, .container-fluid {
 }
 
 //responsiveness for owner detail and vehicle section 
-  
-@media (max-width: 375px) and (max-height: 667px) {
-      .label{
-        margin-right: 33rem;
-      }
-      .value1{
-        margin-left: -29rem;
-      }
-      .value2{
-        padding-right: 20rem;
-      }
-      .label1{
-        margin-right: 19rem;
-      }
-      .value8{
-        padding-right: 19rem;
-      }
-      .label2{
-        padding-left: 1rem;
-        padding-right: 3rem;
-      }
-      .value4{
-        padding-right: 27rem;
-      }
-      .value5{
-        padding-right: 20rem;
-      }
-      .label3{
-        padding-right: 28rem;
-      }
+@media(max-width:375px) and (max-height:667px){
+    .blue-card{
+      display: flex;
+      flex-direction: column;
+    }
+    //       .label{
+//         margin-right: 33rem;
+//       }
+//       .value1{
+//         margin-left: -29rem;
+//       }
+//       .value2{
+//         padding-right: 20rem;
+//       }
 }
+  
+// @media (max-width: 375px) and (max-height: 667px) {
+//       .label{
+//         margin-right: 33rem;
+//       }
+//       .value1{
+//         margin-left: -29rem;
+//       }
+//       .value2{
+//         padding-right: 20rem;
+//       }
+//       .label1{
+//         margin-right: 19rem;
+//       }
+//       .value8{
+//         padding-right: 19rem;
+//       }
+//       .label2{
+//         padding-left: 1rem;
+//         padding-right: 3rem;
+//       }
+//       .value4{
+//         padding-right: 27rem;
+//       }
+//       .value5{
+//         padding-right: 20rem;
+//       }
+//       .label3{
+//         padding-right: 28rem;
+//       }
+// }
 
   
 
