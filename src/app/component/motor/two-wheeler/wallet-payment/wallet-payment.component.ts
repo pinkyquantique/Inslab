@@ -3,12 +3,14 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SharedService } from '../../shared.service';
 import { LoadingComponent } from '../../../../loading.component';
+import { ShimmerDirective } from '../../../../shimmer.directive';
+
 
 
 @Component({
   selector: 'app-wallet-payment',
   standalone: true,
-  imports: [CommonModule,LoadingComponent],
+  imports: [CommonModule,LoadingComponent,ShimmerDirective],
   templateUrl: './wallet-payment.component.html',
   styleUrl: './wallet-payment.component.scss'
 })
