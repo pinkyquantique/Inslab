@@ -1,10 +1,13 @@
-<div [formGroup]="formGroup" class="form-group">
-  <label [for]="config.name">{{ config.label }} <span *ngIf="config.required" class="required-asterisk">*</span></label>
+<div [formGroup]="formGroup" class="form-group floating-label">
   <input
     type="text"
     [id]="config.name"
     [formControlName]="config.name"
-    [placeholder]="config.placeholder"
+    [placeholder]="config.placeholder || ' '"
   />
-  <small class="note">{{ config.note }} </small>
+  <label [for]="config.name">
+    {{ config.label }}
+    <span *ngIf="config.required" class="required-asterisk">*</span>
+  </label>
+  <small class="note">{{ config.note }}</small>
 </div>

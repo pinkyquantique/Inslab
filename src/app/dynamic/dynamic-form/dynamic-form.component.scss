@@ -26,4 +26,11 @@ form {
       width: 100%;  /* Stack fields on smaller screens */
     }
   }
+  .req-error{
+    margin-top: -2rem;
+    .error{
+      color: red;
+      font-size: x-small;
+    }
+  }
   

@@ -1,39 +1,46 @@
 <div class="form-group">
-    <div    class="input-group">
-      <label [for]="config.name">{{ config.label }} <span *ngIf="config.required" class="required-asterisk">*</span></label>
-      <div class="input-container">
-        <span class="calendar-icon" (click)="openPicker()">
-          <i class="bi bi-calendar"></i> <!-- Bootstrap icon for calendar -->
-        </span>
+  <label [for]="config.name">
+    {{ config.label }}
+    <span *ngIf="config.required" class="required-asterisk">*</span>
+  </label>
+
+  <div class="input-group">
+    <div class="input-container">
+      <span class="calendar-icon" (click)="togglePicker($event)">
+        <i class="bi bi-calendar"></i>
+      </span>
       <input
         type="text"
         class="form-control"
-        placeholder="config.placeholder"
-        [(ngModel)]="selectedmonthDate"
-        (focus)="openPicker()"  
-      readonly
+        placeholder="{{ config.placeholder }}"
+        [value]="formattedDate"
+        readonly
+        (click)="togglePicker($event)"
       />
-     
-    </div>
-    </div>
-  
-    <!-- Date Picker Dropdown -->
-    <div *ngIf="showPicker" class="card mt-2 p-3" style="width: 18rem;">
-      <div class="form-group">
-        <label for="yearSelect">Year</label>
-        <select id="yearSelect" class="form-select" [(ngModel)]="selectedYear">
-          <option *ngFor="let year of years" [value]="year">{{ year }}</option>
-        </select>
-      </div>
-  
-      <div class="form-group mt-2">
-        <label for="monthSelect">Month</label>
-        <select id="monthSelect" class="form-select" [(ngModel)]="selectedMonth">
-          <option *ngFor="let month of months; let i = index" [value]="i">{{ month }}</option>
-        </select>
-      </div>
-  
-      <button class="btn btn-primary mt-3" (click)="selectDate()">Select</button>
     </div>
   </div>
-  
+
+  <div
+    #picker
+    class="dropdown-picker card p-3"
+    *ngIf="showPicker"
+    [ngStyle]="{ top: pickerPosition.top, left: pickerPosition.left }"
+  >
+    <div class="picker-header">
+      <button class="btn btn-outline-primary me-2" (click)="prevYear()">←</button>
+      <span class="year-label">{{ selectedYear }}</span>
+      <button class="btn btn-outline-primary ms-2" (click)="nextYear()">→</button>
+    </div>
+
+    <div class="month-grid mt-3">
+      <button
+        *ngFor="let month of months; let i = index"
+        class="month-button"
+        [class.selected]="selectedMonth === i"
+        (click)="selectMonth(i)"
+      >
+        {{ month }}
+      </button>
+    </div>
+  </div>
+</div>

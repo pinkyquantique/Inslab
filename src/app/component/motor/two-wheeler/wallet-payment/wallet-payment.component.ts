@@ -41,8 +41,15 @@ export class WalletPaymentComponent implements OnInit {
   }
 
   
-  onFormSubmit() {
-    this.router.navigate(['/pages/motor/two-wheeler/confirmation'])
+  onFormSubmit(event: Event) {
+    event.preventDefault();
+    this.isLoading = true;
+    this.loadingMessage = 'Fetching data...';
+    setTimeout(() => {
+      this.isLoading = false; 
+      this.router.navigate(['/pages/motor/two-wheeler/confirmation'])
+    }, 3000); 
+   
   }
  
 }
